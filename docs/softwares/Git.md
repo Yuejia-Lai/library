@@ -62,6 +62,7 @@ export LC_ALL="zh_CN.UTF-8"
 ### 基础操作指令
 
 ```
+rm -rf .git 撤销git init
 git add //工作区-》暂存区
 git commit //暂存区-》本地仓库
 git status //查看工作区暂存区状态
@@ -86,6 +87,7 @@ git checkout -b 分支名  //直接切换到一个不存在的分支（创建并
 git merge 分支名称   //一个分支上的提交可以合并到另一个分支
 git branch -d b1 删除分支时，需要做各种检查
 git branch -D b1 不做任何检查，强制删除
+git branch -m oldname newname 分支改名
 ```
 
 关于分支的冲突这里不详细展开。
