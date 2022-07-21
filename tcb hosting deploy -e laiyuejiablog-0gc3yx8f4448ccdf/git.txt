@@ -1,2 +1,0 @@
-git pull git@github.com:Yuejia-Lai/library.git main
-git push git@github.com:Yuejia-Lai/library.git main
