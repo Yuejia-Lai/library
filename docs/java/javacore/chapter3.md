@@ -322,3 +322,65 @@ else if ······
 else do something;
 ```
 
+3. 循环
+
+```java
+while(condition) do something;
+do do something while (condition);
+```
+
+4. 确定循环
+
+```java
+for(int i=0;i<len;++i) do something;
+```
+
+> [!attention] 注意循环变量的统一性，循环结束的条件，变量的作用域
+
+5. 多重选择：switch语句
+
+```java
+switch(choice){
+    case 1:
+        do something;
+        break;
+    case 2:
+        do something;
+        break;
+    ······
+    default:
+    	do ...
+        break;
+}
+```
+
+> [!warning] 注意break语句
+
+6. 中断控制流程的语句
+
+Java虽然有goto保留字，但是不建议使用，代替的有带标签的break语句,可以用于跳出多重嵌套的循环：
+
+```java
+read_data:
+while(...){
+    ...
+    for(...){
+        ....
+        if(...) break read_data;
+        ....
+    }
+}
+....
+```
+
+> [!note] break的标签必须放在希望跳出的最外层循环之前，而且紧跟一个冒号
+
+**注意：只能跳出语句块，不能跳入！**
+
+同样，有一种带标签的continue语句，可以跳到与标签匹配的循环的首部
+
+---
+
+
+
+## 大数
