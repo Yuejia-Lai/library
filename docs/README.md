@@ -24,3 +24,6 @@
 
 > 本站的最终目标是成为一个有名的免费，开源，无广告的知识库，让全世界程序员都能从中获益，网站**持续更新**，各位读者有好的点子或者书籍项目网课推荐也可以在[Gitee](https://gitee.com/yuejia-lai)上与我联系
 
+```pdf
+https://static.r2coding.com/r2_static/pdf/front.pdf
+```

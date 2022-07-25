@@ -19,6 +19,7 @@
     - [全书导读](/computer/csapp/README.md)
     - [第一章-计算机系统漫游](/computer/csapp/chapter1.md)
     - [第二章-信息的表示和处理](/computer/csapp/chapter2.md)
+    - [第三章-程序的机器级表示](/computer/csapp/chapter3.md)
     - labs
   - 计算机网络(《计算机网络：自顶向下方法》)
     - 全书导读
