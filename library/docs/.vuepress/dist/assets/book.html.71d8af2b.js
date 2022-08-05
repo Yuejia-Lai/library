@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-746cc4b7","path":"/book.html","title":"","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"copyright":"\u8457\u4F5C\u6743\u5F52Yuejia-Lai\u6240\u6709\\n\u539F\u6587\u94FE\u63A5\uFF1Ahttps://laiyuejia.cn/book.html","filePathRelative":"book.md"}');export{t as data};
