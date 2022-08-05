@@ -1,1 +1,0 @@
-tcb hosting deploy -e laiyuejiablog-0gc3yx8f4448ccdf
