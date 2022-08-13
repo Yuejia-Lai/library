@@ -1,0 +1,74 @@
+{
+  "hash": "0e8a0756",
+  "browserHash": "e86a048e",
+  "optimized": {
+    "@vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "@vue_devtools-api.js",
+      "fileHash": "851dfe32",
+      "needsInterop": false
+    },
+    "@vuepress/shared": {
+      "src": "../../../../node_modules/@vuepress/shared/dist/index.js",
+      "file": "@vuepress_shared.js",
+      "fileHash": "5b1307d1",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "14d5ac14",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "file": "vue-router.js",
+      "fileHash": "78809cfc",
+      "needsInterop": false
+    },
+    "chart.js/auto": {
+      "src": "../../../../node_modules/chart.js/auto/auto.mjs",
+      "file": "chart_js_auto.js",
+      "fileHash": "3b365c30",
+      "needsInterop": false
+    },
+    "echarts": {
+      "src": "../../../../node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "7a6aec04",
+      "needsInterop": false
+    },
+    "flowchart.js": {
+      "src": "../../../../node_modules/flowchart.js/index.js",
+      "file": "flowchart_js.js",
+      "fileHash": "53f49c19",
+      "needsInterop": true
+    },
+    "mermaid": {
+      "src": "../../../../node_modules/mermaid/dist/mermaid.esm.min.mjs",
+      "file": "mermaid.js",
+      "fileHash": "d4858a3e",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "933c2e76",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-3IO6YQQR": {
+      "file": "chunk-3IO6YQQR.js"
+    },
+    "chunk-2GHHG46M": {
+      "file": "chunk-2GHHG46M.js"
+    },
+    "chunk-LTBIPGHC": {
+      "file": "chunk-LTBIPGHC.js"
+    },
+    "chunk-PXE4CLEU": {
+      "file": "chunk-PXE4CLEU.js"
+    }
+  }
+}
