@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-184f4da6","path":"/intro.html","title":"Intro Page","lang":"zh-CN","frontmatter":{"icon":"info"},"excerpt":"","headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"copyright":"\u8457\u4F5C\u6743\u5F52Yuejia-Lai\u6240\u6709\\n\u539F\u6587\u94FE\u63A5\uFF1Ahttps://laiyuejia.cn/intro.html","filePathRelative":"intro.md"}');export{t as data};
