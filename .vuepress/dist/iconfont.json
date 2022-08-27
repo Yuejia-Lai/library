@@ -6,6 +6,55 @@
   "description": "知识库tu'biao'su'cai'ku",
   "glyphs": [
     {
+      "icon_id": "20784474",
+      "name": "c++语言",
+      "font_class": "cyuyan",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "18748997",
+      "name": "开源",
+      "font_class": "kaiyuan",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "4936607",
+      "name": "file-markdown-fill",
+      "font_class": "file-markdown-fill",
+      "unicode": "e857",
+      "unicode_decimal": 59479
+    },
+    {
+      "icon_id": "410162",
+      "name": "终端厂商管理",
+      "font_class": "zhongduanchangshangguanli",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1486988",
+      "name": "终端控制",
+      "font_class": "zhongduankongzhi",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "8039333",
+      "name": "终端",
+      "font_class": "zhongduan",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "18610501",
+      "name": "终端监控",
+      "font_class": "zhongduanjiankong",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
       "icon_id": "12083946",
       "name": "集成任务",
       "font_class": "jichengrenwu",

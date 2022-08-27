@@ -108,24 +108,31 @@ module.exports = {
           text: "计算机基础",
           icon: "iconfont icon-computer_fill",
           link: "/computer/",
-          prefix: "/computer",
           collapsable: true,
           children: [
               {
-                text: "CSAPP",
-                icon: "iconfont icon-jisuanjikaifa",
-                prefix: "/csapp/",
+                text: "SQL",
+                icon: "iconfont icon-database-full",
                 collapsable: true,
+                prefix: "/computer/SQL/",
                 children: [
                   {
-                    text: "第一章-计算机系统漫游",
-                    icon: "iconfont icon-document_fill",
+                    text: "数据库与MySQL环境搭建",
+                    icon: "iconfont icon-database-full",
                     link: "chapter1"
                   },
                   {
+                    text: "基本SELECT语句",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter2"
+                  },
+                  {
 
-                  }
+                  },
                 ]
+              },
+              {
+
               },
           ]
         },
@@ -138,6 +145,7 @@ module.exports = {
               {
                 text: "CSAPP",
                 icon: "iconfont icon-jisuanjikaifa",
+                link: "/computer/csapp/",
                 prefix: "/computer/csapp/",
                 collapsable: true,
                 children: [
@@ -147,14 +155,42 @@ module.exports = {
                     link: "chapter1"
                   },
                   {
-
-                  }
+                    text: "信息的表示和处理",
+                    icon: "iconfont icon-document_fill",
+                    link: "chapter2"
+                  },
+                  {
+                    text: "程序的机器级表示",
+                    icon: "iconfont icon-document_fill",
+                    link: "chapter2"
+                  },
+                ]
+              },
+              {
+                text: "C Primer Plus",
+                icon: "iconfont icon-cyuyan",
+                link: "/book",
+                collapsable: true,
+                prefix: "/computer/C_Primer_Plus/",
+                children: [
+                  {
+                    text: "初识C语言",
+                    icon: "iconfont icon-document_fill",
+                    link: "chapter1"
+                  },
+                  {
+                    text: "C语言概述",
+                    icon: "iconfont icon-document_fill",
+                    link: "chapter2"
+                  },
+                  
                 ]
               },
               {
                 text: "Java基础《Java核心技术》",
                 icon: "iconfont icon-data-dictionary",
-                prefix: "/computer/javacore/",
+                prefix: "/java/javacore/",
+                collapsable: true,
                 children: [
                   {
                     text: "第一章-Java程序设计概述",
@@ -162,6 +198,10 @@ module.exports = {
                     link: "chapter1",
                   },
                 ]
+              },
+              {
+                text: "Linux应该这样学",
+                icon: "iconfont "
               },
           ]
         },
@@ -195,6 +235,30 @@ module.exports = {
           ]
         },
         {
+          text: "小知识",
+          icon: "iconfont icon-creativefill",
+          collapsable: true,
+          prefix: "/tips/",
+          children: [
+            {
+              text: "cmd使用",
+              icon: "iconfont icon-zhongduan",
+              link: "cmd",                     
+            },
+            {
+              text: "markdown语法",
+              icon: "iconfont icon-file-markdown-fill",
+              link: "markdown",
+              
+            },
+            {
+              text: "常见开源协议",
+              icon: "iconfont icon-kaiyuan",
+              link: "开源协议",
+            },
+          ]
+        },
+        {
           text: "个人项目",
           icon: "iconfont icon-brand",
           prefix: "/projects",
@@ -203,9 +267,6 @@ module.exports = {
             {
               
             },
-            {
-
-            }
           ]
         },
       ],

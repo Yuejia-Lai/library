@@ -1,0 +1,121 @@
+<template><div><h1 id="初识c语言" tabindex="-1"><a class="header-anchor" href="#初识c语言" aria-hidden="true">#</a> 初识C语言</h1>
+<p>我们先来了解C语言的起源和一些特性，包括它的优缺点。然后，介绍 编程的起源并探讨一些编程的基本原则。最后，讨论如何在一些常见系统中 运行C程序</p>
+<h2 id="c语言的起源" tabindex="-1"><a class="header-anchor" href="#c语言的起源" aria-hidden="true">#</a> C语言的起源</h2>
+<p>1972年，贝尔实验室的丹尼斯·里奇（Dennis Ritch）和肯·汤普逊（Ken Thompson）在开发UNIX操作系统时设计了C语言。然而，C语言不完全是里 奇突发奇想而来，他是在B语言（汤普逊发明）的基础上进行设计</p>
+<p>最初为程序员设计开发的C语言，现在已成为首选的编程语言 之一</p>
+<h2 id="选择c语言的理由" tabindex="-1"><a class="header-anchor" href="#选择c语言的理由" aria-hidden="true">#</a> 选择C语言的理由</h2>
+<p>在过去40多年里，C语言已成为最重要、最流行的编程语言之一</p>
+<p>在学习C语言的过程中，会发现它的 许多优点（见图1.1）。下面，我们来看看其中较为突出的几点：</p>
+<ul>
+<li>设计特性：C是一门流行的语言，融合了计算机科学理论和实践的控制特性。C语 言的设计理念让用户能轻松地完成自顶向下的规划、结构化编程和模块化设计</li>
+<li>高效性：在设计上，它充分利用了当前计算机的优势，因此 C 程序相对更紧凑，而且运行速度很快。实际上，C 语言具有通常是汇编语言 才具有的微调控制能力</li>
+<li>可移植性：C是可移植的语言。意味着，在一种系统中编写的 C程序稍作修改或 不修改就能在其他系统运行。如需修改，也只需简单更改主程序头文件中的 少许项即可，由于C语言与UNIX关系密切，UNIX系统通常会将C编译器作为软件包的 一部分，因此，无论是使用家庭计算机、专业工作站，还是大型 机，都能找到针对特定系统的C编译器</li>
+<li>强大而灵活：功能 强大且灵活的UNIX操作系统，大部分是用C语言写的；其他语言（如， FORTRAN、Perl、Python、Pascal、LISP、Logo、BASIC）的许多编译器和 解释器都是用C语言编写的</li>
+<li>面向程序员：C 语言是为了满足程序员的需求而设计的，程序员利用 C 可以访问硬 件、操控内存中的位。C 语言有丰富的运算符，能让程序员简洁地表达自己 的意图</li>
+<li>缺点：C语言使用 指针，而涉及指针的编程错误往往难以察觉，C 语言紧凑简洁，结合了大量的运算符。正因如此，我们也可以编写出 让人极其费解的代码</li>
+</ul>
+<hr>
+<h2 id="c语言的应用范围" tabindex="-1"><a class="header-anchor" href="#c语言的应用范围" aria-hidden="true">#</a> C语言的应用范围</h2>
+<ul>
+<li>
+<p>早在20世纪80年代，C语言就已经成为小型计算机（UNIX系统）使用的 主流语言。从那以后，C语言的应用范围扩展到微型机（个人计算机）和大 型机（庞然大物）</p>
+</li>
+<li>
+<p>越来越多的计算机用户已转而求助C语言解决一些安全问题。不一 定非得是计算机专家也能使用C语言</p>
+</li>
+<li>
+<p>C++几乎是C的超集，这意味着任何C程序差不多就是一个C++程序。学习C 语言，也相当于学习了许多C++的知识</p>
+</li>
+<li>
+<p>C 语言已成为嵌 入式系统编程的流行语言，C 语 言还从长期被FORTRAN独占的科学编程领域分得一杯羹，C在Linux开发中扮演着极其重要的角色</p>
+</li>
+</ul>
+<hr>
+<h2 id="计算机能做什么" tabindex="-1"><a class="header-anchor" href="#计算机能做什么" aria-hidden="true">#</a> 计算机能做什么</h2>
+<blockquote>
+<p>现代的计算机由多种部件构成。中央处理单元（CPU）承担绝大部分的运算工作。随机存取内存（RAM）是存储程序和文件的工作区；而永久内存存储设备（过去一般指机械硬盘，现在还包括固态硬盘）即使在关闭计算机后，也不会丢失之前储存的程序和文件。另外，还有各种外围设备（如，键盘、鼠标、触摸屏、监视器）提供人与计算机之间的交互。CPU负责处理程序</p>
+</blockquote>
+<p>CPU 的工作非常简单，至少从以下简短的描述中看是这样。它从内存中获取并执行一条指令，然后再从内存中获取并执行下一条指令</p>
+<hr>
+<h2 id="高级计算机语言和编译器" tabindex="-1"><a class="header-anchor" href="#高级计算机语言和编译器" aria-hidden="true">#</a> 高级计算机语言和编译器</h2>
+<p>高级编程语言（如，C）以多种方式简化了编程工作，高级语言（如C、Java、Pascal）以更抽象的方式描述行为，不受限于特定CPU或指令集。而且，高级语言简单易学，用高级语言编程比用机器语言编程容易得多</p>
+<hr>
+<h2 id="语言标准" tabindex="-1"><a class="header-anchor" href="#语言标准" aria-hidden="true">#</a> 语言标准</h2>
+<p>1987年，布莱恩·柯林汉（Brian Kernighan）和丹尼斯·里奇（Dennis Ritchie）合著的The C Programming Language（《C语言程序设计》）第1版是公认的C标准，通常称之为K&amp;R C或经典C。特别是，该书中的附录中的“C语言参考手册”已成为实现C的指导标准，由于缺乏官方标准，UNIX实现提供的库已成为了标准库</p>
+<h3 id="第一个ansi-iso-c标准" tabindex="-1"><a class="header-anchor" href="#第一个ansi-iso-c标准" aria-hidden="true">#</a> 第一个ANSI/ISO C标准</h3>
+<p>美国国家标准协会（ANSI）于 1983 年组建了一个委员会（X3J11），开发了一套新标准，并于1989年正式公布。该标准（ANSI C）定义了C语言和C标准库。国际标准化组织于1990年采用了这套C标准（ISO C）。ISO C和ANSI C是完全相同的标准。ANSI/ISO标准的最终版本通常叫作C89（因为ANSI于1989年批准该标准）或C90（因为ISO于1990年批准该标准）。另外，由于ANSI先公布C标准，因此业界人士通常使用ANSI C</p>
+<p>委员会在表述这一精神时列出了以下几点：</p>
+<ul>
+<li>信任程序员；</li>
+<li>不要妨碍程序员做需要做的事；</li>
+<li>保持语言精练简单；</li>
+<li>只提供一种方法执行一项操作；</li>
+<li>让程序运行更快，即使不能保证其可移植性</li>
+</ul>
+<h3 id="c99标准" tabindex="-1"><a class="header-anchor" href="#c99标准" aria-hidden="true">#</a> C99标准</h3>
+<p>1994年，ANSI/ISO联合委员会（C9X委员会）开始修订C标准，最终发布了C99标准</p>
+<p>委员会的用意不是在C语言中添加新特性，而是为了达到新的目标：</p>
+<ul>
+<li>支持国际化编程</li>
+<li>调整现有实践致力于解决明显的缺陷</li>
+<li>为适应科学和工程项目中的关键数值计算，提高C的适应性</li>
+</ul>
+<h3 id="c11标准" tabindex="-1"><a class="header-anchor" href="#c11标准" aria-hidden="true">#</a> C11标准</h3>
+<p>2011年终于发布了C11标准。此次，委员会提出了一些新的指导原则。出于对当前编程安全的担忧，不那么强调“信任程序员”目标了。而且，供应商并未像对C90那样很好地接受和支持C99。这使得C99的一些特性成为C11的可选项</p>
+<hr>
+<h2 id="使用c语言的7个步骤" tabindex="-1"><a class="header-anchor" href="#使用c语言的7个步骤" aria-hidden="true">#</a> 使用C语言的7个步骤</h2>
+<p>C是编译型语言<img src="https://s2.loli.net/2022/07/27/t3XMHIfQeWoDK2h.png" alt="Snipaste_2022-07-27_16-40-44" loading="lazy"></p>
+<h3 id="第一步-定义程序的目标" tabindex="-1"><a class="header-anchor" href="#第一步-定义程序的目标" aria-hidden="true">#</a> 第一步：定义程序的目标</h3>
+<p>在动手写程序之前，要在脑中有清晰的思路。想要程序去做什么首先自己要明确自己想做什么，思考你的程序需要哪些信息，要进行哪些计算和控制，以及程序应该要报告什么信息</p>
+<h3 id="第二步-设计程序" tabindex="-1"><a class="header-anchor" href="#第二步-设计程序" aria-hidden="true">#</a> 第二步：设计程序</h3>
+<p>对程序应该完成什么任务有概念性的认识后，就应该考虑如何用程序来完成它</p>
+<p>除此之外，还要决定在程序（还可能是辅助文件）中如何表示数据，以及用什么方法处理数据</p>
+<h3 id="第三步-编写代码" tabindex="-1"><a class="header-anchor" href="#第三步-编写代码" aria-hidden="true">#</a> 第三步：编写代码</h3>
+<p>设计好程序后，就可以编写代码来实现它。也就是说，把你设计的程序翻译成 C语言</p>
+<p>在这一步骤中，应该给自己编写的程序添加文字注释。最简单的方式是使用 C的注释工具在源代码中加入对代码的解释</p>
+<h3 id="第四步-编译" tabindex="-1"><a class="header-anchor" href="#第四步-编译" aria-hidden="true">#</a> 第四步：编译</h3>
+<p>编译的细节取决于编程的环境</p>
+<p>编译器是把源代码转换成可执行代码的程序。可执行代码 是用计算机的机器语言表示的代码。这种语言由数字码表示的指令组成</p>
+<p>C 编译器负责把C代码翻译成特定的机器语言。此外，C编译器还将源代码与C库（库中包含大量的 标准函数供用户使用，如printf()和scanf()）的代码合并成最终的程序（更精确地说，应该是由一个被称为链接器的程序来链接库函数，但是在大多数系统中，编译器运行链接器）</p>
+<p>其结果是，生成一个用户可以运行的可执行文 件，其中包含着计算机能理解的代码</p>
+<blockquote>
+<p>编译器还会检查C语言程序是否有效。如果C编译器发现错误，就不生成可执行文件并报错</p>
+</blockquote>
+<h3 id="第五步-运行程序" tabindex="-1"><a class="header-anchor" href="#第五步-运行程序" aria-hidden="true">#</a> 第五步：运行程序</h3>
+<p>传统上，可执行文件是可运行的程序</p>
+<p>最终生成的程序可通过单击或双击文件名或图标直接在操作系统中运行</p>
+<h3 id="第六步-测试和调试程序" tabindex="-1"><a class="header-anchor" href="#第六步-测试和调试程序" aria-hidden="true">#</a> 第六步：测试和调试程序</h3>
+<p>你会发现你的程序中有一些错误，计算机行话叫作bug。查找并修复程序错误的过程叫调试</p>
+<h3 id="第七步-维护和修改代码" tabindex="-1"><a class="header-anchor" href="#第七步-维护和修改代码" aria-hidden="true">#</a> 第七步：维护和修改代码</h3>
+<p>创建完程序后，你发现程序有错，或者想扩展程序的用途，这时就要修改程序</p>
+<h3 id="说明" tabindex="-1"><a class="header-anchor" href="#说明" aria-hidden="true">#</a> 说明</h3>
+<p>编程并非像描述那样是一个线性的过程。有时，要在不同的步骤之间往复</p>
+<p>应该养成先规划再动手编写代码的好习惯，用纸和笔记录下程序的目标和设计框架</p>
+<hr>
+<h2 id="编程机制" tabindex="-1"><a class="header-anchor" href="#编程机制" aria-hidden="true">#</a> 编程机制</h2>
+<p>生成程序的具体过程因计算机环境而异。C是可移植性语言，因此可以在许多环境中使用</p>
+<p>用C语言编写程序时，编写的内容被储存在文本文件中，该文件被称为源代码文件（source code file）。大部分C系统，包括之前提到的，都要求文件名以.c结尾</p>
+<blockquote>
+<p>文件名应该满足特定计算机操作系统的特殊要求</p>
+</blockquote>
+<h3 id="目标代码文件-可执行文件和库" tabindex="-1"><a class="header-anchor" href="#目标代码文件-可执行文件和库" aria-hidden="true">#</a> 目标代码文件，可执行文件和库</h3>
+<p>C编程的基本策略是，用程序把源代码文件转换为可执行文件</p>
+<p>典型的C实现通过编译和链接两个步骤来完成这一过程。编译器把源代码转换成中间代码，链接器把中间代码和其他代码合并，生成可执行文件</p>
+<p>简而言之，目标文件和可执行文件都由机器语言指令组成的。然而，目标文件中只包含编译器为你编写的代码翻译的机器语言代码，可执行文件中还包含你编写的程序中使用的库函数和启动代码的机器代码</p>
+<h3 id="unix系统" tabindex="-1"><a class="header-anchor" href="#unix系统" aria-hidden="true">#</a> UNIX系统</h3>
+<p>UNIX C没有自己的编辑器，但是可以使用通用的UNIX编辑器，如 emacs、jove、vi或X Window System文本编辑器</p>
+<p>以前，UNIX C编译器要调用语言定义的cc命令。但是，它没有跟上标准发展的脚步，已经退出了历史舞台。但是，UNIX系统提供的C编译器通常来自一些其他源，然后以cc命令作为编译器的别名</p>
+<p>如果原始程序有多个源代码文件，则保留目标代码文件</p>
+<h3 id="gnu编译器集合和llvm项目" tabindex="-1"><a class="header-anchor" href="#gnu编译器集合和llvm项目" aria-hidden="true">#</a> GNU编译器集合和LLVM项目</h3>
+<p>GNU项目始于1987年，是一个开发大量免费UNIX软件的集合（GNU的意思是“GNU’s Not UNIX”，即GNU不是UNIX）。GNU编译器集合（也被称为GCC，其中包含GCC C编译器）是该项目的产品之一。GCC在一个指导委员会的带领下，持续不断地开发，它的C编译器紧跟C标准的改动。GCC有各种版本以适应不同的硬件平台和操作系统，包括UNIX、Linux和Windows。用gcc命令便可调用GCC C编译器。许多使用gcc的系统都用cc作为gcc的别名</p>
+<h3 id="linux系统" tabindex="-1"><a class="header-anchor" href="#linux系统" aria-hidden="true">#</a> Linux系统</h3>
+<p>Linux是一个开源、流行、类似于UNIX的操作系统，可在不同平台（包括PC和Mac）上运行</p>
+<p>在Linux中准备C程序与在UNIX系统中几乎一样，不同的是要使用GNU提供的GCC公共域C编译器</p>
+<h3 id="pc的命令行编译器" tabindex="-1"><a class="header-anchor" href="#pc的命令行编译器" aria-hidden="true">#</a> PC的命令行编译器</h3>
+<h3 id="集成开发环境" tabindex="-1"><a class="header-anchor" href="#集成开发环境" aria-hidden="true">#</a> 集成开发环境</h3>
+<p>许多供应商（包括微软、Embarcadero、Digital Mars）都提供Windows下的集成开发环境，或称为IDE</p>
+<hr>
+<h2 id="本章小结" tabindex="-1"><a class="header-anchor" href="#本章小结" aria-hidden="true">#</a> 本章小结</h2>
+<p>C是强大而简洁的编程语言。它之所以流行，在于自身提供大量的实用编程工具，能很好地控制硬件。而且，与大多数其他程序相比，C程序更容易从一个系统移植到另一个系统。</p>
+<p>C是编译型语言。C编译器和链接器是把C语言源代码转换成可执行代码的程序</p>
+</div></template>

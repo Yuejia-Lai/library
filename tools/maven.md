@@ -1,6 +1,12 @@
-# Maven
+---
+title: Maven
+icon: iconfont icon-G-stack-fill
+date: 2022-6-20
+---
 
-> [!tip] 本文介绍了Maven相关操作，方便以后查阅。
+
+
+> 本文介绍了Maven相关操作，方便以后查阅。
 
 
 

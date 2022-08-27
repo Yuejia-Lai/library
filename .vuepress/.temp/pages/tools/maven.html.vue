@@ -1,6 +1,5 @@
-<template><div><h1 id="maven" tabindex="-1"><a class="header-anchor" href="#maven" aria-hidden="true">#</a> Maven</h1>
-<blockquote>
-<p>[!tip] 本文介绍了Maven相关操作，方便以后查阅。</p>
+<template><div><blockquote>
+<p>本文介绍了Maven相关操作，方便以后查阅。</p>
 </blockquote>
 <h2 id="分模块开发" tabindex="-1"><a class="header-anchor" href="#分模块开发" aria-hidden="true">#</a> 分模块开发</h2>
 <ul>
