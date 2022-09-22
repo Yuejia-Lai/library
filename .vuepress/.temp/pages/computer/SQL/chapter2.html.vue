@@ -623,4 +623,94 @@ Empty set(0.00 sec)
 <div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP 'x{2,}';
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>在fruits表中，查询f_name字段值出现字符串“ba”最少1次、最多3次的记录，SQL语句如下：</p>
 <div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP 'ba{1,3}';
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="排序数据" tabindex="-1"><a class="header-anchor" href="#排序数据" aria-hidden="true">#</a> 排序数据</h2>
+<h3 id="排序规则" tabindex="-1"><a class="header-anchor" href="#排序规则" aria-hidden="true">#</a> 排序规则</h3>
+<ul>
+<li>使用 ORDER BY 子句排序
+<ul>
+<li><strong>ASC（ascend）: 升序</strong></li>
+<li><strong>DESC（descend）:降序</strong></li>
+</ul>
+</li>
+<li><strong>ORDER BY 子句在SELECT语句的结尾。</strong></li>
+</ul>
+<h3 id="单列排序" tabindex="-1"><a class="header-anchor" href="#单列排序" aria-hidden="true">#</a> 单列排序</h3>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT   last_name, job_id, department_id, hire_date
+FROM     employees
+ORDER BY hire_date ;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="多列排序" tabindex="-1"><a class="header-anchor" href="#多列排序" aria-hidden="true">#</a> 多列排序</h3>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT last_name, department_id, salary
+FROM   employees
+ORDER BY department_id, salary DESC;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>可以使用不在SELECT列表中的列排序。</li>
+<li>在对多列进行排序的时候，首先排序的第一列必须有相同的列值，才会对第二列进行排序。如果第一列数据中所有值都是唯一的，将不再对第二列进行排序。</li>
+</ul>
+<h2 id="分页" tabindex="-1"><a class="header-anchor" href="#分页" aria-hidden="true">#</a> 分页</h2>
+<h3 id="背景" tabindex="-1"><a class="header-anchor" href="#背景" aria-hidden="true">#</a> 背景</h3>
+<p>背景1：查询返回的记录太多了，查看起来很不方便，怎么样能够实现分页查询呢？</p>
+<p>背景2：表里有 4 条数据，我们只想要显示第 2、3 条数据怎么办呢？</p>
+<h3 id="实现规则" tabindex="-1"><a class="header-anchor" href="#实现规则" aria-hidden="true">#</a> 实现规则</h3>
+<ul>
+<li>
+<p>分页原理</p>
+<p>所谓分页显示，就是将数据库中的结果集，一段一段显示出来需要的条件。</p>
+</li>
+<li>
+<p><strong>MySQL中使用 LIMIT 实现分页</strong></p>
+</li>
+<li>
+<p>格式：</p>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>LIMIT [位置偏移量,] 行数
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>第一个“位置偏移量”参数指示MySQL从哪一行开始显示，是一个可选参数，如果不指定“位置偏移量”，将会从表中的第一条记录开始（第一条记录的位置偏移量是0，第二条记录的位置偏移量是1，以此类推）；第二个参数“行数”指示返回的记录条数。</p>
+</li>
+<li>
+<p>举例</p>
+</li>
+</ul>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>--前10条记录：
+SELECT * FROM 表名 LIMIT 0,10;
+或者
+SELECT * FROM 表名 LIMIT 10;
+
+--第11至20条记录：
+SELECT * FROM 表名 LIMIT 10,10;
+
+--第21至30条记录： 
+SELECT * FROM 表名 LIMIT 20,10;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>MySQL 8.0中可以使用“LIMIT 3 OFFSET 4”，意思是获取从第5条记录开始后面的3条记录，和“LIMIT 4,3;”返回的结果相同。</p>
+</blockquote>
+<ul>
+<li>分页显式公式**：（当前页数-1）<em>每页条数，每页条数</em>*</li>
+</ul>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT * FROM table 
+LIMIT(PageNo - 1)*PageSize,PageSize;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>注意：LIMIT 子句必须放在整个SELECT语句的最后！</strong></li>
+<li>使用 LIMIT 的好处</li>
+</ul>
+<p>约束返回结果的数量可以<code v-pre>减少数据表的网络传输量</code>，也可以<code v-pre>提升查询效率</code>。如果我们知道返回结果只有 1 条，就可以使用<code v-pre>LIMIT 1</code>，告诉 SELECT 语句只需要返回一条记录即可。这样的好处就是 SELECT 不需要扫描完整的表，只需要检索到一条符合条件的记录即可返回。</p>
+<h3 id="拓展" tabindex="-1"><a class="header-anchor" href="#拓展" aria-hidden="true">#</a> 拓展</h3>
+<p>在不同的 DBMS 中使用的关键字可能不同。在 MySQL、PostgreSQL、MariaDB 和 SQLite 中使用 LIMIT 关键字，而且需要放到 SELECT 语句的最后面。</p>
+<ul>
+<li>如果是 SQL Server 和 Access，需要使用 <code v-pre>TOP</code> 关键字，比如：</li>
+</ul>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT TOP 5 name, hp_max FROM heros ORDER BY hp_max DESC
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
+<li>如果是 DB2，使用<code v-pre>FETCH FIRST 5 ROWS ONLY</code>这样的关键字：</li>
+</ul>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT name, hp_max FROM heros ORDER BY hp_max DESC FETCH FIRST 5 ROWS ONLY
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
+<li>如果是 Oracle，你需要基于 <code v-pre>ROWNUM</code> 来统计行数：</li>
+</ul>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT rownum,last_name,salary FROM employees WHERE rownum &lt; 5 ORDER BY salary DESC;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>需要说明的是，这条语句是先取出来前 5 条数据行，然后再按照 hp_max 从高到低的顺序进行排序。但这样产生的结果和上述方法的并不一样。我会在后面讲到子查询，你可以使用</p>
+<div class="language-mysql ext-mysql line-numbers-mode"><pre v-pre class="language-mysql"><code>SELECT rownum, last_name,salary
+FROM (
+    SELECT last_name,salary
+    FROM employees
+    ORDER BY salary DESC)
+WHERE rownum &lt; 10;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>得到与上述方法一致的结果。</p>
+</div></template>

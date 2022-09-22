@@ -127,7 +127,44 @@ module.exports = {
                     link: "chapter2"
                   },
                   {
-
+                    text: "多表查询",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter3"
+                  },
+                  {
+                    text: "单行函数与聚合函数",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter4"
+                  },
+                  {
+                    text: "表操作与数据增删改",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter6"
+                  },
+                  {
+                    text: "数据类型",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter7"
+                  },
+                  {
+                    text: "约束",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter8"
+                  },
+                  {
+                    text: "视图、存储过程与函数",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter9"
+                  },
+                  {
+                    text: "变量、流程控制与游标、触发器",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter10"
+                  },
+                  {
+                    text: "MySQL 8 新特性",
+                    icon: "iconfont icon-database-full",
+                    link: "chapter11"
                   },
                 ]
               },
@@ -162,7 +199,7 @@ module.exports = {
                   {
                     text: "程序的机器级表示",
                     icon: "iconfont icon-document_fill",
-                    link: "chapter2"
+                    link: "chapter3"
                   },
                 ]
               },
@@ -199,20 +236,66 @@ module.exports = {
                   },
                 ]
               },
-              {
-                text: "Linux应该这样学",
-                icon: "iconfont "
-              },
+              
           ]
         },
         {
           text: "Java后端",
           icon: "iconfont icon-java",
-          prefix: "/java",
           collapsable: true,
           children: [
             {
-              
+              text: "MyBatis",
+              icon: "iconfont icon-data",
+              prefix: "/develop/MyBatis/",
+              collapsable: true,
+              children: [
+                {
+                  text: "MyBatis简介",
+                  icon: "iconfont icon-data",
+                  link: "chapter1",
+                },
+                {
+                  text: "搭建MyBatis",
+                  icon: "iconfont icon-data",
+                  link: "chapter2",
+                },
+                {
+                  text: "MyBatis的增删改查",
+                  icon: "iconfont icon-data",
+                  link: "chapter3",
+                },
+                {
+                  text: "MyBatis获取参数值的两种方式",
+                  icon: "iconfont icon-data",
+                  link: "chapter4",
+                },
+                {
+                  text: "MyBatis的各种查询功能",
+                  icon: "iconfont icon-data",
+                  link: "chapter5",
+                },
+                {
+                  text: "自定义映射resultMap",
+                  icon: "iconfont icon-data",
+                  link: "chapter6",
+                },
+                {
+                  text: "动态SQL",
+                  icon: "iconfont icon-data",
+                  link: "chapter7",
+                },
+                {
+                  text: "MyBatis的缓存与逆向工程",
+                  icon: "iconfont icon-data",
+                  link: "chapter8",
+                },
+                {
+                  text: "分页插件",
+                  icon: "iconfont icon-data",
+                  link: "chapter9",
+                },
+              ]
             }
           ]
         },
