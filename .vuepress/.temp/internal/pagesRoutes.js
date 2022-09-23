@@ -47,6 +47,7 @@ export const pagesRoutes = [
   ["v-91b00d44","/develop/Spring/chapter1.html",{"title":"Spring简介","icon":"iconfont icon-bxl-spring-boot"},["/develop/Spring/chapter1","/develop/Spring/chapter1.md"]],
   ["v-8e465c06","/develop/Spring/chapter2.html",{"title":"IOC","icon":"iconfont icon-bxl-spring-boot"},["/develop/Spring/chapter2","/develop/Spring/chapter2.md"]],
   ["v-8adcaac8","/develop/Spring/chapter3.html",{"title":"AOP","icon":"iconfont icon-bxl-spring-boot"},["/develop/Spring/chapter3","/develop/Spring/chapter3.md"]],
+  ["v-8772f98a","/develop/Spring/chapter4.html",{"title":"声明式事务","icon":"iconfont icon-bxl-spring-boot"},["/develop/Spring/chapter4","/develop/Spring/chapter4.md"]],
   ["v-68dec8fb","/java/javacore/chapter1.html",{"title":"Java程序设计概述"},["/java/javacore/chapter1","/java/javacore/chapter1.md"]],
   ["v-6a93a19a","/java/javacore/chapter2.html",{"title":"Java程序设计环境"},["/java/javacore/chapter2","/java/javacore/chapter2.md"]],
   ["v-6c487a39","/java/javacore/chapter3.html",{"title":"Java的基本程序设计结构"},["/java/javacore/chapter3","/java/javacore/chapter3.md"]],

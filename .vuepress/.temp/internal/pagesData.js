@@ -95,6 +95,8 @@ export const pagesData = {
   "v-8e465c06": () => import(/* webpackChunkName: "v-8e465c06" */"D:/file/vuepress/library/docs/.vuepress/.temp/pages/develop/Spring/chapter2.html.js").then(({ data }) => data),
   // path: /develop/Spring/chapter3.html
   "v-8adcaac8": () => import(/* webpackChunkName: "v-8adcaac8" */"D:/file/vuepress/library/docs/.vuepress/.temp/pages/develop/Spring/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/Spring/chapter4.html
+  "v-8772f98a": () => import(/* webpackChunkName: "v-8772f98a" */"D:/file/vuepress/library/docs/.vuepress/.temp/pages/develop/Spring/chapter4.html.js").then(({ data }) => data),
   // path: /java/javacore/chapter1.html
   "v-68dec8fb": () => import(/* webpackChunkName: "v-68dec8fb" */"D:/file/vuepress/library/docs/.vuepress/.temp/pages/java/javacore/chapter1.html.js").then(({ data }) => data),
   // path: /java/javacore/chapter2.html

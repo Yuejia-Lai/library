@@ -296,6 +296,34 @@ module.exports = {
                   link: "chapter9",
                 },
               ]
+            },
+            {
+              text: "Spring",
+              icon: "iconfont icon-bxl-spring-boot",
+              prefix: "/develop/Spring/",
+              collapsable: true,
+              children: [
+                {
+                  text: "Spring简介",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter1",
+                },
+                {
+                  text: "IOC",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter2",
+                },
+                {
+                  text: "AOP",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter3",
+                },
+                {
+                  text: "声明式事务",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter4",
+                },
+              ]
             }
           ]
         },
