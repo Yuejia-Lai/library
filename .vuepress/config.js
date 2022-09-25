@@ -324,6 +324,24 @@ module.exports = {
                   link: "chapter4",
                 },
               ]
+            },
+            {
+              text: "SpringMVC",
+              icon: "iconfont icon-bxl-spring-boot",
+              prefix: "/develop/SpringMVC/",
+              collapsable: true,
+              children: [
+                {
+                  text: "SpringMVC简介与入门案例",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter1",
+                },
+                {
+                  text: "@RequestMapping注解与请求参数获取",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter2",
+                },
+              ]
             }
           ]
         },
