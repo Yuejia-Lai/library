@@ -168,9 +168,6 @@ module.exports = {
                   },
                 ]
               },
-              {
-
-              },
           ]
         },
         {
@@ -236,7 +233,6 @@ module.exports = {
                   },
                 ]
               },
-              
           ]
         },
         {
@@ -341,6 +337,49 @@ module.exports = {
                   icon: "iconfont icon-bxl-spring-boot",
                   link: "chapter2",
                 },
+                {
+                  text: "域对象共享数据与视图",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter3",
+                },
+                {
+                  text: "RESTful",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter4",
+                },
+                {
+                  text: "ajax请求与文件上传和下载",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter5",
+                },
+                {
+                  text: "拦截器与异常处理器",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter6",
+                },
+                {
+                  text: "注解配置SpringMVC与执行流程",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter7",
+                },
+              ]
+            },
+            {
+              text: "SSM",
+              icon: "iconfont icon-manage_fill",
+              prefix: "/develop/SSM/",
+              collapsable: true,
+              children: [
+                  {
+                    text: "SSM整合总结",
+                    icon: "iconfont icon-manage_fill",
+                    link: "chapter1",
+                  },
+                  {
+                    text: "SSM整合",
+                    icon: "iconfont icon-manage_fill",
+                    link: "chapter2",
+                  },
               ]
             }
           ]
