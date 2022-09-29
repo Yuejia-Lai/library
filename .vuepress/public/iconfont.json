@@ -6,6 +6,118 @@
   "description": "知识库tu'biao'su'cai'ku",
   "glyphs": [
     {
+      "icon_id": "1423",
+      "name": "html5",
+      "font_class": "html5",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "826075",
+      "name": "web2",
+      "font_class": "web2",
+      "unicode": "e6fc",
+      "unicode_decimal": 59132
+    },
+    {
+      "icon_id": "1903870",
+      "name": "web__消息管理",
+      "font_class": "web__xiaoxiguanli",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "1903873",
+      "name": "web_微信",
+      "font_class": "web_weixin",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "5618153",
+      "name": "WEB前端",
+      "font_class": "WEBqianduan",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "6231012",
+      "name": "web",
+      "font_class": "web",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "8152839",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "10573069",
+      "name": "sharpicons_add-database",
+      "font_class": "sharpicons_add-database",
+      "unicode": "e816",
+      "unicode_decimal": 59414
+    },
+    {
+      "icon_id": "10573074",
+      "name": "sharpicons_database",
+      "font_class": "sharpicons_database",
+      "unicode": "e81a",
+      "unicode_decimal": 59418
+    },
+    {
+      "icon_id": "10573081",
+      "name": "sharpicons_database-center",
+      "font_class": "sharpicons_database-center",
+      "unicode": "e81b",
+      "unicode_decimal": 59419
+    },
+    {
+      "icon_id": "10573084",
+      "name": "sharpicons_delete-database",
+      "font_class": "sharpicons_delete-database",
+      "unicode": "e81c",
+      "unicode_decimal": 59420
+    },
+    {
+      "icon_id": "10573085",
+      "name": "sharpicons_database-confrim",
+      "font_class": "sharpicons_database-confrim",
+      "unicode": "e81d",
+      "unicode_decimal": 59421
+    },
+    {
+      "icon_id": "10573093",
+      "name": "sharpicons_lock-database",
+      "font_class": "sharpicons_lock-database",
+      "unicode": "e81f",
+      "unicode_decimal": 59423
+    },
+    {
+      "icon_id": "10573101",
+      "name": "sharpicons_remove-database",
+      "font_class": "sharpicons_remove-database",
+      "unicode": "e820",
+      "unicode_decimal": 59424
+    },
+    {
+      "icon_id": "10573117",
+      "name": "sharpicons_safe-database",
+      "font_class": "sharpicons_safe-database",
+      "unicode": "e824",
+      "unicode_decimal": 59428
+    },
+    {
+      "icon_id": "28550237",
+      "name": "组织框架",
+      "font_class": "zuzhikuangjia",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
       "icon_id": "5394495",
       "name": "data",
       "font_class": "data",

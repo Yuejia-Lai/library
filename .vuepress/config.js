@@ -105,6 +105,27 @@ module.exports = {
       ],
       sidebar: [
         {
+          text: "Leetcode刷题记录",
+          icon: "iconfont icon-leetcode1",
+          link: "/leetcode/",
+          collapsable: true,
+          children: [
+            {
+              text: "剑指offer(第二版)",
+              icon: "iconfont icon-leetcode1",
+              collapsable: true,
+              prefix: "/leetcode/offer/",
+              children: [
+                {
+                  text: "剑指offer(第二版)-I",
+                  icon: "iconfont icon-leetcode1",
+                  link: "offer-1"
+                }
+              ]
+            },
+          ]
+        },
+        {
           text: "计算机基础",
           icon: "iconfont icon-computer_fill",
           link: "/computer/",
