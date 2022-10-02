@@ -189,6 +189,19 @@ module.exports = {
                   },
                 ]
               },
+              {
+                text: "Linux",
+                icon: "iconfont icon-linux",
+                collapsable: true,
+                prefix: "/computer/Linux/",
+                children: [
+                  {
+                    text: "Linux介绍",
+                    icon: "iconfont icon-linux",
+                    link: "chapter1"
+                  },
+                ]
+              },
           ]
         },
         {
@@ -401,6 +414,34 @@ module.exports = {
                     icon: "iconfont icon-manage_fill",
                     link: "chapter2",
                   },
+              ]
+            },
+            {
+              text: "MyBatis Plus",
+              icon: "iconfont icon-sharpicons_database-center",
+              prefix: "/develop/MyBatis Plus/",
+              collapsable: true,
+              children: [
+                {
+                  text: "MyBatis-Plus简介与入门案例",
+                  icon: "iconfont icon-sharpicons_database-center",
+                  link: "chapter1",
+                },
+                {
+                  text: "基本CRUD与常用注解",
+                  icon: "iconfont icon-sharpicons_database-center",
+                  link: "chapter2",
+                },
+                {
+                  text: "条件构造器与常用接口和插件",
+                  icon: "iconfont icon-sharpicons_database-center",
+                  link: "chapter3",
+                },
+                {
+                  text: "通用枚举，代码生成器与多数据源配置",
+                  icon: "iconfont icon-sharpicons_database-center",
+                  link: "chapter4",
+                },
               ]
             }
           ]

@@ -404,6 +404,13 @@ export const searchIndex = [
   {
     "title": "",
     "headers": [],
+    "path": "/me/about.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
     "path": "/maps/C++.html",
     "pathLocale": "/",
     "extraFields": []
@@ -437,13 +444,6 @@ export const searchIndex = [
       }
     ],
     "path": "/maps/Java.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/me/about.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4529,8 +4529,183 @@ export const searchIndex = [
   },
   {
     "title": "条件构造器与常用接口和插件",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "wapper介绍",
+        "slug": "wapper介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "QueryWrapper",
+        "slug": "querywrapper",
+        "children": [
+          {
+            "level": 3,
+            "title": "组装查询条件",
+            "slug": "组装查询条件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "组装排序条件",
+            "slug": "组装排序条件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "组装删除条件",
+            "slug": "组装删除条件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "条件的优先级",
+            "slug": "条件的优先级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "组装select子句",
+            "slug": "组装select子句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "实现子查询",
+            "slug": "实现子查询",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "UpdateWrapper",
+        "slug": "updatewrapper",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "condition",
+        "slug": "condition",
+        "children": [
+          {
+            "level": 3,
+            "title": "思路一：",
+            "slug": "思路一",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "思路二：",
+            "slug": "思路二",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "LambdaQueryWrapper",
+        "slug": "lambdaquerywrapper",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "LambdaUpdateWrapper",
+        "slug": "lambdaupdatewrapper",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "分页插件",
+        "slug": "分页插件",
+        "children": [
+          {
+            "level": 3,
+            "title": "添加配置类",
+            "slug": "添加配置类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "测试",
+            "slug": "测试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "xml自定义分页",
+        "slug": "xml自定义分页",
+        "children": [
+          {
+            "level": 3,
+            "title": "UserMapper中定义接口方法",
+            "slug": "usermapper中定义接口方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "UserMapper.xml中编写SQL",
+            "slug": "usermapper-xml中编写sql",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "测试",
+            "slug": "测试-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "乐观锁",
+        "slug": "乐观锁",
+        "children": [
+          {
+            "level": 3,
+            "title": "场景",
+            "slug": "场景",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "乐观锁与悲观锁",
+            "slug": "乐观锁与悲观锁",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "模拟修改冲突",
+            "slug": "模拟修改冲突",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "乐观锁实现流程",
+            "slug": "乐观锁实现流程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Mybatis-Plus实现乐观锁",
+            "slug": "mybatis-plus实现乐观锁",
+            "children": []
+          }
+        ]
+      }
+    ],
     "path": "/develop/MyBatis%20Plus/chapter3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "通用枚举，代码生成器与多数据源配置",
+    "headers": [],
+    "path": "/develop/MyBatis%20Plus/chapter4.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5545,6 +5720,86 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "剑指offer(第二版)-I",
+    "headers": [
+      {
+        "level": 2,
+        "title": "剑指 Offer 03. 数组中重复的数字",
+        "slug": "剑指-offer-03-数组中重复的数字",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 04. 二维数组中的查找",
+        "slug": "剑指-offer-04-二维数组中的查找",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 05. 替换空格",
+        "slug": "剑指-offer-05-替换空格",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 06. 从尾到头打印链表",
+        "slug": "剑指-offer-06-从尾到头打印链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 07. 重建二叉树",
+        "slug": "剑指-offer-07-重建二叉树",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 09. 用两个栈实现队列",
+        "slug": "剑指-offer-09-用两个栈实现队列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 10- I. 斐波那契数列",
+        "slug": "剑指-offer-10-i-斐波那契数列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 10- II. 青蛙跳台阶问题",
+        "slug": "剑指-offer-10-ii-青蛙跳台阶问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 11. 旋转数组的最小数字",
+        "slug": "剑指-offer-11-旋转数组的最小数字",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 12. 矩阵中的路径",
+        "slug": "剑指-offer-12-矩阵中的路径",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 14- I. 剪绳子",
+        "slug": "剑指-offer-14-i-剪绳子",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 14- II. 剪绳子 II",
+        "slug": "剑指-offer-14-ii-剪绳子-ii",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/offer/offer-1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Java程序设计概述",
     "headers": [
       {
@@ -5893,86 +6148,6 @@ export const searchIndex = [
       }
     ],
     "path": "/java/javacore/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "剑指offer(第二版)-I",
-    "headers": [
-      {
-        "level": 2,
-        "title": "剑指 Offer 03. 数组中重复的数字",
-        "slug": "剑指-offer-03-数组中重复的数字",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 04. 二维数组中的查找",
-        "slug": "剑指-offer-04-二维数组中的查找",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 05. 替换空格",
-        "slug": "剑指-offer-05-替换空格",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 06. 从尾到头打印链表",
-        "slug": "剑指-offer-06-从尾到头打印链表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 07. 重建二叉树",
-        "slug": "剑指-offer-07-重建二叉树",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 09. 用两个栈实现队列",
-        "slug": "剑指-offer-09-用两个栈实现队列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 10- I. 斐波那契数列",
-        "slug": "剑指-offer-10-i-斐波那契数列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 10- II. 青蛙跳台阶问题",
-        "slug": "剑指-offer-10-ii-青蛙跳台阶问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 11. 旋转数组的最小数字",
-        "slug": "剑指-offer-11-旋转数组的最小数字",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 12. 矩阵中的路径",
-        "slug": "剑指-offer-12-矩阵中的路径",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 14- I. 剪绳子",
-        "slug": "剑指-offer-14-i-剪绳子",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 14- II. 剪绳子 II",
-        "slug": "剑指-offer-14-ii-剪绳子-ii",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/offer/offer-1.html",
     "pathLocale": "/",
     "extraFields": []
   },
