@@ -120,7 +120,12 @@ module.exports = {
                   text: "剑指offer(第二版)-I",
                   icon: "iconfont icon-leetcode1",
                   link: "offer-1"
-                }
+                },
+                {
+                  text: "剑指offer(第二版)-II",
+                  icon: "iconfont icon-leetcode1",
+                  link: "offer-2"
+                },
               ]
             },
           ]
@@ -441,6 +446,24 @@ module.exports = {
                   text: "通用枚举，代码生成器与多数据源配置",
                   icon: "iconfont icon-sharpicons_database-center",
                   link: "chapter4",
+                },
+              ]
+            },
+            {
+              text: "SpringBoot",
+              icon: "iconfont icon-bxl-spring-boot",
+              prefix: "/develop/SpringBoot/",
+              collapsable: true,
+              children: [
+                {
+                  text: "快速上手SpringBoot",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter1",
+                },
+                {
+                  text: "SpringBoot基础配置",
+                  icon: "iconfont icon-bxl-spring-boot",
+                  link: "chapter2",
                 },
               ]
             }

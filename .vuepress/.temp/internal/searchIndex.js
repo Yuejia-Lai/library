@@ -49,6 +49,32 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "本站使用说明",
+    "headers": [
+      {
+        "level": 2,
+        "title": "善于使用搜索功能和Ctrl+F",
+        "slug": "善于使用搜索功能和ctrl-f",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "发布修改意见",
+        "slug": "发布修改意见",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "合理使用本站",
+        "slug": "合理使用本站",
+        "children": []
+      }
+    ],
+    "path": "/guide/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "SpringBoot",
     "headers": [
       {
@@ -376,39 +402,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "本站使用说明",
-    "headers": [
-      {
-        "level": 2,
-        "title": "善于使用搜索功能和Ctrl+F",
-        "slug": "善于使用搜索功能和ctrl-f",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "发布修改意见",
-        "slug": "发布修改意见",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "合理使用本站",
-        "slug": "合理使用本站",
-        "children": []
-      }
-    ],
-    "path": "/guide/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/me/about.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [],
     "path": "/maps/C++.html",
@@ -444,6 +437,13 @@ export const searchIndex = [
       }
     ],
     "path": "/maps/Java.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/me/about.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1646,9 +1646,133 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Linux介绍",
-    "headers": [],
+    "title": "Linux目录结构",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本介绍",
+        "slug": "基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "具体的目录结构",
+        "slug": "具体的目录结构",
+        "children": []
+      }
+    ],
     "path": "/computer/Linux/chapter1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Vi与Vim",
+    "headers": [
+      {
+        "level": 2,
+        "title": "vi 和 vim 的基本介绍",
+        "slug": "vi-和-vim-的基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "vi 和 vim 常用的三种模式",
+        "slug": "vi-和-vim-常用的三种模式",
+        "children": [
+          {
+            "level": 3,
+            "title": "正常模式",
+            "slug": "正常模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "插入模式",
+            "slug": "插入模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "命令行模式",
+            "slug": "命令行模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "vi 和 vim 基本使用",
+        "slug": "vi-和-vim-基本使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "各种模式的相互切换",
+            "slug": "各种模式的相互切换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "vi 和 vim 快捷键",
+            "slug": "vi-和-vim-快捷键",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/computer/Linux/chapter2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "开机、重启和用户登录注销",
+    "headers": [
+      {
+        "level": 2,
+        "title": "关机&重启命令",
+        "slug": "关机-重启命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注意细节",
+            "slug": "注意细节",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "用户登录和注销",
+        "slug": "用户登录和注销",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用细节",
+            "slug": "使用细节",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/computer/Linux/chapter3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "用户管理",
+    "headers": [],
+    "path": "/computer/Linux/chapter4.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4704,7 +4828,107 @@ export const searchIndex = [
   },
   {
     "title": "通用枚举，代码生成器与多数据源配置",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "通用枚举",
+        "slug": "通用枚举",
+        "children": [
+          {
+            "level": 3,
+            "title": "数据库表添加字段sex",
+            "slug": "数据库表添加字段sex",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建通用枚举类型",
+            "slug": "创建通用枚举类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配置扫描通用枚举",
+            "slug": "配置扫描通用枚举",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "测试",
+            "slug": "测试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "代码生成器",
+        "slug": "代码生成器",
+        "children": [
+          {
+            "level": 3,
+            "title": "引入依赖",
+            "slug": "引入依赖",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "快速生成",
+            "slug": "快速生成",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "多数据源",
+        "slug": "多数据源",
+        "children": [
+          {
+            "level": 3,
+            "title": "创建数据库及表",
+            "slug": "创建数据库及表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引入依赖",
+            "slug": "引入依赖-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配置多数据源",
+            "slug": "配置多数据源",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建用户service",
+            "slug": "创建用户service",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建商品service",
+            "slug": "创建商品service",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "测试",
+            "slug": "测试-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "MyBatisX插件",
+        "slug": "mybatisx插件",
+        "children": []
+      }
+    ],
     "path": "/develop/MyBatis%20Plus/chapter4.html",
     "pathLocale": "/",
     "extraFields": []
@@ -5195,6 +5419,158 @@ export const searchIndex = [
       }
     ],
     "path": "/develop/Spring/chapter4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "快速上手SpringBoot",
+    "headers": [
+      {
+        "level": 2,
+        "title": "SpringBoot入门程序制作（一）",
+        "slug": "springboot入门程序制作-一",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "SpringBoot入门程序制作（二）",
+        "slug": "springboot入门程序制作-二",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "SpringBoot入门程序制作（三）",
+        "slug": "springboot入门程序制作-三",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "SpringBoot入门程序制作（四）",
+        "slug": "springboot入门程序制作-四",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "教你一招：在Idea中隐藏指定文件/文件夹",
+        "slug": "教你一招-在idea中隐藏指定文件-文件夹",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "SpringBoot简介",
+        "slug": "springboot简介",
+        "children": [
+          {
+            "level": 3,
+            "title": "parent",
+            "slug": "parent",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "starter",
+            "slug": "starter",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "starter与parent的区别",
+            "slug": "starter与parent的区别",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引导类",
+            "slug": "引导类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "内嵌tomcat",
+            "slug": "内嵌tomcat",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/develop/SpringBoot/chapter1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot基础配置",
+    "headers": [
+      {
+        "level": 2,
+        "title": "属性配置",
+        "slug": "属性配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置文件分类",
+        "slug": "配置文件分类",
+        "children": [
+          {
+            "level": 3,
+            "title": "配置文件优先级",
+            "slug": "配置文件优先级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "教你一招：自动提示功能消失解决方案",
+            "slug": "教你一招-自动提示功能消失解决方案",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "yaml文件",
+        "slug": "yaml文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "yaml数据读取",
+        "slug": "yaml数据读取",
+        "children": [
+          {
+            "level": 3,
+            "title": "读取单一数据",
+            "slug": "读取单一数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "读取全部数据",
+            "slug": "读取全部数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "读取对象数据",
+            "slug": "读取对象数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "yaml文件中的数据引用",
+            "slug": "yaml文件中的数据引用",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/develop/SpringBoot/chapter2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot基础配置",
+    "headers": [],
+    "path": "/develop/SpringBoot/chapter3.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5720,86 +6096,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "剑指offer(第二版)-I",
-    "headers": [
-      {
-        "level": 2,
-        "title": "剑指 Offer 03. 数组中重复的数字",
-        "slug": "剑指-offer-03-数组中重复的数字",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 04. 二维数组中的查找",
-        "slug": "剑指-offer-04-二维数组中的查找",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 05. 替换空格",
-        "slug": "剑指-offer-05-替换空格",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 06. 从尾到头打印链表",
-        "slug": "剑指-offer-06-从尾到头打印链表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 07. 重建二叉树",
-        "slug": "剑指-offer-07-重建二叉树",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 09. 用两个栈实现队列",
-        "slug": "剑指-offer-09-用两个栈实现队列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 10- I. 斐波那契数列",
-        "slug": "剑指-offer-10-i-斐波那契数列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 10- II. 青蛙跳台阶问题",
-        "slug": "剑指-offer-10-ii-青蛙跳台阶问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 11. 旋转数组的最小数字",
-        "slug": "剑指-offer-11-旋转数组的最小数字",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 12. 矩阵中的路径",
-        "slug": "剑指-offer-12-矩阵中的路径",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 14- I. 剪绳子",
-        "slug": "剑指-offer-14-i-剪绳子",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剑指 Offer 14- II. 剪绳子 II",
-        "slug": "剑指-offer-14-ii-剪绳子-ii",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/offer/offer-1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Java程序设计概述",
     "headers": [
       {
@@ -6148,6 +6444,208 @@ export const searchIndex = [
       }
     ],
     "path": "/java/javacore/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "剑指offer(第二版)-I",
+    "headers": [
+      {
+        "level": 2,
+        "title": "剑指 Offer 03. 数组中重复的数字",
+        "slug": "剑指-offer-03-数组中重复的数字",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 04. 二维数组中的查找",
+        "slug": "剑指-offer-04-二维数组中的查找",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 05. 替换空格",
+        "slug": "剑指-offer-05-替换空格",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 06. 从尾到头打印链表",
+        "slug": "剑指-offer-06-从尾到头打印链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 07. 重建二叉树",
+        "slug": "剑指-offer-07-重建二叉树",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 09. 用两个栈实现队列",
+        "slug": "剑指-offer-09-用两个栈实现队列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 10- I. 斐波那契数列",
+        "slug": "剑指-offer-10-i-斐波那契数列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 10- II. 青蛙跳台阶问题",
+        "slug": "剑指-offer-10-ii-青蛙跳台阶问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 11. 旋转数组的最小数字",
+        "slug": "剑指-offer-11-旋转数组的最小数字",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 12. 矩阵中的路径",
+        "slug": "剑指-offer-12-矩阵中的路径",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 14- I. 剪绳子",
+        "slug": "剑指-offer-14-i-剪绳子",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 14- II. 剪绳子 II",
+        "slug": "剑指-offer-14-ii-剪绳子-ii",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 15. 二进制中1的个数",
+        "slug": "剑指-offer-15-二进制中1的个数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 16. 数值的整数次方",
+        "slug": "剑指-offer-16-数值的整数次方",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 17. 打印从1到最大的n位数",
+        "slug": "剑指-offer-17-打印从1到最大的n位数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 18. 删除链表的节点",
+        "slug": "剑指-offer-18-删除链表的节点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 19. 正则表达式匹配",
+        "slug": "剑指-offer-19-正则表达式匹配",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 20. 表示数值的字符串",
+        "slug": "剑指-offer-20-表示数值的字符串",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/offer/offer-1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "剑指offer(第二版)-I",
+    "headers": [
+      {
+        "level": 2,
+        "title": "剑指 Offer 21. 调整数组顺序使奇数位于偶数前面",
+        "slug": "剑指-offer-21-调整数组顺序使奇数位于偶数前面",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 22. 链表中倒数第k个节点",
+        "slug": "剑指-offer-22-链表中倒数第k个节点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 24. 反转链表",
+        "slug": "剑指-offer-24-反转链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 25. 合并两个排序的链表",
+        "slug": "剑指-offer-25-合并两个排序的链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 26. 树的子结构",
+        "slug": "剑指-offer-26-树的子结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 27. 二叉树的镜像",
+        "slug": "剑指-offer-27-二叉树的镜像",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 28. 对称的二叉树",
+        "slug": "剑指-offer-28-对称的二叉树",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 29. 顺时针打印矩阵",
+        "slug": "剑指-offer-29-顺时针打印矩阵",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 30. 包含min函数的栈",
+        "slug": "剑指-offer-30-包含min函数的栈",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 31. 栈的压入、弹出序列",
+        "slug": "剑指-offer-31-栈的压入、弹出序列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 32 - I. 从上到下打印二叉树",
+        "slug": "剑指-offer-32-i-从上到下打印二叉树",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 32 - II. 从上到下打印二叉树 II",
+        "slug": "剑指-offer-32-ii-从上到下打印二叉树-ii",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 32 - III. 从上到下打印二叉树 III",
+        "slug": "剑指-offer-32-iii-从上到下打印二叉树-iii",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/offer/offer-2.html",
     "pathLocale": "/",
     "extraFields": []
   },

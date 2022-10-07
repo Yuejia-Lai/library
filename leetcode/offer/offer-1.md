@@ -1,6 +1,7 @@
 ---
 title: 剑指offer(第二版)-I
 icon: iconfont icon-leetcode1
+date: 2022-10
 ---
 
 ::: info
@@ -691,5 +692,476 @@ class Solution {
 }
 ```
 
+## [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
+
+**题目描述：**
+
+编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为 [汉明重量](http://en.wikipedia.org/wiki/Hamming_weight)).）。
+
+ 
+
+**提示：**
+
+- 请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。
+- 在 Java 中，编译器使用 [二进制补码](https://baike.baidu.com/item/二进制补码/5295284) 记法来表示有符号整数。因此，在上面的 **示例 3** 中，输入表示有符号整数 `-3`。
+
+ 
+
+**示例 1：**
+
+```
+输入：n = 11 (控制台输入 00000000000000000000000000001011)
+输出：3
+解释：输入的二进制串 00000000000000000000000000001011 中，共有三位为 '1'。
+```
+
+**示例 2：**
+
+```
+输入：n = 128 (控制台输入 00000000000000000000000010000000)
+输出：1
+解释：输入的二进制串 00000000000000000000000010000000 中，共有一位为 '1'。
+```
+
+**示例 3：**
+
+```
+输入：n = 4294967293 (控制台输入 11111111111111111111111111111101，部分语言中 n = -3）
+输出：31
+解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 '1'。
+```
+
 ---
+
+循环即可
+
+**题解：**
+
+```java
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int sum=0;
+        while(n!=0){
+            sum+=n&1;
+            n=n>>>1;
+        }
+        return sum;
+    }
+}
+```
+
+---
+
+## [剑指 Offer 16. 数值的整数次方](https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
+
+**题目描述：**
+
+实现 [pow(*x*, *n*)](https://www.cplusplus.com/reference/valarray/pow/) ，即计算 x 的 n 次幂函数（即，xn）。不得使用库函数，同时不需要考虑大数问题。
+
+ 
+
+**示例 1：**
+
+```
+输入：x = 2.00000, n = 10
+输出：1024.00000
+```
+
+**示例 2：**
+
+```
+输入：x = 2.10000, n = 3
+输出：9.26100
+```
+
+**示例 3：**
+
+```
+输入：x = 2.00000, n = -2
+输出：0.25000
+解释：2-2 = 1/22 = 1/4 = 0.25
+```
+
+---
+
+递归
+
+**题解：**
+
+```java
+class Solution {
+    public double myPow(double x, int n) {
+        if(n==0) return 1;
+        if(n<0&&-1*n<0) return 1/(dp(x,-1*(n+1))*x);
+        if(n<0) return 1/dp(x,-1*n);
+        return dp(x,n);
+    }
+    public double dp(double x,int n){
+        if(n==1) return x;
+        double tmp=dp(x,n/2);
+        if(n%2==1){
+            return tmp*tmp*x;
+        }
+        else return tmp*tmp;
+    }
+}
+```
+
+---
+
+## [剑指 Offer 17. 打印从1到最大的n位数](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
+
+**题目描述：**
+
+输入数字 `n`，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
+
+**示例 1:**
+
+```
+输入: n = 1
+输出: [1,2,3,4,5,6,7,8,9]
+```
+
+---
+
+确定数组容量，依次存放即可
+
+**题解：**
+
+```java
+class Solution {
+    public int[] printNumbers(int n) {
+        int end=1;
+        for(int i=0;i<n;++i){
+            end*=10;
+        }
+        int[] result=new int[end-1];
+        for(int i=1;i<end;++i){
+            result[i-1]=i;
+        }
+        return result;
+    }
+}
+```
+
+---
+
+## [剑指 Offer 18. 删除链表的节点](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
+
+给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
+
+返回删除后的链表的头节点。
+
+**注意：**此题对比原题有改动
+
+**示例 1:**
+
+```
+输入: head = [4,5,1,9], val = 5
+输出: [4,1,9]
+解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -> 1 -> 9.
+```
+
+**示例 2:**
+
+```
+输入: head = [4,5,1,9], val = 1
+输出: [4,5,9]
+解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -> 5 -> 9.
+```
+
+---
+
+前后指针遍历即可
+
+**题解：**
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode deleteNode(ListNode head, int val) {
+        if(head==null) return head;
+        if(head.val==val) return head.next;
+        ListNode p=head;
+        ListNode q=head.next;
+        while(q!=null){
+            if(q.val==val){
+                p.next=q.next;
+                return head;
+            }
+            p=p.next;
+            q=q.next;
+        }
+        return head;
+    }
+}
+```
+
+---
+
+## [剑指 Offer 19. 正则表达式匹配](https://leetcode.cn/problems/zheng-ze-biao-da-shi-pi-pei-lcof/)
+
+请实现一个函数用来匹配包含`'. '`和`'*'`的正则表达式。模式中的字符`'.'`表示任意一个字符，而`'*'`表示它前面的字符可以出现任意次（含0次）。在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串`"aaa"`与模式`"a.a"`和`"ab*ac*a"`匹配，但与`"aa.a"`和`"ab*a"`均不匹配。
+
+**示例 1:**
+
+```
+输入:
+s = "aa"
+p = "a"
+输出: false
+解释: "a" 无法匹配 "aa" 整个字符串。
+```
+
+**示例 2:**
+
+```
+输入:
+s = "aa"
+p = "a*"
+输出: true
+解释: 因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。因此，字符串 "aa" 可被视为 'a' 重复了一次。
+```
+
+**示例 3:**
+
+```
+输入:
+s = "ab"
+p = ".*"
+输出: true
+解释: ".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
+```
+
+**示例 4:**
+
+```
+输入:
+s = "aab"
+p = "c*a*b"
+输出: true
+解释: 因为 '*' 表示零个或多个，这里 'c' 为 0 个, 'a' 被重复一次。因此可以匹配字符串 "aab"。
+```
+
+**示例 5:**
+
+```
+输入:
+s = "mississippi"
+p = "mis*is*p*."
+输出: false
+```
+
+- `s` 可能为空，且只包含从 `a-z` 的小写字母。
+- `p` 可能为空，且只包含从 `a-z` 的小写字母以及字符 `.` 和 `*`，无连续的 `'*'`。
+
+---
+
+动态规划
+
+**题解：**
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        int lens=s.length();
+        int lenp=p.length();
+        boolean[][] dp=new boolean[lens+1][lenp+1];
+        char[] lists=s.toCharArray();
+        char[] listp=p.toCharArray();
+        dp[0][0]=true;
+        for(int j=0;j<lenp;++j){
+            if(listp[j]=='*'&&dp[0][j-1]){
+                dp[0][j+1]=true;
+            }
+        }
+        for(int i=1;i<lens+1;++i){
+            for(int j=1;j<lenp+1;++j){
+                if(listp[j-1]=='*'){
+                    if(listp[j-2]=='.'){
+                        dp[i][j]=dp[i-1][j-1]||dp[i][j-1]||dp[i-1][j]||dp[i][j-2];
+                    }
+                    else if(lists[i-1]==listp[j-2]){
+                        dp[i][j]=dp[i-1][j-1]||dp[i][j-1]||dp[i-1][j]||dp[i][j-2];
+                    }
+                    else{
+                        dp[i][j]=dp[i][j-2];
+                    }
+                }
+                else{
+                    if(listp[j-1]=='.'){
+                        dp[i][j]=dp[i-1][j-1];
+                    }
+                    else if(listp[j-1]==lists[i-1]){
+                        dp[i][j]=dp[i-1][j-1];
+                    }
+                    else{
+                        dp[i][j]=false;
+                    }
+                }
+            }
+        }
+        return dp[lens][lenp];
+    }
+}
+```
+
+---
+
+## [剑指 Offer 20. 表示数值的字符串](https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/)
+
+请实现一个函数用来判断字符串是否表示**数值**（包括整数和小数）。
+
+**数值**（按顺序）可以分成以下几个部分：
+
+1. 若干空格
+2. 一个 **小数** 或者 **整数**
+3. （可选）一个 `'e'` 或 `'E'` ，后面跟着一个 **整数**
+4. 若干空格
+
+**小数**（按顺序）可以分成以下几个部分：
+
+1. （可选）一个符号字符（`'+'` 或 `'-'`）
+2. 下述格式之一：
+   1. 至少一位数字，后面跟着一个点 `'.'`
+   2. 至少一位数字，后面跟着一个点 `'.'` ，后面再跟着至少一位数字
+   3. 一个点 `'.'` ，后面跟着至少一位数字
+
+**整数**（按顺序）可以分成以下几个部分：
+
+1. （可选）一个符号字符（`'+'` 或 `'-'`）
+2. 至少一位数字
+
+部分**数值**列举如下：
+
+- `["+100", "5e2", "-123", "3.1416", "-1E-16", "0123"]`
+
+部分**非数值**列举如下：
+
+- `["12e", "1a3.14", "1.2.3", "+-5", "12e+5.4"]`
+
+ 
+
+**示例 1：**
+
+```
+输入：s = "0"
+输出：true
+```
+
+**示例 2：**
+
+```
+输入：s = "e"
+输出：false
+```
+
+**示例 3：**
+
+```
+输入：s = "."
+输出：false
+```
+
+**示例 4：**
+
+```
+输入：s = "    .1  "
+输出：true
+```
+
+---
+
+垃圾题目，纯恶心人，无脑各种判断即可
+
+**题解：**
+
+```java
+class Solution {
+    public static boolean isNumber(String s) {
+        int len=s.length();
+        char[] list=s.toCharArray();
+        int index=0;
+        for(;index<len;++index){
+            if(list[index]!=' '){
+                if(list[index]=='+'||list[index]=='-'||(list[index]<='9'&&list[index]>='0')||list[index]=='.'){
+                    break;
+                }
+                else return false;
+            }
+        }
+        if(index==len) return false;
+        int index2=index;
+        for(;index2<len;++index2){
+            if(list[index2]=='e'||list[index2]=='E'||list[index2]==' ') break;
+        }
+        boolean pointflag=false;
+        for(int i=index;i<index2;++i){
+            if(list[i]=='+'||list[i]=='-'){
+                 if(i!=index) return false;
+            }
+            else if(list[i]=='.'){
+                if(pointflag) return false;
+                if(i>0&&list[i-1]<='9'&&list[i-1]>='0') pointflag=true;
+                if(i<len-1&&list[i+1]<='9'&&list[i+1]>='0') pointflag=true;
+                if(!pointflag) return false;
+            }
+            else if(list[i]<='9'&&list[i]>='0'){
+                continue;
+            }
+            else{
+                return false;
+            }
+        }
+
+        for(index=index2;index<len;++index){
+            if(list[index]==' ') break;
+        }
+        for(int i=index2;i<index;++i){
+            if(list[i]=='e'||list[i]=='E'){
+                if(i!=index2) return false;
+                if(i<len-1&&(list[i+1]=='+'||list[i+1]=='-')){
+                    if(i<len-2&&list[i+2]>='0'&&list[i+2]<='9') ;
+                    else return false;
+                }
+                else if(i<len-1){
+                    if(list[i+1]>='0'&&list[i+1]<='9') ;
+                    else return false;
+                }
+
+                else if(i==len-1) return false;
+                if(i>0&&list[i-1]=='.'){
+                    if(i>1&&list[i-2]>='0'&&list[i-2]<='9') continue;
+                    return false;
+                }
+                else if(i>0){
+                    if(list[i-1]<='9'&&list[i-1]>='0') continue;
+                    return false;
+                }
+                else if(i==0) return false;
+            }
+            else if(list[i]=='+'||list[i]=='-'){
+                if((list[index2]!='e'&&list[index2]!='E')&&i!=index) return false;
+                else if((list[index2]=='e'||list[index2]=='E')&&i!=index2+1) return false;
+            }
+            else if(list[i]<='9'&&list[i]>='0');
+            else return false;
+        }
+        for(int i=index;i<len;++i){
+            if(list[i]!=' '){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
 
