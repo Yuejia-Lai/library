@@ -404,6 +404,13 @@ export const searchIndex = [
   {
     "title": "",
     "headers": [],
+    "path": "/me/about.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
     "path": "/maps/C++.html",
     "pathLocale": "/",
     "extraFields": []
@@ -437,13 +444,6 @@ export const searchIndex = [
       }
     ],
     "path": "/maps/Java.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/me/about.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1771,8 +1771,640 @@ export const searchIndex = [
   },
   {
     "title": "用户管理",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "添加用户",
+        "slug": "添加用户",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "细节说明",
+            "slug": "细节说明",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "指定/修改密码",
+        "slug": "指定-修改密码",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "删除用户",
+        "slug": "删除用户",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法-2",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "查询用户信息指令",
+        "slug": "查询用户信息指令",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法-3",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "切换用户",
+        "slug": "切换用户",
+        "children": [
+          {
+            "level": 3,
+            "title": "介绍",
+            "slug": "介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法-4",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "查看当前用户/登录用户",
+        "slug": "查看当前用户-登录用户",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法-5",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "用户组",
+        "slug": "用户组",
+        "children": [
+          {
+            "level": 3,
+            "title": "新增组",
+            "slug": "新增组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "删除组",
+            "slug": "删除组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改用户的组",
+            "slug": "修改用户的组",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "用户和组相关文件",
+        "slug": "用户和组相关文件",
+        "children": [
+          {
+            "level": 3,
+            "title": "/etc/passwd 文件",
+            "slug": "etc-passwd-文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "/etc/shadow 文件",
+            "slug": "etc-shadow-文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "/etc/group 文件",
+            "slug": "etc-group-文件",
+            "children": []
+          }
+        ]
+      }
+    ],
     "path": "/computer/Linux/chapter4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "实用指令",
+    "headers": [
+      {
+        "level": 2,
+        "title": "指定运行级别",
+        "slug": "指定运行级别",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CentOS7 后运行级别说明",
+            "slug": "centos7-后运行级别说明",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "找回 root 密码",
+        "slug": "找回-root-密码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "帮助指令",
+        "slug": "帮助指令",
+        "children": [
+          {
+            "level": 3,
+            "title": "man 获得帮助信息",
+            "slug": "man-获得帮助信息",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "help 指令",
+            "slug": "help-指令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "文件目录类",
+        "slug": "文件目录类",
+        "children": [
+          {
+            "level": 3,
+            "title": "pwd 指令",
+            "slug": "pwd-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ls 指令",
+            "slug": "ls-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cd 指令",
+            "slug": "cd-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mkdir 指令",
+            "slug": "mkdir-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "rmdir 指令删除空目录",
+            "slug": "rmdir-指令删除空目录",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "touch 指令",
+            "slug": "touch-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cp 指令",
+            "slug": "cp-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "rm 指令",
+            "slug": "rm-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mv 指令",
+            "slug": "mv-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cat 指令",
+            "slug": "cat-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "more 指令",
+            "slug": "more-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "less 指令",
+            "slug": "less-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "echo 指令",
+            "slug": "echo-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "head 指令",
+            "slug": "head-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "tail 指令",
+            "slug": "tail-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "> 指令 和 >> 指令",
+            "slug": "指令-和-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ln 指令",
+            "slug": "ln-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "history 指令",
+            "slug": "history-指令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "时间日期类",
+        "slug": "时间日期类",
+        "children": [
+          {
+            "level": 3,
+            "title": "date 指令-显示当前日期",
+            "slug": "date-指令-显示当前日期",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "date 指令-设置日期",
+            "slug": "date-指令-设置日期",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "cal 指令",
+            "slug": "cal-指令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "搜索查找类",
+        "slug": "搜索查找类",
+        "children": [
+          {
+            "level": 3,
+            "title": "find 指令",
+            "slug": "find-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "locate 指令",
+            "slug": "locate-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "grep 指令和 管道符号 |",
+            "slug": "grep-指令和-管道符号",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "压缩和解压类",
+        "slug": "压缩和解压类",
+        "children": [
+          {
+            "level": 3,
+            "title": "gzip/gunzip 指令",
+            "slug": "gzip-gunzip-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "zip/unzip 指令",
+            "slug": "zip-unzip-指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "tar 指令",
+            "slug": "tar-指令",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/computer/Linux/chapter5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "组管理和权限管理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Linux 组基本介绍",
+        "slug": "linux-组基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "文件/目录 所有者",
+        "slug": "文件-目录-所有者",
+        "children": [
+          {
+            "level": 3,
+            "title": "查看文件的所有者",
+            "slug": "查看文件的所有者",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改文件所有者",
+            "slug": "修改文件所有者",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "组的创建",
+        "slug": "组的创建",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本指令",
+            "slug": "基本指令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "文件/目录 所在组",
+        "slug": "文件-目录-所在组",
+        "children": [
+          {
+            "level": 3,
+            "title": "查看文件/目录所在组",
+            "slug": "查看文件-目录所在组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改文件/目录所在的组",
+            "slug": "修改文件-目录所在的组",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "其它组",
+        "slug": "其它组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "改变用户所在组",
+        "slug": "改变用户所在组",
+        "children": [
+          {
+            "level": 3,
+            "title": "改变用户所在组",
+            "slug": "改变用户所在组-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "权限的基本介绍",
+        "slug": "权限的基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "rwx 权限详解，难点",
+        "slug": "rwx-权限详解-难点",
+        "children": [
+          {
+            "level": 3,
+            "title": "rwx 作用到文件",
+            "slug": "rwx-作用到文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "rwx 作用到目录",
+            "slug": "rwx-作用到目录",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "修改权限-chmod",
+        "slug": "修改权限-chmod",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本说明：",
+            "slug": "基本说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "第一种方式：+ 、-、= 变更权限",
+            "slug": "第一种方式-、-、-变更权限",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "第二种方式：通过数字变更权限",
+            "slug": "第二种方式-通过数字变更权限",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "修改文件所有者-chown",
+        "slug": "修改文件所有者-chown",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "修改文件/目录所在组-chgrp",
+        "slug": "修改文件-目录所在组-chgrp",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍-1",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/computer/Linux/chapter6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "定时任务调度",
+    "headers": [
+      {
+        "level": 2,
+        "title": "定时任务调度",
+        "slug": "定时任务调度",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "crond 任务调度",
+        "slug": "crond-任务调度",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "概述",
+        "slug": "概述",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本语法",
+            "slug": "基本语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "常用选项",
+            "slug": "常用选项",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "快速入门",
+            "slug": "快速入门",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "crond 相关指令",
+        "slug": "crond-相关指令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "at 定时任务",
+        "slug": "at-定时任务",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本介绍",
+            "slug": "基本介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "at 命令格式",
+            "slug": "at-命令格式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "at 命令选项",
+            "slug": "at-命令选项",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "at 时间定义",
+            "slug": "at-时间定义",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/computer/Linux/chapter7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Linux 磁盘分区、挂载",
+    "headers": [],
+    "path": "/computer/Linux/chapter8.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5568,8 +6200,112 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "SpringBoot基础配置",
-    "headers": [],
+    "title": "基于SpringBoot实现SSMP整合",
+    "headers": [
+      {
+        "level": 2,
+        "title": "整合JUnit",
+        "slug": "整合junit",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "整合MyBatis",
+        "slug": "整合mybatis",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "整合MyBatis-Plus",
+        "slug": "整合mybatis-plus",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "整合Druid",
+        "slug": "整合druid",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "SSMP整合综合案例",
+        "slug": "ssmp整合综合案例",
+        "children": [
+          {
+            "level": 3,
+            "title": "模块创建",
+            "slug": "模块创建",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "实体类开发",
+            "slug": "实体类开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据层开发——基础CRUD",
+            "slug": "数据层开发——基础crud",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据层开发——分页功能制作",
+            "slug": "数据层开发——分页功能制作",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据层开发——条件查询功能制作",
+            "slug": "数据层开发——条件查询功能制作",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "业务层开发",
+            "slug": "业务层开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "业务层快速开发",
+            "slug": "业务层快速开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "表现层开发",
+            "slug": "表现层开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "前后端联通性测试",
+            "slug": "前后端联通性测试",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "页面基础功能开发",
+            "slug": "页面基础功能开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "业务消息一致性处理",
+            "slug": "业务消息一致性处理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "页面功能开发",
+            "slug": "页面功能开发",
+            "children": []
+          }
+        ]
+      }
+    ],
     "path": "/develop/SpringBoot/chapter3.html",
     "pathLocale": "/",
     "extraFields": []
@@ -6564,7 +7300,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "剑指offer(第二版)-I",
+    "title": "剑指offer(第二版)-II",
     "headers": [
       {
         "level": 2,
@@ -6643,9 +7379,89 @@ export const searchIndex = [
         "title": "剑指 Offer 32 - III. 从上到下打印二叉树 III",
         "slug": "剑指-offer-32-iii-从上到下打印二叉树-iii",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 33. 二叉搜索树的后序遍历序列",
+        "slug": "剑指-offer-33-二叉搜索树的后序遍历序列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 34. 二叉树中和为某一值的路径",
+        "slug": "剑指-offer-34-二叉树中和为某一值的路径",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 35. 复杂链表的复制",
+        "slug": "剑指-offer-35-复杂链表的复制",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 36. 二叉搜索树与双向链表",
+        "slug": "剑指-offer-36-二叉搜索树与双向链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 37. 序列化二叉树",
+        "slug": "剑指-offer-37-序列化二叉树",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 38. 字符串的排列",
+        "slug": "剑指-offer-38-字符串的排列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 39. 数组中出现次数超过一半的数字",
+        "slug": "剑指-offer-39-数组中出现次数超过一半的数字",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 40. 最小的k个数",
+        "slug": "剑指-offer-40-最小的k个数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 41. 数据流中的中位数",
+        "slug": "剑指-offer-41-数据流中的中位数",
+        "children": []
       }
     ],
     "path": "/leetcode/offer/offer-2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "剑指offer(第二版)-III",
+    "headers": [
+      {
+        "level": 2,
+        "title": "剑指 Offer 42. 连续子数组的最大和",
+        "slug": "剑指-offer-42-连续子数组的最大和",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 43. 1～n 整数中 1 出现的次数",
+        "slug": "剑指-offer-43-1-n-整数中-1-出现的次数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剑指 Offer 44. 数字序列中某一位的数字",
+        "slug": "剑指-offer-44-数字序列中某一位的数字",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/offer/offer-3.html",
     "pathLocale": "/",
     "extraFields": []
   },
