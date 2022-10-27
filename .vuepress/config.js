@@ -78,10 +78,7 @@ module.exports = {
                 text: "Java后端学习路线",
                 link: "Java",
               },
-              {
-                text: "C++后端学习路线",
-                link: "C++",
-              }
+              
           ],
         },
         {
@@ -91,10 +88,34 @@ module.exports = {
           children: [],
         },
         {
-          text: "小知识",
+          text: "官方/实用文档",
           icon: "iconfont icon-creativefill",
-          prefix: "/tips/",
-          children: [],
+          children: [
+            {
+              text: "Java 8 api_docs",
+              link: "https://docs.oracle.com/javase/8/docs/api/",
+            },
+            {
+              text: "Java 17 api_docs",
+              link: "https://docs.oracle.com/en/java/javase/17/docs/api/index.html",
+            },
+            {
+              text: "Maven Repository",
+              link: "https://mvnrepository.com/",
+            },
+            {
+              text: "Spring系列",
+              link: "https://spring.io/projects",
+            },
+            {
+              text: "Redis",
+              link: "https://redis.io/docs/",
+            },
+            {
+              text: "MDN 网络文档",
+              link: "https://developer.mozilla.org/zh-CN/",
+            },
+          ],
         },
         {
           text: "关于我",

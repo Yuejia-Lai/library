@@ -63,6 +63,9 @@ export const pagesRoutes = [
   ["v-5c5f74f0","/develop/SpringBoot/chapter1.html",{"title":"快速上手SpringBoot","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringBoot/chapter1","/develop/SpringBoot/chapter1.md"]],
   ["v-5e144d8f","/develop/SpringBoot/chapter2.html",{"title":"SpringBoot基础配置","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringBoot/chapter2","/develop/SpringBoot/chapter2.md"]],
   ["v-5fc9262e","/develop/SpringBoot/chapter3.html",{"title":"基于SpringBoot实现SSMP整合","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringBoot/chapter3","/develop/SpringBoot/chapter3.md"]],
+  ["v-7b8c448d","/leetcode/offer/offer-1.html",{"title":"剑指offer(第二版)-I","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-1","/leetcode/offer/offer-1.md"]],
+  ["v-7d411d2c","/leetcode/offer/offer-2.html",{"title":"剑指offer(第二版)-II","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-2","/leetcode/offer/offer-2.md"]],
+  ["v-7ef5f5cb","/leetcode/offer/offer-3.html",{"title":"剑指offer(第二版)-III","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-3","/leetcode/offer/offer-3.md"]],
   ["v-00b24c30","/develop/SpringMVC/chapter1.html",{"title":"SpringMVC简介与入门案例","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringMVC/chapter1","/develop/SpringMVC/chapter1.md"]],
   ["v-015bb287","/develop/SpringMVC/chapter2.html",{"title":"RequestMapping注解与请求参数获取","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringMVC/chapter2","/develop/SpringMVC/chapter2.md"]],
   ["v-03108b26","/develop/SpringMVC/chapter3.html",{"title":"域对象共享数据与视图","icon":"iconfont icon-bxl-spring-boot"},["/develop/SpringMVC/chapter3","/develop/SpringMVC/chapter3.md"]],
@@ -77,8 +80,5 @@ export const pagesRoutes = [
   ["v-6c487a39","/java/javacore/chapter3.html",{"title":"Java的基本程序设计结构"},["/java/javacore/chapter3","/java/javacore/chapter3.md"]],
   ["v-6dfd52d8","/java/javacore/chapter4.html",{"title":"对象和类"},["/java/javacore/chapter4","/java/javacore/chapter4.md"]],
   ["v-8809d1cc","/java/javacore/",{"title":"Java核心技术导读"},["/java/javacore/index.html","/java/javacore/README.md"]],
-  ["v-7b8c448d","/leetcode/offer/offer-1.html",{"title":"剑指offer(第二版)-I","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-1","/leetcode/offer/offer-1.md"]],
-  ["v-7d411d2c","/leetcode/offer/offer-2.html",{"title":"剑指offer(第二版)-II","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-2","/leetcode/offer/offer-2.md"]],
-  ["v-7ef5f5cb","/leetcode/offer/offer-3.html",{"title":"剑指offer(第二版)-III","icon":"iconfont icon-leetcode1"},["/leetcode/offer/offer-3","/leetcode/offer/offer-3.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]
