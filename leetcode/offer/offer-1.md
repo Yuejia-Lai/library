@@ -1,7 +1,7 @@
 ---
 title: 剑指offer(第二版)-I
 icon: iconfont icon-leetcode1
-date: 2022-10
+date: 2022-10-01
 ---
 
 ::: info

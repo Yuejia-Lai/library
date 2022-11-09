@@ -132,7 +132,7 @@
 <span class="token comment">//通过代理模式创建UserMapper接口的代理实现类对象</span>
 <span class="token class-name">UserMapper</span> userMapper <span class="token operator">=</span> sqlSession<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">UserMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//调用UserMapper接口中的方法，就可以根据UserMapper的全类名匹配元素文件，通过调用的方法名匹配</span>
-映射文件中的SQL标签，并执行标签中的SQL语句
+映射文件中的<span class="token constant">SQL</span>标签，并执行标签中的<span class="token constant">SQL</span>语句
 <span class="token keyword">int</span> result <span class="token operator">=</span> userMapper<span class="token punctuation">.</span><span class="token function">insertUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//sqlSession.commit();</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结果："</span><span class="token operator">+</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>

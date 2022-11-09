@@ -41,7 +41,7 @@
 	user<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Enum"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	user<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token comment">//设置性别信息为枚举项，会将@EnumValue注解所标识的属性值存储到数据库</span>
-	user<span class="token punctuation">.</span><span class="token function">setSex</span><span class="token punctuation">(</span><span class="token class-name">SexEnum</span><span class="token punctuation">.</span>MALE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	user<span class="token punctuation">.</span><span class="token function">setSex</span><span class="token punctuation">(</span><span class="token class-name">SexEnum</span><span class="token punctuation">.</span><span class="token constant">MALE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token comment">//INSERT INTO t_user ( username, age, sex ) VALUES ( ?, ?, ? )</span>
 	<span class="token comment">//Parameters: Enum(String), 20(Integer), 1(Integer)</span>
 	userMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>

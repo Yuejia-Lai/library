@@ -946,7 +946,7 @@ object.
 * the factory bean class.
 * <span class="token keyword">@since</span> 5.2
 */</span>
-<span class="token class-name">String</span> OBJECT_TYPE_ATTRIBUTE <span class="token operator">=</span> <span class="token string">"factoryBeanObjectType"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> <span class="token constant">OBJECT_TYPE_ATTRIBUTE</span> <span class="token operator">=</span> <span class="token string">"factoryBeanObjectType"</span><span class="token punctuation">;</span>
 <span class="token doc-comment comment">/**
 * Return an instance (possibly shared or independent) of the object
 * managed by this factory.

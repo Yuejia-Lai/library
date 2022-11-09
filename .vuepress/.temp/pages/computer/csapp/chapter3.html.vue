@@ -43,7 +43,7 @@
 <hr>
 <h2 id="程序编码" tabindex="-1"><a class="header-anchor" href="#程序编码" aria-hidden="true">#</a> 程序编码</h2>
 <p>一个C程序有两个文件：p1.c和p2.c，用Unix命令编译：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>gcc -Og -o p p1.c p2.c
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>gcc <span class="token parameter variable">-Og</span> <span class="token parameter variable">-o</span> p p1.c p2.c
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>-Og为优化等级，gcc为GCC的C编译器</p>
 <h3 id="机器级代码" tabindex="-1"><a class="header-anchor" href="#机器级代码" aria-hidden="true">#</a> 机器级代码</h3>
 <p>对于机器级编程有两种重要抽象：</p>
@@ -70,7 +70,7 @@
     <span class="token operator">*</span>dest <span class="token operator">=</span> t<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在命令行上使用 “-S” 选项，就能看到 C 语言编译器产生的汇编代码：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc -Og -S mstore.c
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc <span class="token parameter variable">-Og</span> <span class="token parameter variable">-S</span> mstore.c
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这会使 GCC 运行编译器，产生一个汇编文件 mstore.s，但是不做其他进一步的工作。（通常情况下，它还会继续调用汇编器产生目标代码文件）。</p>
 <p>汇编代码文件包含各种声明，包括下面几行：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>multstore:
@@ -82,12 +82,12 @@
   ret     
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面代码中每个缩进去的行都对应于一条机器指令。比如，pushq 指令表示应该将寄存器％rbx 的内容压入程序栈中。这段代码中已经除去了所有关于局部变量名或数据类型的信息。</p>
 <p>如果我们使用 “-c” 命令行选项，GCC 会编译并汇编该代码：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc -Og -c mstore.c
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc <span class="token parameter variable">-Og</span> <span class="token parameter variable">-c</span> mstore.c
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这就会产生目标代码文件 mstore.o，它是二进制格式的，所以无法直接查看。1368 字节的文件 mstore.o 中有一段 14 字节的序列，它的十六进制表示为：</p>
 <p>53 48 89 d3 e8 00 00 00 00 48 89 03 5b c3</p>
 <p>这就是上面列出的汇编指令对应的目标代码。从中得到一个重要信息，即机器执行的程序只是一个字节序列，它是对一系列指令的编码。机器对产生这些指令的源代码几乎一无所知</p>
 <p>要査看机器代码文件的内容，有一类称为反汇编器（disassembler）的程序非常有用。这些程序根据机器代码产生一种类似于汇编代码的格式。在 Linux 系统中，带 ‘-d’ 命令行标志的程序 OBJDUMP（表示 “object dump”）可以充当这个角色：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> objdump -d mstore.o
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> objdump <span class="token parameter variable">-d</span> mstore.o
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>结果如下（这里，我们在左边增加了行号，在右边增加了斜体表示的注解）：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code># Disassembly of function sum in binary file mstore.o
 0000000000000000 &lt;multstore>:
@@ -125,9 +125,9 @@ Offset   Bytes                Equivalent assembly language
     <span class="token keyword">return</span> s<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后，我们用如下方法生成可执行文件 prog：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc -Og -o prog main.c mstore.c
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> gcc <span class="token parameter variable">-Og</span> <span class="token parameter variable">-o</span> prog main.c mstore.c
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>文件 prog 变成了 8655 个字节，因为它不仅包含了两个过程的代码，还包含了用来启动和终止程序的代码，以及用来与操作系统交互的代码。我们也可以反汇编 prog 文件：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> objdump -d prog
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>linux<span class="token operator">></span> objdump <span class="token parameter variable">-d</span> prog
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>反汇编器会抽取出各种代码序列，包括下面这段：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code># Disassembly of function sum in binary file prog
 ----------------------------------------------------------

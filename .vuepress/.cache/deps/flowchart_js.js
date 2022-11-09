@@ -12,7 +12,7 @@ import {
   init_define_REVEAL_CONFIG,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-PXE4CLEU.js";
+} from "./chunk-VRI7DPPA.js";
 
 // node_modules/flowchart.js/src/flowchart.shim.js
 var require_flowchart_shim = __commonJS({

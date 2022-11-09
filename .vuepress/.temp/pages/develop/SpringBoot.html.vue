@@ -60,7 +60,7 @@
 </div>
 <h4 id="启动" tabindex="-1"><a class="header-anchor" href="#启动" aria-hidden="true">#</a> 启动</h4>
 <p>进入 <code v-pre>jar</code> 包所在位置，在 <code v-pre>命令提示符</code> 中输入如下命令</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>jar -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>jar <span class="token parameter variable">-jar</span> springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>执行上述命令就可以看到 <code v-pre>SpringBoot</code> 运行的日志信息</p>
 <h2 id="springboot概述" tabindex="-1"><a class="header-anchor" href="#springboot概述" aria-hidden="true">#</a> SpringBoot概述</h2>
 <p><code v-pre>SpringBoot</code> 是由Pivotal团队提供的全新框架，其设计目的是用来<strong>简化</strong>Spring应用的<strong>初始搭建</strong>以及<strong>开发过程</strong></p>
@@ -398,11 +398,11 @@
 <div class="language-properties ext-properties line-numbers-mode"><pre v-pre class="language-properties"><code><span class="token key attr-name">spring.profiles.active</span><span class="token punctuation">=</span><span class="token value attr-value">pro</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4 id="命令行启动参数设置" tabindex="-1"><a class="header-anchor" href="#命令行启动参数设置" aria-hidden="true">#</a> 命令行启动参数设置</h4>
 <p><code v-pre>SpringBoot</code> 提供了在运行 <code v-pre>jar</code> 时设置开启指定的环境的方式，如下</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java –jar xxx.jar –-spring.profiles.active<span class="token operator">=</span>test
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">java</span> –jar xxx.jar –-spring.profiles.active<span class="token operator">=</span>test
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>那么这种方式能不能临时修改端口号呢？也是可以的，可以通过如下方式</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java –jar xxx.jar –-server.port<span class="token operator">=</span><span class="token number">88</span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">java</span> –jar xxx.jar –-server.port<span class="token operator">=</span><span class="token number">88</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然也可以同时设置多个配置，比如即指定启用哪个环境配置，又临时指定端口，如下</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java –jar springboot.jar –-server.port<span class="token operator">=</span><span class="token number">88</span> –-spring.profiles.active<span class="token operator">=</span>test
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">java</span> –jar springboot.jar –-server.port<span class="token operator">=</span><span class="token number">88</span> –-spring.profiles.active<span class="token operator">=</span>test
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>大家进行测试后就会发现命令行设置的端口号优先级高（也就是使用的是命令行设置的端口号），配置的优先级其实 <code v-pre>SpringBoot</code> 官网已经进行了说明，参见 :</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="配置文件分类" tabindex="-1"><a class="header-anchor" href="#配置文件分类" aria-hidden="true">#</a> 配置文件分类</h3>

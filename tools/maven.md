@@ -1,7 +1,7 @@
 ---
 title: Maven
 icon: iconfont icon-G-stack-fill
-date: 2022-6-20
+date: 2022-06-20
 ---
 
 

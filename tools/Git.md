@@ -1,7 +1,7 @@
 ---
 title: Git
 icon: iconfont icon-git
-date: 2022-6-30
+date: 2022-06-30
 ---
 
 

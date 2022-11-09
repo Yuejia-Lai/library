@@ -11,7 +11,7 @@ import {
   init_define_REVEAL_CONFIG,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-PXE4CLEU.js";
+} from "./chunk-VRI7DPPA.js";
 
 // dep:chart_js_auto
 init_define_BACK_TO_TOP_LOCALES();
@@ -7895,7 +7895,7 @@ function needContext(proxy, names2) {
   }
   return false;
 }
-var version = "3.9.0";
+var version = "3.9.1";
 var KNOWN_POSITIONS = ["top", "bottom", "left", "right", "chartArea"];
 function positionIsHorizontal(position, axis) {
   return position === "top" || position === "bottom" || KNOWN_POSITIONS.indexOf(position) === -1 && axis === "x";
@@ -13245,7 +13245,7 @@ export {
  * Released under the MIT License
  */
 /*!
- * Chart.js v3.9.0
+ * Chart.js v3.9.1
  * https://www.chartjs.org
  * (c) 2022 Chart.js Contributors
  * Released under the MIT License

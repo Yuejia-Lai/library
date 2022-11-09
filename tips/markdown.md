@@ -1,7 +1,7 @@
 ---
 title: markdown语法
 icon: iconfont icon-file-markdown-fill
-date: 2022-6-10
+date: 2022-06-10
 ---
 
 ### 标题语法
