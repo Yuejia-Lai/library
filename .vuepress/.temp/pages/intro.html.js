@@ -1,14 +1,1 @@
-export const data = JSON.parse("{\"key\":\"v-184f4da6\",\"path\":\"/intro.html\",\"title\":\"Intro Page\",\"lang\":\"zh-CN\",\"frontmatter\":{\"icon\":\"info\"},\"excerpt\":\"\",\"headers\":[],\"readingTime\":{\"minutes\":0.03,\"words\":10},\"copyright\":\"著作权归Yuejia-Lai所有\\n原文链接：https://laiyuejia.cn/intro.html\",\"filePathRelative\":\"intro.md\"}")
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}
+export const data = JSON.parse("{\"key\":\"v-184f4da6\",\"path\":\"/intro.html\",\"title\":\"Intro Page\",\"lang\":\"zh-CN\",\"frontmatter\":{\"icon\":\"info\"},\"excerpt\":\"\",\"headers\":[],\"git\":{\"createdTime\":1660401558000,\"updatedTime\":1667994378000,\"contributors\":[{\"name\":\"laiyuejia\",\"email\":\"2662656815@qq.com\",\"commits\":2}]},\"readingTime\":{\"minutes\":0.03,\"words\":10},\"copyright\":\"著作权归Yuejia-Lai所有\\n原文链接：https://laiyuejia.cn/intro.html\",\"filePathRelative\":\"intro.md\",\"localizedDate\":\"2022年8月13日\"}")

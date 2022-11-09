@@ -1,14 +1,1 @@
-export const data = JSON.parse("{\"key\":\"v-6a93a19a\",\"path\":\"/java/javacore/chapter2.html\",\"title\":\"Java程序设计环境\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"安装Java开发工具包\",\"slug\":\"安装java开发工具包\",\"children\":[]},{\"level\":2,\"title\":\"JShell\",\"slug\":\"jshell\",\"children\":[]}],\"readingTime\":{\"minutes\":1.16,\"words\":349},\"copyright\":\"著作权归Yuejia-Lai所有\\n原文链接：https://laiyuejia.cn/java/javacore/chapter2.html\",\"filePathRelative\":\"java/javacore/chapter2.md\"}")
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}
+export const data = JSON.parse("{\"key\":\"v-6a93a19a\",\"path\":\"/java/javacore/chapter2.html\",\"title\":\"Java程序设计环境\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"安装Java开发工具包\",\"slug\":\"安装java开发工具包\",\"children\":[]},{\"level\":2,\"title\":\"JShell\",\"slug\":\"jshell\",\"children\":[]}],\"git\":{\"createdTime\":1658226156000,\"updatedTime\":1667994378000,\"contributors\":[{\"name\":\"laiyuejia\",\"email\":\"2662656815@qq.com\",\"commits\":3},{\"name\":\"Yuejia-Lai\",\"email\":\"100849962+Yuejia-Lai@users.noreply.github.com\",\"commits\":1}]},\"readingTime\":{\"minutes\":1.16,\"words\":349},\"copyright\":\"著作权归Yuejia-Lai所有\\n原文链接：https://laiyuejia.cn/java/javacore/chapter2.html\",\"filePathRelative\":\"java/javacore/chapter2.md\",\"localizedDate\":\"2022年7月19日\"}")

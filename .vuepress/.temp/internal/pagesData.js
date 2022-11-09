@@ -31,64 +31,6 @@ export const pagesData = {
   "v-62727154": () => import(/* webpackChunkName: "v-62727154" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/tools/Git.html.js").then(({ data }) => data),
   // path: /tools/maven.html
   "v-63f85fdb": () => import(/* webpackChunkName: "v-63f85fdb" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/tools/maven.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter1.html
-  "v-5909d864": () => import(/* webpackChunkName: "v-5909d864" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter2.html
-  "v-55a02726": () => import(/* webpackChunkName: "v-55a02726" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter3.html
-  "v-523675e8": () => import(/* webpackChunkName: "v-523675e8" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter3.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter4.html
-  "v-4eccc4aa": () => import(/* webpackChunkName: "v-4eccc4aa" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter4.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter5.html
-  "v-4b63136c": () => import(/* webpackChunkName: "v-4b63136c" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter5.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter6.html
-  "v-47f9622e": () => import(/* webpackChunkName: "v-47f9622e" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter6.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter7.html
-  "v-448fb0f0": () => import(/* webpackChunkName: "v-448fb0f0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter7.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter8.html
-  "v-4125ffb2": () => import(/* webpackChunkName: "v-4125ffb2" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter8.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis/chapter9.html
-  "v-3dbc4e74": () => import(/* webpackChunkName: "v-3dbc4e74" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter9.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis%20Plus/chapter1.html
-  "v-7ab5dc4a": () => import(/* webpackChunkName: "v-7ab5dc4a" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis%20Plus/chapter2.html
-  "v-774c2b0c": () => import(/* webpackChunkName: "v-774c2b0c" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis%20Plus/chapter3.html
-  "v-73e279ce": () => import(/* webpackChunkName: "v-73e279ce" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter3.html.js").then(({ data }) => data),
-  // path: /develop/MyBatis%20Plus/chapter4.html
-  "v-7078c890": () => import(/* webpackChunkName: "v-7078c890" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter4.html.js").then(({ data }) => data),
-  // path: /develop/SSM/chapter1.html
-  "v-26d0d5b0": () => import(/* webpackChunkName: "v-26d0d5b0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SSM/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/SSM/chapter2.html
-  "v-23672472": () => import(/* webpackChunkName: "v-23672472" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SSM/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/Spring/chapter1.html
-  "v-91b00d44": () => import(/* webpackChunkName: "v-91b00d44" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/Spring/chapter2.html
-  "v-8e465c06": () => import(/* webpackChunkName: "v-8e465c06" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/Spring/chapter3.html
-  "v-8adcaac8": () => import(/* webpackChunkName: "v-8adcaac8" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter3.html.js").then(({ data }) => data),
-  // path: /develop/Spring/chapter4.html
-  "v-8772f98a": () => import(/* webpackChunkName: "v-8772f98a" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter4.html.js").then(({ data }) => data),
-  // path: /develop/SpringBoot/chapter1.html
-  "v-5c5f74f0": () => import(/* webpackChunkName: "v-5c5f74f0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/SpringBoot/chapter2.html
-  "v-5e144d8f": () => import(/* webpackChunkName: "v-5e144d8f" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/SpringBoot/chapter3.html
-  "v-5fc9262e": () => import(/* webpackChunkName: "v-5fc9262e" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter3.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter1.html
-  "v-00b24c30": () => import(/* webpackChunkName: "v-00b24c30" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter1.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter2.html
-  "v-015bb287": () => import(/* webpackChunkName: "v-015bb287" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter2.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter3.html
-  "v-03108b26": () => import(/* webpackChunkName: "v-03108b26" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter3.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter4.html
-  "v-04c563c5": () => import(/* webpackChunkName: "v-04c563c5" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter4.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter5.html
-  "v-067a3c64": () => import(/* webpackChunkName: "v-067a3c64" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter5.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter6.html
-  "v-082f1503": () => import(/* webpackChunkName: "v-082f1503" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter6.html.js").then(({ data }) => data),
-  // path: /develop/SpringMVC/chapter7.html
-  "v-09e3eda2": () => import(/* webpackChunkName: "v-09e3eda2" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter7.html.js").then(({ data }) => data),
   // path: /computer/C_Primer_plus/
   "v-cec7e540": () => import(/* webpackChunkName: "v-cec7e540" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/computer/C_Primer_plus/index.html.js").then(({ data }) => data),
   // path: /computer/C_Primer_plus/chapter1.html
@@ -151,6 +93,64 @@ export const pagesData = {
   "v-6c487a39": () => import(/* webpackChunkName: "v-6c487a39" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/java/javacore/chapter3.html.js").then(({ data }) => data),
   // path: /java/javacore/chapter4.html
   "v-6dfd52d8": () => import(/* webpackChunkName: "v-6dfd52d8" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/java/javacore/chapter4.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter1.html
+  "v-5909d864": () => import(/* webpackChunkName: "v-5909d864" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter2.html
+  "v-55a02726": () => import(/* webpackChunkName: "v-55a02726" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter3.html
+  "v-523675e8": () => import(/* webpackChunkName: "v-523675e8" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter4.html
+  "v-4eccc4aa": () => import(/* webpackChunkName: "v-4eccc4aa" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter4.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter5.html
+  "v-4b63136c": () => import(/* webpackChunkName: "v-4b63136c" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter5.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter6.html
+  "v-47f9622e": () => import(/* webpackChunkName: "v-47f9622e" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter6.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter7.html
+  "v-448fb0f0": () => import(/* webpackChunkName: "v-448fb0f0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter7.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter8.html
+  "v-4125ffb2": () => import(/* webpackChunkName: "v-4125ffb2" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter8.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis/chapter9.html
+  "v-3dbc4e74": () => import(/* webpackChunkName: "v-3dbc4e74" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis/chapter9.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis%20Plus/chapter1.html
+  "v-7ab5dc4a": () => import(/* webpackChunkName: "v-7ab5dc4a" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis%20Plus/chapter2.html
+  "v-774c2b0c": () => import(/* webpackChunkName: "v-774c2b0c" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis%20Plus/chapter3.html
+  "v-73e279ce": () => import(/* webpackChunkName: "v-73e279ce" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/MyBatis%20Plus/chapter4.html
+  "v-7078c890": () => import(/* webpackChunkName: "v-7078c890" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/MyBatis Plus/chapter4.html.js").then(({ data }) => data),
+  // path: /develop/SSM/chapter1.html
+  "v-26d0d5b0": () => import(/* webpackChunkName: "v-26d0d5b0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SSM/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/SSM/chapter2.html
+  "v-23672472": () => import(/* webpackChunkName: "v-23672472" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SSM/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/Spring/chapter1.html
+  "v-91b00d44": () => import(/* webpackChunkName: "v-91b00d44" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/Spring/chapter2.html
+  "v-8e465c06": () => import(/* webpackChunkName: "v-8e465c06" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/Spring/chapter3.html
+  "v-8adcaac8": () => import(/* webpackChunkName: "v-8adcaac8" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/Spring/chapter4.html
+  "v-8772f98a": () => import(/* webpackChunkName: "v-8772f98a" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/Spring/chapter4.html.js").then(({ data }) => data),
+  // path: /develop/SpringBoot/chapter1.html
+  "v-5c5f74f0": () => import(/* webpackChunkName: "v-5c5f74f0" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/SpringBoot/chapter2.html
+  "v-5e144d8f": () => import(/* webpackChunkName: "v-5e144d8f" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/SpringBoot/chapter3.html
+  "v-5fc9262e": () => import(/* webpackChunkName: "v-5fc9262e" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringBoot/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter1.html
+  "v-00b24c30": () => import(/* webpackChunkName: "v-00b24c30" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter1.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter2.html
+  "v-015bb287": () => import(/* webpackChunkName: "v-015bb287" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter2.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter3.html
+  "v-03108b26": () => import(/* webpackChunkName: "v-03108b26" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter3.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter4.html
+  "v-04c563c5": () => import(/* webpackChunkName: "v-04c563c5" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter4.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter5.html
+  "v-067a3c64": () => import(/* webpackChunkName: "v-067a3c64" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter5.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter6.html
+  "v-082f1503": () => import(/* webpackChunkName: "v-082f1503" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter6.html.js").then(({ data }) => data),
+  // path: /develop/SpringMVC/chapter7.html
+  "v-09e3eda2": () => import(/* webpackChunkName: "v-09e3eda2" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/develop/SpringMVC/chapter7.html.js").then(({ data }) => data),
   // path: /leetcode/offer/offer-1.html
   "v-7b8c448d": () => import(/* webpackChunkName: "v-7b8c448d" */"/Users/laiyuejia/projects/library/docs/.vuepress/.temp/pages/leetcode/offer/offer-1.html.js").then(({ data }) => data),
   // path: /leetcode/offer/offer-2.html
