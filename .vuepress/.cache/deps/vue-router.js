@@ -1,6 +1,6 @@
 import {
   setupDevtoolsPlugin
-} from "./chunk-3IO6YQQR.js";
+} from "./chunk-UVPVYHTY.js";
 import {
   computed,
   defineComponent,
@@ -18,8 +18,8 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-2GHHG46M.js";
-import "./chunk-LTBIPGHC.js";
+} from "./chunk-3CPCBEP4.js";
+import "./chunk-UW5CZA7I.js";
 import {
   init_define_BACK_TO_TOP_LOCALES,
   init_define_CODE_COPY_LOCALES,
@@ -33,7 +33,7 @@ import {
   init_define_REVEAL_CONFIG,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-PXE4CLEU.js";
+} from "./chunk-VRI7DPPA.js";
 
 // dep:vue-router
 init_define_BACK_TO_TOP_LOCALES();
@@ -964,7 +964,9 @@ function createRouterMatcher(routes, globalOptions) {
         }
       }
       originalRecord = originalRecord || matcher;
-      insertMatcher(matcher);
+      if (matcher.record.components && Object.keys(matcher.record.components).length || matcher.record.name || matcher.record.redirect) {
+        insertMatcher(matcher);
+      }
     }
     return originalMatcher ? () => {
       removeRoute(originalMatcher);
@@ -1012,13 +1014,19 @@ function createRouterMatcher(routes, globalOptions) {
         throw createRouterError(1, {
           location: location2
         });
+      if (true) {
+        const invalidParams = Object.keys(location2.params || {}).filter((paramName) => !matcher.keys.find((k) => k.name === paramName));
+        if (invalidParams.length) {
+          warn(`Discarded invalid param(s) "${invalidParams.join('", "')}" when navigating. See https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22 for more details.`);
+        }
+      }
       name = matcher.record.name;
       params = assign(
         paramsFromLocation(
           currentLocation.params,
           matcher.keys.filter((k) => !k.optional).map((k) => k.name)
         ),
-        location2.params
+        location2.params && paramsFromLocation(location2.params, matcher.keys.map((k) => k.name))
       );
       path = matcher.stringify(params);
     } else if ("path" in location2) {
@@ -1119,11 +1127,11 @@ function isSameParam(a, b) {
 function checkSameParams(a, b) {
   for (const key of a.keys) {
     if (!key.optional && !b.keys.find(isSameParam.bind(null, key)))
-      return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" should have the exact same param named "${key.name}"`);
+      return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
   }
   for (const key of b.keys) {
     if (!key.optional && !a.keys.find(isSameParam.bind(null, key)))
-      return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" should have the exact same param named "${key.name}"`);
+      return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
   }
 }
 function checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent) {
@@ -1134,7 +1142,7 @@ function checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent) {
 function checkMissingParamsInAbsolutePath(record, parent) {
   for (const key of parent.keys) {
     if (!record.keys.find(isSameParam.bind(null, key)))
-      return warn(`Absolute path "${record.record.path}" should have the exact same param named "${key.name}" as its parent "${parent.record.path}".`);
+      return warn(`Absolute path "${record.record.path}" must have the exact same param named "${key.name}" as its parent "${parent.record.path}".`);
   }
 }
 function isRecordChildOf(record, parent) {
@@ -1280,7 +1288,7 @@ function onBeforeRouteLeave(leaveGuard) {
     {}
   ).value;
   if (!activeRecord) {
-    warn("No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?");
+    warn("No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside a component child of <router-view>. Maybe you called it inside of App.vue?");
     return;
   }
   registerGuard(activeRecord, "leaveGuards", leaveGuard);
@@ -1295,7 +1303,7 @@ function onBeforeRouteUpdate(updateGuard) {
     {}
   ).value;
   if (!activeRecord) {
-    warn("No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?");
+    warn("No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside a component child of <router-view>. Maybe you called it inside of App.vue?");
     return;
   }
   registerGuard(activeRecord, "updateGuards", updateGuard);
@@ -2191,7 +2199,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     if (shouldRedirect)
       return pushWithRedirect(
         assign(locationAsObject(shouldRedirect), {
-          state: data,
+          state: typeof shouldRedirect === "object" ? assign({}, data, shouldRedirect.state) : data,
           force,
           replace: replace2
         }),
@@ -2220,7 +2228,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
             assign({
               replace: replace2
             }, locationAsObject(failure2.to), {
-              state: data,
+              state: typeof failure2.to === "object" ? assign({}, data, failure2.to.state) : data,
               force
             }),
             redirectedFrom || toLocation
@@ -2530,7 +2538,7 @@ export {
   viewDepthKey
 };
 /*!
-  * vue-router v4.1.3
+  * vue-router v4.1.6
   * (c) 2022 Eduardo San Martin Morote
   * @license MIT
   */

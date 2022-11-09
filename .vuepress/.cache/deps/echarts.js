@@ -12,7 +12,7 @@ import {
   init_define_REVEAL_CONFIG,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-PXE4CLEU.js";
+} from "./chunk-VRI7DPPA.js";
 
 // dep:echarts
 init_define_BACK_TO_TOP_LOCALES();
@@ -1407,6 +1407,19 @@ function preparePointerTransformer(markers, saved, inverse) {
 function isCanvasEl(el) {
   return el.nodeName.toUpperCase() === "CANVAS";
 }
+var replaceReg = /([&<>"'])/g;
+var replaceMap = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;"
+};
+function encodeHTML(source) {
+  return source == null ? "" : (source + "").replace(replaceReg, function(str, c) {
+    return replaceMap[c];
+  });
+}
 
 // node_modules/zrender/lib/core/event.js
 var MOUSE_EVENT_REG = /^(?:mouse|pointer|contextmenu|drag|drop)|click/;
@@ -1590,6 +1603,488 @@ var recognizers = {
   }
 };
 
+// node_modules/zrender/lib/core/BoundingRect.js
+init_define_BACK_TO_TOP_LOCALES();
+init_define_CODE_COPY_LOCALES();
+init_define_CODE_COPY_OPTIONS();
+init_define_CODE_DEMO_OPTIONS();
+init_define_MERMAID_OPTIONS();
+init_define_PHOTO_SWIPE_LOCALES();
+init_define_PHOTO_SWIPE_OPTIONS();
+init_define_READING_TIME_LOCALES();
+init_define_REVEAL_CONFIG();
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/zrender/lib/core/matrix.js
+var matrix_exports = {};
+__export(matrix_exports, {
+  clone: () => clone3,
+  copy: () => copy2,
+  create: () => create2,
+  identity: () => identity,
+  invert: () => invert,
+  mul: () => mul2,
+  rotate: () => rotate,
+  scale: () => scale2,
+  translate: () => translate
+});
+init_define_BACK_TO_TOP_LOCALES();
+init_define_CODE_COPY_LOCALES();
+init_define_CODE_COPY_OPTIONS();
+init_define_CODE_DEMO_OPTIONS();
+init_define_MERMAID_OPTIONS();
+init_define_PHOTO_SWIPE_LOCALES();
+init_define_PHOTO_SWIPE_OPTIONS();
+init_define_READING_TIME_LOCALES();
+init_define_REVEAL_CONFIG();
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+function create2() {
+  return [1, 0, 0, 1, 0, 0];
+}
+function identity(out2) {
+  out2[0] = 1;
+  out2[1] = 0;
+  out2[2] = 0;
+  out2[3] = 1;
+  out2[4] = 0;
+  out2[5] = 0;
+  return out2;
+}
+function copy2(out2, m2) {
+  out2[0] = m2[0];
+  out2[1] = m2[1];
+  out2[2] = m2[2];
+  out2[3] = m2[3];
+  out2[4] = m2[4];
+  out2[5] = m2[5];
+  return out2;
+}
+function mul2(out2, m1, m2) {
+  var out0 = m1[0] * m2[0] + m1[2] * m2[1];
+  var out1 = m1[1] * m2[0] + m1[3] * m2[1];
+  var out22 = m1[0] * m2[2] + m1[2] * m2[3];
+  var out3 = m1[1] * m2[2] + m1[3] * m2[3];
+  var out4 = m1[0] * m2[4] + m1[2] * m2[5] + m1[4];
+  var out5 = m1[1] * m2[4] + m1[3] * m2[5] + m1[5];
+  out2[0] = out0;
+  out2[1] = out1;
+  out2[2] = out22;
+  out2[3] = out3;
+  out2[4] = out4;
+  out2[5] = out5;
+  return out2;
+}
+function translate(out2, a, v) {
+  out2[0] = a[0];
+  out2[1] = a[1];
+  out2[2] = a[2];
+  out2[3] = a[3];
+  out2[4] = a[4] + v[0];
+  out2[5] = a[5] + v[1];
+  return out2;
+}
+function rotate(out2, a, rad) {
+  var aa = a[0];
+  var ac = a[2];
+  var atx = a[4];
+  var ab = a[1];
+  var ad = a[3];
+  var aty = a[5];
+  var st = Math.sin(rad);
+  var ct = Math.cos(rad);
+  out2[0] = aa * ct + ab * st;
+  out2[1] = -aa * st + ab * ct;
+  out2[2] = ac * ct + ad * st;
+  out2[3] = -ac * st + ct * ad;
+  out2[4] = ct * atx + st * aty;
+  out2[5] = ct * aty - st * atx;
+  return out2;
+}
+function scale2(out2, a, v) {
+  var vx = v[0];
+  var vy = v[1];
+  out2[0] = a[0] * vx;
+  out2[1] = a[1] * vy;
+  out2[2] = a[2] * vx;
+  out2[3] = a[3] * vy;
+  out2[4] = a[4] * vx;
+  out2[5] = a[5] * vy;
+  return out2;
+}
+function invert(out2, a) {
+  var aa = a[0];
+  var ac = a[2];
+  var atx = a[4];
+  var ab = a[1];
+  var ad = a[3];
+  var aty = a[5];
+  var det = aa * ad - ab * ac;
+  if (!det) {
+    return null;
+  }
+  det = 1 / det;
+  out2[0] = ad * det;
+  out2[1] = -ab * det;
+  out2[2] = -ac * det;
+  out2[3] = aa * det;
+  out2[4] = (ac * aty - ad * atx) * det;
+  out2[5] = (ab * atx - aa * aty) * det;
+  return out2;
+}
+function clone3(a) {
+  var b = create2();
+  copy2(b, a);
+  return b;
+}
+
+// node_modules/zrender/lib/core/Point.js
+init_define_BACK_TO_TOP_LOCALES();
+init_define_CODE_COPY_LOCALES();
+init_define_CODE_COPY_OPTIONS();
+init_define_CODE_DEMO_OPTIONS();
+init_define_MERMAID_OPTIONS();
+init_define_PHOTO_SWIPE_LOCALES();
+init_define_PHOTO_SWIPE_OPTIONS();
+init_define_READING_TIME_LOCALES();
+init_define_REVEAL_CONFIG();
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+var Point = function() {
+  function Point2(x, y) {
+    this.x = x || 0;
+    this.y = y || 0;
+  }
+  Point2.prototype.copy = function(other) {
+    this.x = other.x;
+    this.y = other.y;
+    return this;
+  };
+  Point2.prototype.clone = function() {
+    return new Point2(this.x, this.y);
+  };
+  Point2.prototype.set = function(x, y) {
+    this.x = x;
+    this.y = y;
+    return this;
+  };
+  Point2.prototype.equal = function(other) {
+    return other.x === this.x && other.y === this.y;
+  };
+  Point2.prototype.add = function(other) {
+    this.x += other.x;
+    this.y += other.y;
+    return this;
+  };
+  Point2.prototype.scale = function(scalar) {
+    this.x *= scalar;
+    this.y *= scalar;
+  };
+  Point2.prototype.scaleAndAdd = function(other, scalar) {
+    this.x += other.x * scalar;
+    this.y += other.y * scalar;
+  };
+  Point2.prototype.sub = function(other) {
+    this.x -= other.x;
+    this.y -= other.y;
+    return this;
+  };
+  Point2.prototype.dot = function(other) {
+    return this.x * other.x + this.y * other.y;
+  };
+  Point2.prototype.len = function() {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  };
+  Point2.prototype.lenSquare = function() {
+    return this.x * this.x + this.y * this.y;
+  };
+  Point2.prototype.normalize = function() {
+    var len2 = this.len();
+    this.x /= len2;
+    this.y /= len2;
+    return this;
+  };
+  Point2.prototype.distance = function(other) {
+    var dx = this.x - other.x;
+    var dy = this.y - other.y;
+    return Math.sqrt(dx * dx + dy * dy);
+  };
+  Point2.prototype.distanceSquare = function(other) {
+    var dx = this.x - other.x;
+    var dy = this.y - other.y;
+    return dx * dx + dy * dy;
+  };
+  Point2.prototype.negate = function() {
+    this.x = -this.x;
+    this.y = -this.y;
+    return this;
+  };
+  Point2.prototype.transform = function(m2) {
+    if (!m2) {
+      return;
+    }
+    var x = this.x;
+    var y = this.y;
+    this.x = m2[0] * x + m2[2] * y + m2[4];
+    this.y = m2[1] * x + m2[3] * y + m2[5];
+    return this;
+  };
+  Point2.prototype.toArray = function(out2) {
+    out2[0] = this.x;
+    out2[1] = this.y;
+    return out2;
+  };
+  Point2.prototype.fromArray = function(input) {
+    this.x = input[0];
+    this.y = input[1];
+  };
+  Point2.set = function(p, x, y) {
+    p.x = x;
+    p.y = y;
+  };
+  Point2.copy = function(p, p2) {
+    p.x = p2.x;
+    p.y = p2.y;
+  };
+  Point2.len = function(p) {
+    return Math.sqrt(p.x * p.x + p.y * p.y);
+  };
+  Point2.lenSquare = function(p) {
+    return p.x * p.x + p.y * p.y;
+  };
+  Point2.dot = function(p0, p1) {
+    return p0.x * p1.x + p0.y * p1.y;
+  };
+  Point2.add = function(out2, p0, p1) {
+    out2.x = p0.x + p1.x;
+    out2.y = p0.y + p1.y;
+  };
+  Point2.sub = function(out2, p0, p1) {
+    out2.x = p0.x - p1.x;
+    out2.y = p0.y - p1.y;
+  };
+  Point2.scale = function(out2, p0, scalar) {
+    out2.x = p0.x * scalar;
+    out2.y = p0.y * scalar;
+  };
+  Point2.scaleAndAdd = function(out2, p0, p1, scalar) {
+    out2.x = p0.x + p1.x * scalar;
+    out2.y = p0.y + p1.y * scalar;
+  };
+  Point2.lerp = function(out2, p0, p1, t) {
+    var onet = 1 - t;
+    out2.x = onet * p0.x + t * p1.x;
+    out2.y = onet * p0.y + t * p1.y;
+  };
+  return Point2;
+}();
+var Point_default = Point;
+
+// node_modules/zrender/lib/core/BoundingRect.js
+var mathMin = Math.min;
+var mathMax = Math.max;
+var lt = new Point_default();
+var rb = new Point_default();
+var lb = new Point_default();
+var rt = new Point_default();
+var minTv = new Point_default();
+var maxTv = new Point_default();
+var BoundingRect = function() {
+  function BoundingRect2(x, y, width, height) {
+    if (width < 0) {
+      x = x + width;
+      width = -width;
+    }
+    if (height < 0) {
+      y = y + height;
+      height = -height;
+    }
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+  BoundingRect2.prototype.union = function(other) {
+    var x = mathMin(other.x, this.x);
+    var y = mathMin(other.y, this.y);
+    if (isFinite(this.x) && isFinite(this.width)) {
+      this.width = mathMax(other.x + other.width, this.x + this.width) - x;
+    } else {
+      this.width = other.width;
+    }
+    if (isFinite(this.y) && isFinite(this.height)) {
+      this.height = mathMax(other.y + other.height, this.y + this.height) - y;
+    } else {
+      this.height = other.height;
+    }
+    this.x = x;
+    this.y = y;
+  };
+  BoundingRect2.prototype.applyTransform = function(m2) {
+    BoundingRect2.applyTransform(this, this, m2);
+  };
+  BoundingRect2.prototype.calculateTransform = function(b) {
+    var a = this;
+    var sx = b.width / a.width;
+    var sy = b.height / a.height;
+    var m2 = create2();
+    translate(m2, m2, [-a.x, -a.y]);
+    scale2(m2, m2, [sx, sy]);
+    translate(m2, m2, [b.x, b.y]);
+    return m2;
+  };
+  BoundingRect2.prototype.intersect = function(b, mtv) {
+    if (!b) {
+      return false;
+    }
+    if (!(b instanceof BoundingRect2)) {
+      b = BoundingRect2.create(b);
+    }
+    var a = this;
+    var ax0 = a.x;
+    var ax1 = a.x + a.width;
+    var ay0 = a.y;
+    var ay1 = a.y + a.height;
+    var bx0 = b.x;
+    var bx1 = b.x + b.width;
+    var by0 = b.y;
+    var by1 = b.y + b.height;
+    var overlap = !(ax1 < bx0 || bx1 < ax0 || ay1 < by0 || by1 < ay0);
+    if (mtv) {
+      var dMin = Infinity;
+      var dMax = 0;
+      var d0 = Math.abs(ax1 - bx0);
+      var d1 = Math.abs(bx1 - ax0);
+      var d2 = Math.abs(ay1 - by0);
+      var d3 = Math.abs(by1 - ay0);
+      var dx = Math.min(d0, d1);
+      var dy = Math.min(d2, d3);
+      if (ax1 < bx0 || bx1 < ax0) {
+        if (dx > dMax) {
+          dMax = dx;
+          if (d0 < d1) {
+            Point_default.set(maxTv, -d0, 0);
+          } else {
+            Point_default.set(maxTv, d1, 0);
+          }
+        }
+      } else {
+        if (dx < dMin) {
+          dMin = dx;
+          if (d0 < d1) {
+            Point_default.set(minTv, d0, 0);
+          } else {
+            Point_default.set(minTv, -d1, 0);
+          }
+        }
+      }
+      if (ay1 < by0 || by1 < ay0) {
+        if (dy > dMax) {
+          dMax = dy;
+          if (d2 < d3) {
+            Point_default.set(maxTv, 0, -d2);
+          } else {
+            Point_default.set(maxTv, 0, d3);
+          }
+        }
+      } else {
+        if (dx < dMin) {
+          dMin = dx;
+          if (d2 < d3) {
+            Point_default.set(minTv, 0, d2);
+          } else {
+            Point_default.set(minTv, 0, -d3);
+          }
+        }
+      }
+    }
+    if (mtv) {
+      Point_default.copy(mtv, overlap ? minTv : maxTv);
+    }
+    return overlap;
+  };
+  BoundingRect2.prototype.contain = function(x, y) {
+    var rect = this;
+    return x >= rect.x && x <= rect.x + rect.width && y >= rect.y && y <= rect.y + rect.height;
+  };
+  BoundingRect2.prototype.clone = function() {
+    return new BoundingRect2(this.x, this.y, this.width, this.height);
+  };
+  BoundingRect2.prototype.copy = function(other) {
+    BoundingRect2.copy(this, other);
+  };
+  BoundingRect2.prototype.plain = function() {
+    return {
+      x: this.x,
+      y: this.y,
+      width: this.width,
+      height: this.height
+    };
+  };
+  BoundingRect2.prototype.isFinite = function() {
+    return isFinite(this.x) && isFinite(this.y) && isFinite(this.width) && isFinite(this.height);
+  };
+  BoundingRect2.prototype.isZero = function() {
+    return this.width === 0 || this.height === 0;
+  };
+  BoundingRect2.create = function(rect) {
+    return new BoundingRect2(rect.x, rect.y, rect.width, rect.height);
+  };
+  BoundingRect2.copy = function(target, source) {
+    target.x = source.x;
+    target.y = source.y;
+    target.width = source.width;
+    target.height = source.height;
+  };
+  BoundingRect2.applyTransform = function(target, source, m2) {
+    if (!m2) {
+      if (target !== source) {
+        BoundingRect2.copy(target, source);
+      }
+      return;
+    }
+    if (m2[1] < 1e-5 && m2[1] > -1e-5 && m2[2] < 1e-5 && m2[2] > -1e-5) {
+      var sx = m2[0];
+      var sy = m2[3];
+      var tx = m2[4];
+      var ty = m2[5];
+      target.x = source.x * sx + tx;
+      target.y = source.y * sy + ty;
+      target.width = source.width * sx;
+      target.height = source.height * sy;
+      if (target.width < 0) {
+        target.x += target.width;
+        target.width = -target.width;
+      }
+      if (target.height < 0) {
+        target.y += target.height;
+        target.height = -target.height;
+      }
+      return;
+    }
+    lt.x = lb.x = source.x;
+    lt.y = rt.y = source.y;
+    rb.x = rt.x = source.x + source.width;
+    rb.y = lb.y = source.y + source.height;
+    lt.transform(m2);
+    rt.transform(m2);
+    rb.transform(m2);
+    lb.transform(m2);
+    target.x = mathMin(lt.x, rb.x, lb.x, rt.x);
+    target.y = mathMin(lt.y, rb.y, lb.y, rt.y);
+    var maxX = mathMax(lt.x, rb.x, lb.x, rt.x);
+    var maxY = mathMax(lt.y, rb.y, lb.y, rt.y);
+    target.width = maxX - target.x;
+    target.height = maxY - target.y;
+  };
+  return BoundingRect2;
+}();
+var BoundingRect_default = BoundingRect;
+
 // node_modules/zrender/lib/Handler.js
 var SILENT = "silent";
 function makeEventPacket(eveType, targetInfo, event) {
@@ -1644,14 +2139,16 @@ var handlerNames = [
   "mousemove",
   "contextmenu"
 ];
+var tmpRect = new BoundingRect_default(0, 0, 0, 0);
 var Handler = function(_super) {
   __extends(Handler2, _super);
-  function Handler2(storage2, painter, proxy, painterRoot) {
+  function Handler2(storage2, painter, proxy, painterRoot, pointerSize) {
     var _this = _super.call(this) || this;
     _this._hovered = new HoveredResult(0, 0);
     _this.storage = storage2;
     _this.painter = painter;
     _this.painterRoot = painterRoot;
+    _this._pointerSize = pointerSize;
     proxy = proxy || new EmptyProxy();
     _this.proxy = null;
     _this.setHandlerProxy(proxy);
@@ -1751,13 +2248,37 @@ var Handler = function(_super) {
   Handler2.prototype.findHover = function(x, y, exclude) {
     var list = this.storage.getDisplayList();
     var out2 = new HoveredResult(x, y);
-    for (var i = list.length - 1; i >= 0; i--) {
-      var hoverCheckResult = void 0;
-      if (list[i] !== exclude && !list[i].ignore && (hoverCheckResult = isHover(list[i], x, y))) {
-        !out2.topTarget && (out2.topTarget = list[i]);
-        if (hoverCheckResult !== SILENT) {
-          out2.target = list[i];
-          break;
+    setHoverTarget(list, out2, x, y, exclude);
+    if (this._pointerSize && !out2.target) {
+      var candidates = [];
+      var pointerSize = this._pointerSize;
+      var targetSizeHalf = pointerSize / 2;
+      var pointerRect = new BoundingRect_default(x - targetSizeHalf, y - targetSizeHalf, pointerSize, pointerSize);
+      for (var i = list.length - 1; i >= 0; i--) {
+        var el = list[i];
+        if (el !== exclude && !el.ignore && !el.ignoreCoarsePointer && (!el.parent || !el.parent.ignoreCoarsePointer)) {
+          tmpRect.copy(el.getBoundingRect());
+          if (el.transform) {
+            tmpRect.applyTransform(el.transform);
+          }
+          if (tmpRect.intersect(pointerRect)) {
+            candidates.push(el);
+          }
+        }
+      }
+      if (candidates.length) {
+        var rStep = 4;
+        var thetaStep = Math.PI / 12;
+        var PI210 = Math.PI * 2;
+        for (var r = 0; r < targetSizeHalf; r += rStep) {
+          for (var theta = 0; theta < PI210; theta += thetaStep) {
+            var x1 = x + r * Math.cos(theta);
+            var y1 = y + r * Math.sin(theta);
+            setHoverTarget(candidates, out2, x1, y1, exclude);
+            if (out2.target) {
+              return out2;
+            }
+          }
         }
       }
     }
@@ -1831,6 +2352,19 @@ function isHover(displayable, x, y) {
     return isSilent ? SILENT : true;
   }
   return false;
+}
+function setHoverTarget(list, out2, x, y, exclude) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    var el = list[i];
+    var hoverCheckResult = void 0;
+    if (el !== exclude && !el.ignore && (hoverCheckResult = isHover(el, x, y))) {
+      !out2.topTarget && (out2.topTarget = el);
+      if (hoverCheckResult !== SILENT) {
+        out2.target = el;
+        break;
+      }
+    }
+  }
 }
 function isOutsideBoundary(handlerInstance, x, y) {
   var painter = handlerInstance.painter;
@@ -3664,13 +4198,14 @@ function parse(colorStr, rgbaArr) {
         }
         alpha = parseCssFloat(params.pop());
       case "rgb":
-        if (params.length !== 3) {
+        if (params.length >= 3) {
+          setRgba(rgbaArr, parseCssInt(params[0]), parseCssInt(params[1]), parseCssInt(params[2]), params.length === 3 ? alpha : parseCssFloat(params[3]));
+          putToCache(colorStr, rgbaArr);
+          return rgbaArr;
+        } else {
           setRgba(rgbaArr, 0, 0, 0, 1);
           return;
         }
-        setRgba(rgbaArr, parseCssInt(params[0]), parseCssInt(params[1]), parseCssInt(params[2]), alpha);
-        putToCache(colorStr, rgbaArr);
-        return rgbaArr;
       case "hsla":
         if (params.length !== 4) {
           setRgba(rgbaArr, 0, 0, 0, 1);
@@ -5204,132 +5739,6 @@ init_define_REVEAL_CONFIG();
 init_define_EXTERNAL_LINK_ICON_LOCALES();
 init_define_SEARCH_HOT_KEYS();
 init_define_SEARCH_LOCALES();
-
-// node_modules/zrender/lib/core/matrix.js
-var matrix_exports = {};
-__export(matrix_exports, {
-  clone: () => clone3,
-  copy: () => copy2,
-  create: () => create2,
-  identity: () => identity,
-  invert: () => invert,
-  mul: () => mul2,
-  rotate: () => rotate,
-  scale: () => scale2,
-  translate: () => translate
-});
-init_define_BACK_TO_TOP_LOCALES();
-init_define_CODE_COPY_LOCALES();
-init_define_CODE_COPY_OPTIONS();
-init_define_CODE_DEMO_OPTIONS();
-init_define_MERMAID_OPTIONS();
-init_define_PHOTO_SWIPE_LOCALES();
-init_define_PHOTO_SWIPE_OPTIONS();
-init_define_READING_TIME_LOCALES();
-init_define_REVEAL_CONFIG();
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_SEARCH_HOT_KEYS();
-init_define_SEARCH_LOCALES();
-function create2() {
-  return [1, 0, 0, 1, 0, 0];
-}
-function identity(out2) {
-  out2[0] = 1;
-  out2[1] = 0;
-  out2[2] = 0;
-  out2[3] = 1;
-  out2[4] = 0;
-  out2[5] = 0;
-  return out2;
-}
-function copy2(out2, m2) {
-  out2[0] = m2[0];
-  out2[1] = m2[1];
-  out2[2] = m2[2];
-  out2[3] = m2[3];
-  out2[4] = m2[4];
-  out2[5] = m2[5];
-  return out2;
-}
-function mul2(out2, m1, m2) {
-  var out0 = m1[0] * m2[0] + m1[2] * m2[1];
-  var out1 = m1[1] * m2[0] + m1[3] * m2[1];
-  var out22 = m1[0] * m2[2] + m1[2] * m2[3];
-  var out3 = m1[1] * m2[2] + m1[3] * m2[3];
-  var out4 = m1[0] * m2[4] + m1[2] * m2[5] + m1[4];
-  var out5 = m1[1] * m2[4] + m1[3] * m2[5] + m1[5];
-  out2[0] = out0;
-  out2[1] = out1;
-  out2[2] = out22;
-  out2[3] = out3;
-  out2[4] = out4;
-  out2[5] = out5;
-  return out2;
-}
-function translate(out2, a, v) {
-  out2[0] = a[0];
-  out2[1] = a[1];
-  out2[2] = a[2];
-  out2[3] = a[3];
-  out2[4] = a[4] + v[0];
-  out2[5] = a[5] + v[1];
-  return out2;
-}
-function rotate(out2, a, rad) {
-  var aa = a[0];
-  var ac = a[2];
-  var atx = a[4];
-  var ab = a[1];
-  var ad = a[3];
-  var aty = a[5];
-  var st = Math.sin(rad);
-  var ct = Math.cos(rad);
-  out2[0] = aa * ct + ab * st;
-  out2[1] = -aa * st + ab * ct;
-  out2[2] = ac * ct + ad * st;
-  out2[3] = -ac * st + ct * ad;
-  out2[4] = ct * atx + st * aty;
-  out2[5] = ct * aty - st * atx;
-  return out2;
-}
-function scale2(out2, a, v) {
-  var vx = v[0];
-  var vy = v[1];
-  out2[0] = a[0] * vx;
-  out2[1] = a[1] * vy;
-  out2[2] = a[2] * vx;
-  out2[3] = a[3] * vy;
-  out2[4] = a[4] * vx;
-  out2[5] = a[5] * vy;
-  return out2;
-}
-function invert(out2, a) {
-  var aa = a[0];
-  var ac = a[2];
-  var atx = a[4];
-  var ab = a[1];
-  var ad = a[3];
-  var aty = a[5];
-  var det = aa * ad - ab * ac;
-  if (!det) {
-    return null;
-  }
-  det = 1 / det;
-  out2[0] = ad * det;
-  out2[1] = -ab * det;
-  out2[2] = -ac * det;
-  out2[3] = aa * det;
-  out2[4] = (ac * aty - ad * atx) * det;
-  out2[5] = (ab * atx - aa * aty) * det;
-  return out2;
-}
-function clone3(a) {
-  var b = create2();
-  copy2(b, a);
-  return b;
-}
-
-// node_modules/zrender/lib/core/Transformable.js
 var mIdentity = identity;
 var EPSILON3 = 5e-5;
 function isNotAroundZero2(val) {
@@ -5556,364 +5965,6 @@ function copyTransform(target, source) {
   }
 }
 var Transformable_default = Transformable;
-
-// node_modules/zrender/lib/core/BoundingRect.js
-init_define_BACK_TO_TOP_LOCALES();
-init_define_CODE_COPY_LOCALES();
-init_define_CODE_COPY_OPTIONS();
-init_define_CODE_DEMO_OPTIONS();
-init_define_MERMAID_OPTIONS();
-init_define_PHOTO_SWIPE_LOCALES();
-init_define_PHOTO_SWIPE_OPTIONS();
-init_define_READING_TIME_LOCALES();
-init_define_REVEAL_CONFIG();
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_SEARCH_HOT_KEYS();
-init_define_SEARCH_LOCALES();
-
-// node_modules/zrender/lib/core/Point.js
-init_define_BACK_TO_TOP_LOCALES();
-init_define_CODE_COPY_LOCALES();
-init_define_CODE_COPY_OPTIONS();
-init_define_CODE_DEMO_OPTIONS();
-init_define_MERMAID_OPTIONS();
-init_define_PHOTO_SWIPE_LOCALES();
-init_define_PHOTO_SWIPE_OPTIONS();
-init_define_READING_TIME_LOCALES();
-init_define_REVEAL_CONFIG();
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_SEARCH_HOT_KEYS();
-init_define_SEARCH_LOCALES();
-var Point = function() {
-  function Point2(x, y) {
-    this.x = x || 0;
-    this.y = y || 0;
-  }
-  Point2.prototype.copy = function(other) {
-    this.x = other.x;
-    this.y = other.y;
-    return this;
-  };
-  Point2.prototype.clone = function() {
-    return new Point2(this.x, this.y);
-  };
-  Point2.prototype.set = function(x, y) {
-    this.x = x;
-    this.y = y;
-    return this;
-  };
-  Point2.prototype.equal = function(other) {
-    return other.x === this.x && other.y === this.y;
-  };
-  Point2.prototype.add = function(other) {
-    this.x += other.x;
-    this.y += other.y;
-    return this;
-  };
-  Point2.prototype.scale = function(scalar) {
-    this.x *= scalar;
-    this.y *= scalar;
-  };
-  Point2.prototype.scaleAndAdd = function(other, scalar) {
-    this.x += other.x * scalar;
-    this.y += other.y * scalar;
-  };
-  Point2.prototype.sub = function(other) {
-    this.x -= other.x;
-    this.y -= other.y;
-    return this;
-  };
-  Point2.prototype.dot = function(other) {
-    return this.x * other.x + this.y * other.y;
-  };
-  Point2.prototype.len = function() {
-    return Math.sqrt(this.x * this.x + this.y * this.y);
-  };
-  Point2.prototype.lenSquare = function() {
-    return this.x * this.x + this.y * this.y;
-  };
-  Point2.prototype.normalize = function() {
-    var len2 = this.len();
-    this.x /= len2;
-    this.y /= len2;
-    return this;
-  };
-  Point2.prototype.distance = function(other) {
-    var dx = this.x - other.x;
-    var dy = this.y - other.y;
-    return Math.sqrt(dx * dx + dy * dy);
-  };
-  Point2.prototype.distanceSquare = function(other) {
-    var dx = this.x - other.x;
-    var dy = this.y - other.y;
-    return dx * dx + dy * dy;
-  };
-  Point2.prototype.negate = function() {
-    this.x = -this.x;
-    this.y = -this.y;
-    return this;
-  };
-  Point2.prototype.transform = function(m2) {
-    if (!m2) {
-      return;
-    }
-    var x = this.x;
-    var y = this.y;
-    this.x = m2[0] * x + m2[2] * y + m2[4];
-    this.y = m2[1] * x + m2[3] * y + m2[5];
-    return this;
-  };
-  Point2.prototype.toArray = function(out2) {
-    out2[0] = this.x;
-    out2[1] = this.y;
-    return out2;
-  };
-  Point2.prototype.fromArray = function(input) {
-    this.x = input[0];
-    this.y = input[1];
-  };
-  Point2.set = function(p, x, y) {
-    p.x = x;
-    p.y = y;
-  };
-  Point2.copy = function(p, p2) {
-    p.x = p2.x;
-    p.y = p2.y;
-  };
-  Point2.len = function(p) {
-    return Math.sqrt(p.x * p.x + p.y * p.y);
-  };
-  Point2.lenSquare = function(p) {
-    return p.x * p.x + p.y * p.y;
-  };
-  Point2.dot = function(p0, p1) {
-    return p0.x * p1.x + p0.y * p1.y;
-  };
-  Point2.add = function(out2, p0, p1) {
-    out2.x = p0.x + p1.x;
-    out2.y = p0.y + p1.y;
-  };
-  Point2.sub = function(out2, p0, p1) {
-    out2.x = p0.x - p1.x;
-    out2.y = p0.y - p1.y;
-  };
-  Point2.scale = function(out2, p0, scalar) {
-    out2.x = p0.x * scalar;
-    out2.y = p0.y * scalar;
-  };
-  Point2.scaleAndAdd = function(out2, p0, p1, scalar) {
-    out2.x = p0.x + p1.x * scalar;
-    out2.y = p0.y + p1.y * scalar;
-  };
-  Point2.lerp = function(out2, p0, p1, t) {
-    var onet = 1 - t;
-    out2.x = onet * p0.x + t * p1.x;
-    out2.y = onet * p0.y + t * p1.y;
-  };
-  return Point2;
-}();
-var Point_default = Point;
-
-// node_modules/zrender/lib/core/BoundingRect.js
-var mathMin = Math.min;
-var mathMax = Math.max;
-var lt = new Point_default();
-var rb = new Point_default();
-var lb = new Point_default();
-var rt = new Point_default();
-var minTv = new Point_default();
-var maxTv = new Point_default();
-var BoundingRect = function() {
-  function BoundingRect2(x, y, width, height) {
-    if (width < 0) {
-      x = x + width;
-      width = -width;
-    }
-    if (height < 0) {
-      y = y + height;
-      height = -height;
-    }
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-  }
-  BoundingRect2.prototype.union = function(other) {
-    var x = mathMin(other.x, this.x);
-    var y = mathMin(other.y, this.y);
-    if (isFinite(this.x) && isFinite(this.width)) {
-      this.width = mathMax(other.x + other.width, this.x + this.width) - x;
-    } else {
-      this.width = other.width;
-    }
-    if (isFinite(this.y) && isFinite(this.height)) {
-      this.height = mathMax(other.y + other.height, this.y + this.height) - y;
-    } else {
-      this.height = other.height;
-    }
-    this.x = x;
-    this.y = y;
-  };
-  BoundingRect2.prototype.applyTransform = function(m2) {
-    BoundingRect2.applyTransform(this, this, m2);
-  };
-  BoundingRect2.prototype.calculateTransform = function(b) {
-    var a = this;
-    var sx = b.width / a.width;
-    var sy = b.height / a.height;
-    var m2 = create2();
-    translate(m2, m2, [-a.x, -a.y]);
-    scale2(m2, m2, [sx, sy]);
-    translate(m2, m2, [b.x, b.y]);
-    return m2;
-  };
-  BoundingRect2.prototype.intersect = function(b, mtv) {
-    if (!b) {
-      return false;
-    }
-    if (!(b instanceof BoundingRect2)) {
-      b = BoundingRect2.create(b);
-    }
-    var a = this;
-    var ax0 = a.x;
-    var ax1 = a.x + a.width;
-    var ay0 = a.y;
-    var ay1 = a.y + a.height;
-    var bx0 = b.x;
-    var bx1 = b.x + b.width;
-    var by0 = b.y;
-    var by1 = b.y + b.height;
-    var overlap = !(ax1 < bx0 || bx1 < ax0 || ay1 < by0 || by1 < ay0);
-    if (mtv) {
-      var dMin = Infinity;
-      var dMax = 0;
-      var d0 = Math.abs(ax1 - bx0);
-      var d1 = Math.abs(bx1 - ax0);
-      var d2 = Math.abs(ay1 - by0);
-      var d3 = Math.abs(by1 - ay0);
-      var dx = Math.min(d0, d1);
-      var dy = Math.min(d2, d3);
-      if (ax1 < bx0 || bx1 < ax0) {
-        if (dx > dMax) {
-          dMax = dx;
-          if (d0 < d1) {
-            Point_default.set(maxTv, -d0, 0);
-          } else {
-            Point_default.set(maxTv, d1, 0);
-          }
-        }
-      } else {
-        if (dx < dMin) {
-          dMin = dx;
-          if (d0 < d1) {
-            Point_default.set(minTv, d0, 0);
-          } else {
-            Point_default.set(minTv, -d1, 0);
-          }
-        }
-      }
-      if (ay1 < by0 || by1 < ay0) {
-        if (dy > dMax) {
-          dMax = dy;
-          if (d2 < d3) {
-            Point_default.set(maxTv, 0, -d2);
-          } else {
-            Point_default.set(maxTv, 0, d3);
-          }
-        }
-      } else {
-        if (dx < dMin) {
-          dMin = dx;
-          if (d2 < d3) {
-            Point_default.set(minTv, 0, d2);
-          } else {
-            Point_default.set(minTv, 0, -d3);
-          }
-        }
-      }
-    }
-    if (mtv) {
-      Point_default.copy(mtv, overlap ? minTv : maxTv);
-    }
-    return overlap;
-  };
-  BoundingRect2.prototype.contain = function(x, y) {
-    var rect = this;
-    return x >= rect.x && x <= rect.x + rect.width && y >= rect.y && y <= rect.y + rect.height;
-  };
-  BoundingRect2.prototype.clone = function() {
-    return new BoundingRect2(this.x, this.y, this.width, this.height);
-  };
-  BoundingRect2.prototype.copy = function(other) {
-    BoundingRect2.copy(this, other);
-  };
-  BoundingRect2.prototype.plain = function() {
-    return {
-      x: this.x,
-      y: this.y,
-      width: this.width,
-      height: this.height
-    };
-  };
-  BoundingRect2.prototype.isFinite = function() {
-    return isFinite(this.x) && isFinite(this.y) && isFinite(this.width) && isFinite(this.height);
-  };
-  BoundingRect2.prototype.isZero = function() {
-    return this.width === 0 || this.height === 0;
-  };
-  BoundingRect2.create = function(rect) {
-    return new BoundingRect2(rect.x, rect.y, rect.width, rect.height);
-  };
-  BoundingRect2.copy = function(target, source) {
-    target.x = source.x;
-    target.y = source.y;
-    target.width = source.width;
-    target.height = source.height;
-  };
-  BoundingRect2.applyTransform = function(target, source, m2) {
-    if (!m2) {
-      if (target !== source) {
-        BoundingRect2.copy(target, source);
-      }
-      return;
-    }
-    if (m2[1] < 1e-5 && m2[1] > -1e-5 && m2[2] < 1e-5 && m2[2] > -1e-5) {
-      var sx = m2[0];
-      var sy = m2[3];
-      var tx = m2[4];
-      var ty = m2[5];
-      target.x = source.x * sx + tx;
-      target.y = source.y * sy + ty;
-      target.width = source.width * sx;
-      target.height = source.height * sy;
-      if (target.width < 0) {
-        target.x += target.width;
-        target.width = -target.width;
-      }
-      if (target.height < 0) {
-        target.y += target.height;
-        target.height = -target.height;
-      }
-      return;
-    }
-    lt.x = lb.x = source.x;
-    lt.y = rt.y = source.y;
-    rb.x = rt.x = source.x + source.width;
-    rb.y = lb.y = source.y + source.height;
-    lt.transform(m2);
-    rt.transform(m2);
-    rb.transform(m2);
-    lb.transform(m2);
-    target.x = mathMin(lt.x, rb.x, lb.x, rt.x);
-    target.y = mathMin(lt.y, rb.y, lb.y, rt.y);
-    var maxX = mathMax(lt.x, rb.x, lb.x, rt.x);
-    var maxY = mathMax(lt.y, rb.y, lb.y, rt.y);
-    target.width = maxX - target.x;
-    target.height = maxY - target.y;
-  };
-  return BoundingRect2;
-}();
-var BoundingRect_default = BoundingRect;
 
 // node_modules/zrender/lib/contain/text.js
 init_define_BACK_TO_TOP_LOCALES();
@@ -7219,7 +7270,7 @@ var Group = function(_super) {
     }
   };
   Group5.prototype.getBoundingRect = function(includeChildren) {
-    var tmpRect2 = new BoundingRect_default(0, 0, 0, 0);
+    var tmpRect3 = new BoundingRect_default(0, 0, 0, 0);
     var children = includeChildren || this._children;
     var tmpMat = [];
     var rect = null;
@@ -7231,15 +7282,15 @@ var Group = function(_super) {
       var childRect = child.getBoundingRect();
       var transform2 = child.getLocalTransform(tmpMat);
       if (transform2) {
-        BoundingRect_default.applyTransform(tmpRect2, childRect, transform2);
-        rect = rect || tmpRect2.clone();
-        rect.union(tmpRect2);
+        BoundingRect_default.applyTransform(tmpRect3, childRect, transform2);
+        rect = rect || tmpRect3.clone();
+        rect.union(tmpRect3);
       } else {
         rect = rect || childRect.clone();
         rect.union(childRect);
       }
     }
-    return rect || tmpRect2;
+    return rect || tmpRect3;
   };
   return Group5;
 }(Element_default);
@@ -7297,7 +7348,14 @@ var ZRender = function() {
     this.storage = storage2;
     this.painter = painter;
     var handerProxy = !env_default.node && !env_default.worker && !ssrMode ? new HandlerProxy_default(painter.getViewportRoot(), painter.root) : null;
-    this.handler = new Handler_default(storage2, painter, handerProxy, painter.root);
+    var useCoarsePointer = opts.useCoarsePointer;
+    var usePointerSize = useCoarsePointer == null || useCoarsePointer === "auto" ? env_default.touchEventsSupported : !!useCoarsePointer;
+    var defaultPointerSize = 44;
+    var pointerSize;
+    if (usePointerSize) {
+      pointerSize = retrieve2(opts.pointerSize, defaultPointerSize);
+    }
+    this.handler = new Handler_default(storage2, painter, handerProxy, painter.root, pointerSize);
     this.animation = new Animation_default({
       stage: {
         update: ssrMode ? null : function() {
@@ -7476,7 +7534,7 @@ function getInstance(id) {
 function registerPainter(name, Ctor) {
   painterCtors[name] = Ctor;
 }
-var version = "5.3.2";
+var version = "5.4.0";
 
 // node_modules/echarts/lib/model/Global.js
 init_define_BACK_TO_TOP_LOCALES();
@@ -7631,11 +7689,15 @@ function getPercentWithPrecision(valueList, idx, precision) {
   if (!valueList[idx]) {
     return 0;
   }
+  var seats = getPercentSeats(valueList, precision);
+  return seats[idx] || 0;
+}
+function getPercentSeats(valueList, precision) {
   var sum2 = reduce(valueList, function(acc, val) {
     return acc + (isNaN(val) ? 0 : val);
   }, 0);
   if (sum2 === 0) {
-    return 0;
+    return [];
   }
   var digits = Math.pow(10, precision);
   var votesPerQuota = map(valueList, function(val) {
@@ -7648,8 +7710,8 @@ function getPercentWithPrecision(valueList, idx, precision) {
   var currentSum = reduce(seats, function(acc, val) {
     return acc + val;
   }, 0);
-  var remainder = map(votesPerQuota, function(votes, idx2) {
-    return votes - seats[idx2];
+  var remainder = map(votesPerQuota, function(votes, idx) {
+    return votes - seats[idx];
   });
   while (currentSum < targetSeats) {
     var max3 = Number.NEGATIVE_INFINITY;
@@ -7664,7 +7726,9 @@ function getPercentWithPrecision(valueList, idx, precision) {
     remainder[maxId] = 0;
     ++currentSum;
   }
-  return seats[idx] / digits;
+  return map(seats, function(seat) {
+    return seat / digits;
+  });
 }
 function addSafe(val0, val1) {
   var maxPrecision = Math.max(getPrecision(val0), getPrecision(val1));
@@ -9461,16 +9525,16 @@ var Displayable = function(_super) {
   }();
   return Displayable2;
 }(Element_default);
-var tmpRect = new BoundingRect_default(0, 0, 0, 0);
+var tmpRect2 = new BoundingRect_default(0, 0, 0, 0);
 var viewRect = new BoundingRect_default(0, 0, 0, 0);
 function isDisplayableCulled(el, width, height) {
-  tmpRect.copy(el.getBoundingRect());
+  tmpRect2.copy(el.getBoundingRect());
   if (el.transform) {
-    tmpRect.applyTransform(el.transform);
+    tmpRect2.applyTransform(el.transform);
   }
   viewRect.width = width;
   viewRect.height = height;
-  return !tmpRect.intersect(viewRect);
+  return !tmpRect2.intersect(viewRect);
 }
 var Displayable_default = Displayable;
 
@@ -11642,7 +11706,7 @@ var ZRText = function(_super) {
       this._updateSubTexts();
     }
     if (!this._rect) {
-      var tmpRect2 = new BoundingRect_default(0, 0, 0, 0);
+      var tmpRect3 = new BoundingRect_default(0, 0, 0, 0);
       var children = this._children;
       var tmpMat = [];
       var rect = null;
@@ -11651,16 +11715,16 @@ var ZRText = function(_super) {
         var childRect = child.getBoundingRect();
         var transform2 = child.getLocalTransform(tmpMat);
         if (transform2) {
-          tmpRect2.copy(childRect);
-          tmpRect2.applyTransform(transform2);
-          rect = rect || tmpRect2.clone();
-          rect.union(tmpRect2);
+          tmpRect3.copy(childRect);
+          tmpRect3.applyTransform(transform2);
+          rect = rect || tmpRect3.clone();
+          rect.union(tmpRect3);
         } else {
           rect = rect || childRect.clone();
           rect.union(childRect);
         }
       }
-      this._rect = rect || tmpRect2;
+      this._rect = rect || tmpRect3;
     }
     return this._rect;
   };
@@ -14384,7 +14448,7 @@ var IncrementalDisplayable = function(_super) {
 }(Displayable_default);
 var IncrementalDisplayable_default = IncrementalDisplayable;
 
-// node_modules/echarts/lib/animation/basicTrasition.js
+// node_modules/echarts/lib/animation/basicTransition.js
 init_define_BACK_TO_TOP_LOCALES();
 init_define_CODE_COPY_LOCALES();
 init_define_CODE_COPY_OPTIONS();
@@ -14613,9 +14677,11 @@ function resizePath(path, rect) {
   var m2 = pathRect.calculateTransform(rect);
   path.applyTransform(m2);
 }
-function subPixelOptimizeLine2(param) {
-  subPixelOptimizeLine(param.shape, param.shape, param.style);
-  return param;
+function subPixelOptimizeLine2(shape, lineWidth) {
+  subPixelOptimizeLine(shape, shape, {
+    lineWidth
+  });
+  return shape;
 }
 function subPixelOptimizeRect2(param) {
   subPixelOptimizeRect(param.shape, param.shape, param.style);
@@ -16135,19 +16201,6 @@ function toCamelCase(str, upperCaseFirst) {
   return str;
 }
 var normalizeCssArray2 = normalizeCssArray;
-var replaceReg = /([&<>"'])/g;
-var replaceMap = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "'": "&#39;"
-};
-function encodeHTML(source) {
-  return source == null ? "" : (source + "").replace(replaceReg, function(str, c) {
-    return replaceMap[c];
-  });
-}
 function makeValueReadable(value, valueType, useUTC) {
   var USER_READABLE_DEFUALT_TIME_PATTERN = "{yyyy}-{MM}-{dd} {HH}:{mm}:{ss}";
   function stringToUserReadable(str) {
@@ -24268,9 +24321,9 @@ function getImpl(name) {
 
 // node_modules/echarts/lib/core/echarts.js
 var hasWindow = typeof window !== "undefined";
-var version2 = "5.3.3";
+var version2 = "5.4.0";
 var dependencies = {
-  zrender: "5.3.2"
+  zrender: "5.4.0"
 };
 var TEST_FRAME_REMAIN_TIME = 1;
 var PRIORITY_PROCESSOR_SERIES_FILTER = 800;
@@ -24384,10 +24437,12 @@ var ECharts = function(_super) {
     }
     _this._dom = dom;
     var defaultRenderer = "canvas";
+    var defaultCoarsePointer = "auto";
     var defaultUseDirtyRect = false;
     if (true) {
       var root = hasWindow ? window : global;
       defaultRenderer = root.__ECHARTS__DEFAULT__RENDERER__ || defaultRenderer;
+      defaultCoarsePointer = retrieve2(root.__ECHARTS__DEFAULT__COARSE_POINTER, defaultCoarsePointer);
       var devUseDirtyRect = root.__ECHARTS__DEFAULT__USE_DIRTY_RECT__;
       defaultUseDirtyRect = devUseDirtyRect == null ? defaultUseDirtyRect : devUseDirtyRect;
     }
@@ -24397,7 +24452,9 @@ var ECharts = function(_super) {
       width: opts.width,
       height: opts.height,
       ssr: opts.ssr,
-      useDirtyRect: opts.useDirtyRect == null ? defaultUseDirtyRect : opts.useDirtyRect
+      useDirtyRect: retrieve2(opts.useDirtyRect, defaultUseDirtyRect),
+      useCoarsePointer: retrieve2(opts.useCoarsePointer, defaultCoarsePointer),
+      pointerSize: opts.pointerSize
     });
     _this._ssr = opts.ssr;
     _this._throttledZrFlush = throttle(bind(zr.flush, zr), 17);
@@ -28330,7 +28387,7 @@ var IntervalScale = function(_super) {
     var extent3 = this._extent;
     if (extent3[0] === extent3[1]) {
       if (extent3[0] !== 0) {
-        var expandSize = extent3[0];
+        var expandSize = Math.abs(extent3[0]);
         if (!opt.fixMax) {
           extent3[1] += expandSize / 2;
           extent3[0] -= expandSize / 2;
@@ -29201,9 +29258,9 @@ var LogScale = function(_super) {
     }, this);
   };
   LogScale2.prototype.setExtent = function(start2, end2) {
-    var base2 = this.base;
-    start2 = mathLog(start2) / mathLog(base2);
-    end2 = mathLog(end2) / mathLog(base2);
+    var base2 = mathLog(this.base);
+    start2 = mathLog(Math.max(0, start2)) / base2;
+    end2 = mathLog(Math.max(0, end2)) / base2;
     intervalScaleProto.setExtent.call(this, start2, end2);
   };
   LogScale2.prototype.getExtent = function() {
@@ -32008,7 +32065,7 @@ function vNodeToString(el, opts) {
   var S = opts.newline ? "\n" : "";
   function convertElToString(el2) {
     var children = el2.children, tag = el2.tag, attrs = el2.attrs;
-    return createElementOpen(tag, attrs) + (el2.text || "") + (children ? "" + S + map(children, function(child) {
+    return createElementOpen(tag, attrs) + encodeHTML(el2.text) + (children ? "" + S + map(children, function(child) {
       return convertElToString(child);
     }).join(S) + S : "") + createElementClose(tag);
   }
@@ -33513,6 +33570,8 @@ var Layer = function(_super) {
           });
           clearColor.__canvasGradient = clearColorGradientOrPattern;
         } else if (isImagePatternObject(clearColor)) {
+          clearColor.scaleX = clearColor.scaleX || dpr2;
+          clearColor.scaleY = clearColor.scaleY || dpr2;
           clearColorGradientOrPattern = createCanvasPattern(ctx, clearColor, {
             dirty: function() {
               self2.setUnpainted();
@@ -34547,11 +34606,9 @@ var Symbol2 = function(_super) {
     emphasisState.style = emphasisItemStyle;
     symbolPath.ensureState("select").style = selectItemStyle;
     symbolPath.ensureState("blur").style = blurItemStyle;
-    if (hoverScale) {
-      var scaleRatio = Math.max(isNumber(hoverScale) ? hoverScale : 1.1, 3 / this._sizeY);
-      emphasisState.scaleX = this._sizeX * scaleRatio;
-      emphasisState.scaleY = this._sizeY * scaleRatio;
-    }
+    var scaleRatio = hoverScale == null || hoverScale === true ? Math.max(1.1, 3 / this._sizeY) : isFinite(hoverScale) && hoverScale > 0 ? +hoverScale : 1;
+    emphasisState.scaleX = this._sizeX * scaleRatio;
+    emphasisState.scaleY = this._sizeY * scaleRatio;
     this.setSymbolScale(1);
     toggleHoverEmphasis(this, focus, blurScope, emphasisDisabled);
   };
@@ -35967,8 +36024,8 @@ var LineView = function(_super) {
         if (this._clipShapeForSymbol && !this._clipShapeForSymbol.contain(x, y)) {
           return;
         }
-        var zlevel = seriesModel.get("zlevel");
-        var z = seriesModel.get("z");
+        var zlevel = seriesModel.get("zlevel") || 0;
+        var z = seriesModel.get("z") || 0;
         symbol = new Symbol_default(data, dataIndex);
         symbol.x = x;
         symbol.y = y;
@@ -37560,6 +37617,7 @@ function createLarge(seriesModel, group, progressiveEls, incremental) {
       points: data.getLayout("largePoints")
     },
     incremental: !!incremental,
+    ignoreCoarsePointer: true,
     z2: 1
   });
   el.baseDimIdx = baseDimIdx;
@@ -37708,10 +37766,19 @@ function getBasicPieLayout(seriesModel, api) {
   var width = parsePercent2(viewRect2.width, api.getWidth());
   var height = parsePercent2(viewRect2.height, api.getHeight());
   var size = Math.min(width, height);
-  var cx = parsePercent2(center3[0], width) + viewRect2.x;
-  var cy = parsePercent2(center3[1], height) + viewRect2.y;
   var r0 = parsePercent2(radius[0], size / 2);
   var r = parsePercent2(radius[1], size / 2);
+  var cx;
+  var cy;
+  var coordSys = seriesModel.coordinateSystem;
+  if (coordSys) {
+    var point = coordSys.dataToPoint(center3);
+    cx = point[0] || 0;
+    cy = point[1] || 0;
+  } else {
+    cx = parsePercent2(center3[0], width) + viewRect2.x;
+    cy = parsePercent2(center3[1], height) + viewRect2.y;
+  }
   return {
     cx,
     cy,
@@ -38104,7 +38171,8 @@ function pieLabelLayout(seriesModel) {
     labelLineLen2 = parsePercent2(labelLineLen2, viewWidth);
     if (Math.abs(sectorShape.endAngle - sectorShape.startAngle) < minShowLabelRadian) {
       each(label2.states, setNotShow);
-      label2.ignore = true;
+      each(labelLine2.states, setNotShow);
+      label2.ignore = labelLine2.ignore = true;
       return;
     }
     if (!isLabelShown(label2)) {
@@ -38584,19 +38652,20 @@ var PieSeriesModel = function(_super) {
     _super.prototype.mergeOption.apply(this, arguments);
   };
   PieSeriesModel2.prototype.getInitialData = function() {
-    return createSeriesDataSimply(this, {
+    var data = createSeriesDataSimply(this, {
       coordDimensions: ["value"],
       encodeDefaulter: curry(makeSeriesEncodeForNameBased, this)
     });
-  };
-  PieSeriesModel2.prototype.getDataParams = function(dataIndex) {
-    var data = this.getData();
-    var params = _super.prototype.getDataParams.call(this, dataIndex);
     var valueList = [];
     data.each(data.mapDimension("value"), function(value) {
       valueList.push(value);
     });
-    params.percent = getPercentWithPrecision(valueList, dataIndex, data.hostModel.get("percentPrecision"));
+    this.seats = getPercentSeats(valueList, data.hostModel.get("percentPrecision"));
+    return data;
+  };
+  PieSeriesModel2.prototype.getDataParams = function(dataIndex) {
+    var params = _super.prototype.getDataParams.call(this, dataIndex);
+    params.percent = this.seats[dataIndex];
     params.$vars.push("percent");
     return params;
   };
@@ -39027,6 +39096,7 @@ var LargeSymbolDraw = function() {
     var symbolEl = new LargeSymbolPath({
       cursor: "default"
     });
+    symbolEl.ignoreCoarsePointer = true;
     this.group.add(symbolEl);
     this._newAdded.push(symbolEl);
     return symbolEl;
@@ -40325,6 +40395,7 @@ var builders = {
     var matrix = transformGroup.transform;
     var pt12 = [extent3[0], 0];
     var pt22 = [extent3[1], 0];
+    var inverse = pt12[0] > pt22[0];
     if (matrix) {
       applyTransform(pt12, pt12, matrix);
       applyTransform(pt22, pt22, matrix);
@@ -40333,7 +40404,6 @@ var builders = {
       lineCap: "round"
     }, axisModel.getModel(["axisLine", "lineStyle"]).getLineStyle());
     var line = new Line_default({
-      subPixelOptimize: true,
       shape: {
         x1: pt12[0],
         y1: pt12[1],
@@ -40345,6 +40415,7 @@ var builders = {
       silent: true,
       z2: 1
     });
+    subPixelOptimizeLine2(line.shape, line.style.lineWidth);
     line.anid = "line";
     group.add(line);
     var arrows = axisModel.get(["axisLine", "symbol"]);
@@ -40371,10 +40442,11 @@ var builders = {
         if (arrows[index] !== "none" && arrows[index] != null) {
           var symbol = createSymbol(arrows[index], -symbolWidth_1 / 2, -symbolHeight_1 / 2, symbolWidth_1, symbolHeight_1, lineStyle.stroke, true);
           var r = point.r + point.offset;
+          var pt = inverse ? pt22 : pt12;
           symbol.attr({
             rotation: point.rotate,
-            x: pt12[0] + r * Math.cos(opt.rotation),
-            y: pt12[1] - r * Math.sin(opt.rotation),
+            x: pt[0] + r * Math.cos(opt.rotation),
+            y: pt[1] - r * Math.sin(opt.rotation),
             silent: true,
             z2: 11
           });
@@ -40576,7 +40648,6 @@ function createTicks(ticksCoords, tickTransform, tickEndCoord, tickLineStyle, an
       applyTransform(pt22, pt22, tickTransform);
     }
     var tickEl = new Line_default({
-      subPixelOptimize: true,
       shape: {
         x1: pt12[0],
         y1: pt12[1],
@@ -40588,6 +40659,7 @@ function createTicks(ticksCoords, tickTransform, tickEndCoord, tickLineStyle, an
       autoBatch: true,
       silent: true
     });
+    subPixelOptimizeLine2(tickEl.shape, tickEl.style.lineWidth);
     tickEl.anid = anidPrefix + "_" + ticksCoords[i].tickValue;
     tickEls.push(tickEl);
   }
@@ -41132,9 +41204,8 @@ var axisElementBuilders = {
       }
       var colorIndex = lineCount++ % lineColors.length;
       var tickValue = ticksCoords[i].tickValue;
-      axisGroup.add(new Line_default({
+      var line = new Line_default({
         anid: tickValue != null ? "line_" + ticksCoords[i].tickValue : null,
-        subPixelOptimize: true,
         autoBatch: true,
         shape: {
           x1: p1[0],
@@ -41146,7 +41217,9 @@ var axisElementBuilders = {
           stroke: lineColors[colorIndex]
         }, lineStyle),
         silent: true
-      }));
+      });
+      subPixelOptimizeLine2(line.shape, lineStyle.lineWidth);
+      axisGroup.add(line);
     }
   },
   minorSplitLine: function(axisView, axisGroup, axisModel, gridModel) {
@@ -41176,9 +41249,8 @@ var axisElementBuilders = {
           p2[0] = gridRect.x + gridRect.width;
           p2[1] = tickCoord;
         }
-        axisGroup.add(new Line_default({
+        var line = new Line_default({
           anid: "minor_line_" + minorTicksCoords[i][k].tickValue,
-          subPixelOptimize: true,
           autoBatch: true,
           shape: {
             x1: p1[0],
@@ -41188,7 +41260,9 @@ var axisElementBuilders = {
           },
           style: lineStyle,
           silent: true
-        }));
+        });
+        subPixelOptimizeLine2(line.shape, lineStyle.lineWidth);
+        axisGroup.add(line);
       }
     }
   },
@@ -42274,8 +42348,15 @@ var RoamController = function(_super) {
     this.disable();
   };
   RoamController2.prototype._mousedownHandler = function(e2) {
-    if (isMiddleOrRightButtonOnMouseUpDown(e2) || e2.target && e2.target.draggable) {
+    if (isMiddleOrRightButtonOnMouseUpDown(e2)) {
       return;
+    }
+    var el = e2.target;
+    while (el) {
+      if (el.draggable) {
+        return;
+      }
+      el = el.__hostTarget || el.parent;
     }
     var x = e2.offsetX;
     var y = e2.offsetY;
@@ -46962,6 +47043,11 @@ var TreemapSeriesModel = function(_super) {
         textStyle: {
           color: "#fff"
         }
+      },
+      emphasis: {
+        itemStyle: {
+          color: "rgba(0,0,0,0.9)"
+        }
       }
     },
     label: {
@@ -47103,7 +47189,9 @@ var Breadcrumb = function() {
       return;
     }
     var normalStyleModel = model.getModel("itemStyle");
+    var emphasisModel = model.getModel("emphasis");
     var textStyleModel = normalStyleModel.getModel("textStyle");
+    var emphasisTextStyleModel = emphasisModel.getModel(["itemStyle", "textStyle"]);
     var layoutParam = {
       pos: {
         left: model.get("left"),
@@ -47120,7 +47208,7 @@ var Breadcrumb = function() {
       renderList: []
     };
     this._prepare(targetNode, layoutParam, textStyleModel);
-    this._renderContent(seriesModel, layoutParam, normalStyleModel, textStyleModel, onSelect);
+    this._renderContent(seriesModel, layoutParam, normalStyleModel, emphasisModel, textStyleModel, emphasisTextStyleModel, onSelect);
     positionElement(thisGroup, layoutParam.pos, layoutParam.box);
   };
   Breadcrumb2.prototype._prepare = function(targetNode, layoutParam, textStyleModel) {
@@ -47136,13 +47224,14 @@ var Breadcrumb = function() {
       });
     }
   };
-  Breadcrumb2.prototype._renderContent = function(seriesModel, layoutParam, normalStyleModel, textStyleModel, onSelect) {
+  Breadcrumb2.prototype._renderContent = function(seriesModel, layoutParam, normalStyleModel, emphasisModel, textStyleModel, emphasisTextStyleModel, onSelect) {
     var lastX = 0;
     var emptyItemWidth = layoutParam.emptyItemWidth;
     var height = seriesModel.get(["breadcrumb", "height"]);
     var availableSize = getAvailableSize(layoutParam.pos, layoutParam.box);
     var totalWidth = layoutParam.totalWidth;
     var renderList = layoutParam.renderList;
+    var emphasisItemStyle = emphasisModel.getModel("itemStyle").getItemStyle();
     for (var i = renderList.length - 1; i >= 0; i--) {
       var item = renderList[i];
       var itemNode = item.node;
@@ -47161,11 +47250,9 @@ var Breadcrumb = function() {
           lineJoin: "bevel"
         }),
         textContent: new Text_default({
-          style: {
-            text,
-            fill: textStyleModel.getTextColor(),
-            font: textStyleModel.getFont()
-          }
+          style: createTextStyle(textStyleModel, {
+            text
+          })
         }),
         textConfig: {
           position: "inside"
@@ -47174,6 +47261,11 @@ var Breadcrumb = function() {
         onclick: curry(onSelect, itemNode)
       });
       el.disableLabelAnimation = true;
+      el.getTextContent().ensureState("emphasis").style = createTextStyle(emphasisTextStyleModel, {
+        text
+      });
+      el.ensureState("emphasis").style = emphasisItemStyle;
+      toggleHoverEmphasis(el, emphasisModel.get("focus"), emphasisModel.get("blurScope"), emphasisModel.get("disabled"));
       this.group.add(el);
       packEventData(el, seriesModel, itemNode);
       lastX += itemWidth + ITEM_GAP;
@@ -49288,7 +49380,7 @@ function getSymbolSize(node) {
 // node_modules/echarts/lib/chart/graph/circularLayoutHelper.js
 var PI8 = Math.PI;
 var _symbolRadiansHalf = [];
-function circularLayout(seriesModel, basedOn) {
+function circularLayout(seriesModel, basedOn, draggingNode, pointer) {
   var coordSys = seriesModel.coordinateSystem;
   if (coordSys && coordSys.type !== "view") {
     return;
@@ -49306,6 +49398,15 @@ function circularLayout(seriesModel, basedOn) {
   });
   if (!count2) {
     return;
+  }
+  if (draggingNode) {
+    var _a2 = coordSys.pointToData(pointer), tempX = _a2[0], tempY = _a2[1];
+    var v = [tempX - cx, tempY - cy];
+    normalize(v, v);
+    scale(v, v, r);
+    draggingNode.setLayout([cx + v[0], cy + v[1]], true);
+    var circularRotateLabel = seriesModel.get(["circular", "rotateLabel"]);
+    rotateNodeLabel(draggingNode, circularRotateLabel, cx, cy);
   }
   _layoutNodesBasedOn[basedOn](seriesModel, graph, nodeData, r, cx, cy, count2);
   graph.eachEdge(function(edge, index) {
@@ -49354,11 +49455,45 @@ var _layoutNodesBasedOn = {
     graph.eachNode(function(node) {
       var radianHalf = halfRemainRadian + _symbolRadiansHalf[node.dataIndex];
       angle += radianHalf;
-      node.setLayout([r * Math.cos(angle) + cx, r * Math.sin(angle) + cy]);
+      (!node.getLayout() || !node.getLayout().fixed) && node.setLayout([r * Math.cos(angle) + cx, r * Math.sin(angle) + cy]);
       angle += radianHalf;
     });
   }
 };
+function rotateNodeLabel(node, circularRotateLabel, cx, cy) {
+  var el = node.getGraphicEl();
+  if (!el) {
+    return;
+  }
+  var nodeModel = node.getModel();
+  var labelRotate = nodeModel.get(["label", "rotate"]) || 0;
+  var symbolPath = el.getSymbolPath();
+  if (circularRotateLabel) {
+    var pos = node.getLayout();
+    var rad = Math.atan2(pos[1] - cy, pos[0] - cx);
+    if (rad < 0) {
+      rad = Math.PI * 2 + rad;
+    }
+    var isLeft = pos[0] < cx;
+    if (isLeft) {
+      rad = rad - Math.PI;
+    }
+    var textPosition = isLeft ? "left" : "right";
+    symbolPath.setTextConfig({
+      rotation: -rad,
+      position: textPosition,
+      origin: "center"
+    });
+    var emphasisState = symbolPath.ensureState("emphasis");
+    extend(emphasisState.textConfig || (emphasisState.textConfig = {}), {
+      position: textPosition
+    });
+  } else {
+    symbolPath.setTextConfig({
+      rotation: labelRotate *= Math.PI / 180
+    });
+  }
+}
 
 // node_modules/echarts/lib/chart/graph/circularLayout.js
 function graphCircularLayout(ecModel) {
@@ -50417,6 +50552,7 @@ var GraphView = function(_super) {
     if (forceLayout2) {
       this._startForceLayoutIteration(forceLayout2, layoutAnimation);
     }
+    var layout5 = seriesModel.get("layout");
     data.graph.eachNode(function(node) {
       var idx = node.dataIndex;
       var el = node.getGraphicEl();
@@ -50427,12 +50563,28 @@ var GraphView = function(_super) {
       el.off("drag").off("dragend");
       var draggable = itemModel.get("draggable");
       if (draggable) {
-        el.on("drag", function() {
-          if (forceLayout2) {
-            forceLayout2.warmUp();
-            !_this._layouting && _this._startForceLayoutIteration(forceLayout2, layoutAnimation);
-            forceLayout2.setFixed(idx);
-            data.setItemLayout(idx, [el.x, el.y]);
+        el.on("drag", function(e2) {
+          switch (layout5) {
+            case "force":
+              forceLayout2.warmUp();
+              !_this._layouting && _this._startForceLayoutIteration(forceLayout2, layoutAnimation);
+              forceLayout2.setFixed(idx);
+              data.setItemLayout(idx, [el.x, el.y]);
+              break;
+            case "circular":
+              data.setItemLayout(idx, [el.x, el.y]);
+              node.setLayout({
+                fixed: true
+              }, true);
+              circularLayout(seriesModel, "symbolSize", node, [e2.offsetX, e2.offsetY]);
+              _this.updateLayout(seriesModel);
+              break;
+            case "none":
+            default:
+              data.setItemLayout(idx, [el.x, el.y]);
+              simpleLayoutEdge(seriesModel.getGraph(), seriesModel);
+              _this.updateLayout(seriesModel);
+              break;
           }
         }).on("dragend", function() {
           if (forceLayout2) {
@@ -50462,35 +50614,8 @@ var GraphView = function(_super) {
     var circularRotateLabel = seriesModel.get("layout") === "circular" && seriesModel.get(["circular", "rotateLabel"]);
     var cx = data.getLayout("cx");
     var cy = data.getLayout("cy");
-    data.eachItemGraphicEl(function(el, idx) {
-      var itemModel = data.getItemModel(idx);
-      var labelRotate = itemModel.get(["label", "rotate"]) || 0;
-      var symbolPath = el.getSymbolPath();
-      if (circularRotateLabel) {
-        var pos = data.getItemLayout(idx);
-        var rad = Math.atan2(pos[1] - cy, pos[0] - cx);
-        if (rad < 0) {
-          rad = Math.PI * 2 + rad;
-        }
-        var isLeft = pos[0] < cx;
-        if (isLeft) {
-          rad = rad - Math.PI;
-        }
-        var textPosition = isLeft ? "left" : "right";
-        symbolPath.setTextConfig({
-          rotation: -rad,
-          position: textPosition,
-          origin: "center"
-        });
-        var emphasisState = symbolPath.ensureState("emphasis");
-        extend(emphasisState.textConfig || (emphasisState.textConfig = {}), {
-          position: textPosition
-        });
-      } else {
-        symbolPath.setTextConfig({
-          rotation: labelRotate *= Math.PI / 180
-        });
-      }
+    data.graph.eachNode(function(node) {
+      rotateNodeLabel(node, circularRotateLabel, cx, cy);
     });
     this._firstRender = false;
   };
@@ -51411,18 +51536,50 @@ var GaugeView = function(_super) {
         var distance2 = labelModel.get("distance") + splitLineDistance;
         var label = formatLabel(round(i / splitNumber * (maxVal - minVal) + minVal), labelModel.get("formatter"));
         var autoColor = getColor(i / splitNumber);
-        group.add(new Text_default({
-          style: createTextStyle(labelModel, {
-            text: label,
-            x: unitX * (r - splitLineLen - distance2) + cx,
-            y: unitY * (r - splitLineLen - distance2) + cy,
-            verticalAlign: unitY < -0.8 ? "top" : unitY > 0.8 ? "bottom" : "middle",
-            align: unitX < -0.4 ? "left" : unitX > 0.4 ? "right" : "center"
-          }, {
-            inheritColor: autoColor
-          }),
-          silent: true
-        }));
+        var textStyleX = unitX * (r - splitLineLen - distance2) + cx;
+        var textStyleY = unitY * (r - splitLineLen - distance2) + cy;
+        var rotateType = labelModel.get("rotate");
+        var rotate2 = 0;
+        if (rotateType === "radial") {
+          rotate2 = -angle + 2 * Math.PI;
+          if (rotate2 > Math.PI / 2) {
+            rotate2 += Math.PI;
+          }
+        } else if (rotateType === "tangential") {
+          rotate2 = -angle - Math.PI / 2;
+        } else if (isNumber(rotateType)) {
+          rotate2 = rotateType * Math.PI / 180;
+        }
+        if (rotate2 === 0) {
+          group.add(new Text_default({
+            style: createTextStyle(labelModel, {
+              text: label,
+              x: textStyleX,
+              y: textStyleY,
+              verticalAlign: unitY < -0.8 ? "top" : unitY > 0.8 ? "bottom" : "middle",
+              align: unitX < -0.4 ? "left" : unitX > 0.4 ? "right" : "center"
+            }, {
+              inheritColor: autoColor
+            }),
+            silent: true
+          }));
+        } else {
+          group.add(new Text_default({
+            style: createTextStyle(labelModel, {
+              text: label,
+              x: textStyleX,
+              y: textStyleY,
+              verticalAlign: "middle",
+              align: "center"
+            }, {
+              inheritColor: autoColor
+            }),
+            silent: true,
+            originX: textStyleX,
+            originY: textStyleY,
+            rotation: rotate2
+          }));
+        }
       }
       if (tickModel.get("show") && i !== splitNumber) {
         var distance2 = tickModel.get("distance");
@@ -51797,7 +51954,8 @@ var GaugeSeriesModel = function(_super) {
       show: true,
       distance: 15,
       color: "#464646",
-      fontSize: 12
+      fontSize: 12,
+      rotate: 0
     },
     pointer: {
       icon: null,
@@ -56035,14 +56193,16 @@ function createLarge2(seriesModel, group, progressiveEls, incremental) {
     shape: {
       points: largePoints
     },
-    __sign: 1
+    __sign: 1,
+    ignoreCoarsePointer: true
   });
   group.add(elP);
   var elN = new LargeBoxPath({
     shape: {
       points: largePoints
     },
-    __sign: -1
+    __sign: -1,
+    ignoreCoarsePointer: true
   });
   group.add(elN);
   setLargeStyle(1, elP, seriesModel, data);
@@ -56761,6 +56921,7 @@ var EffectLine = function(_super) {
     var points4 = lineData.getItemLayout(idx);
     var period = effectModel.get("period") * 1e3;
     var loop = effectModel.get("loop");
+    var roundTrip = effectModel.get("roundTrip");
     var constantSpeed = effectModel.get("constantSpeed");
     var delayExpr = retrieve(effectModel.get("delay"), function(idx2) {
       return idx2 / lineData.count() * period / 3;
@@ -56770,7 +56931,7 @@ var EffectLine = function(_super) {
     if (constantSpeed > 0) {
       period = this._getLineLength(symbol) / constantSpeed * 1e3;
     }
-    if (period !== this._period || loop !== this._loop) {
+    if (period !== this._period || loop !== this._loop || roundTrip !== this._roundTrip) {
       symbol.stopAnimation();
       var delayNum = void 0;
       if (isFunction(delayExpr)) {
@@ -56781,17 +56942,18 @@ var EffectLine = function(_super) {
       if (symbol.__t > 0) {
         delayNum = -period * symbol.__t;
       }
-      this._animateSymbol(symbol, period, delayNum, loop);
+      this._animateSymbol(symbol, period, delayNum, loop, roundTrip);
     }
     this._period = period;
     this._loop = loop;
+    this._roundTrip = roundTrip;
   };
-  EffectLine2.prototype._animateSymbol = function(symbol, period, delayNum, loop) {
+  EffectLine2.prototype._animateSymbol = function(symbol, period, delayNum, loop, roundTrip) {
     if (period > 0) {
       symbol.__t = 0;
       var self_1 = this;
-      var animator = symbol.animate("", loop).when(period, {
-        __t: 1
+      var animator = symbol.animate("", loop).when(roundTrip ? period * 2 : period, {
+        __t: roundTrip ? 2 : 1
       }).delay(delayNum).during(function() {
         self_1._updateSymbolPosition(symbol);
       });
@@ -56819,15 +56981,15 @@ var EffectLine = function(_super) {
     var p1 = symbol.__p1;
     var p2 = symbol.__p2;
     var cp1 = symbol.__cp1;
-    var t = symbol.__t;
+    var t = symbol.__t < 1 ? symbol.__t : 2 - symbol.__t;
     var pos = [symbol.x, symbol.y];
     var lastPos = pos.slice();
     var quadraticAt3 = quadraticAt;
     var quadraticDerivativeAt2 = quadraticDerivativeAt;
     pos[0] = quadraticAt3(p1[0], cp1[0], p2[0], t);
     pos[1] = quadraticAt3(p1[1], cp1[1], p2[1], t);
-    var tx = quadraticDerivativeAt2(p1[0], cp1[0], p2[0], t);
-    var ty = quadraticDerivativeAt2(p1[1], cp1[1], p2[1], t);
+    var tx = symbol.__t < 1 ? quadraticDerivativeAt2(p1[0], cp1[0], p2[0], t) : quadraticDerivativeAt2(p2[0], cp1[0], p1[0], 1 - t);
+    var ty = symbol.__t < 1 ? quadraticDerivativeAt2(p1[1], cp1[1], p2[1], t) : quadraticDerivativeAt2(p2[1], cp1[1], p1[1], 1 - t);
     symbol.rotation = -Math.atan2(ty, tx) - Math.PI / 2;
     if (this._symbolType === "line" || this._symbolType === "rect" || this._symbolType === "roundRect") {
       if (symbol.__lastT !== void 0 && symbol.__lastT < symbol.__t) {
@@ -56981,7 +57143,7 @@ var EffectPolyline = function(_super) {
   };
   ;
   EffectPolyline2.prototype._updateSymbolPosition = function(symbol) {
-    var t = symbol.__t;
+    var t = symbol.__t < 1 ? symbol.__t : 2 - symbol.__t;
     var points4 = this._points;
     var offsets = this._offsets;
     var len2 = points4.length;
@@ -57011,8 +57173,8 @@ var EffectPolyline = function(_super) {
     var p1 = points4[frame + 1];
     symbol.x = p0[0] * (1 - p) + p * p1[0];
     symbol.y = p0[1] * (1 - p) + p * p1[1];
-    var tx = p1[0] - p0[0];
-    var ty = p1[1] - p0[1];
+    var tx = symbol.__t < 1 ? p1[0] - p0[0] : p0[0] - p1[0];
+    var ty = symbol.__t < 1 ? p1[1] - p0[1] : p0[1] - p1[1];
     symbol.rotation = -Math.atan2(ty, tx) - Math.PI / 2;
     this._lastFrame = frame;
     this._lastFramePercent = t;
@@ -57229,7 +57391,8 @@ var LargeLineDraw = function() {
   };
   LargeLineDraw2.prototype._create = function() {
     var lineEl = new LargeLinesPath({
-      cursor: "default"
+      cursor: "default",
+      ignoreCoarsePointer: true
     });
     this._newAdded.push(lineEl);
     this.group.add(lineEl);
@@ -59555,7 +59718,7 @@ function installSunburstAction(registers) {
       }
     }
     if (true) {
-      deprecateReplaceLog("highlight", "sunburstHighlight");
+      deprecateReplaceLog("sunburstHighlight", "highlight");
     }
     api.dispatchAction(extend(payload, {
       type: "highlight"
@@ -59567,7 +59730,7 @@ function installSunburstAction(registers) {
   }, function(payload, ecModel, api) {
     payload = extend({}, payload);
     if (true) {
-      deprecateReplaceLog("downplay", "sunburstUnhighlight");
+      deprecateReplaceLog("sunburstUnhighlight", "downplay");
     }
     api.dispatchAction(extend(payload, {
       type: "downplay"
@@ -61065,7 +61228,7 @@ var CustomChartView = function(_super) {
       createOrUpdateItem(api, null, newIdx, renderItem(newIdx, payload), customSeries, group, data);
     }).remove(function(oldIdx) {
       var el = oldData.getItemGraphicEl(oldIdx);
-      applyLeaveTransition(el, customInnerStore(el).option, customSeries);
+      el && applyLeaveTransition(el, customInnerStore(el).option, customSeries);
     }).update(function(newIdx, oldIdx) {
       var oldEl = oldData.getItemGraphicEl(oldIdx);
       createOrUpdateItem(api, oldEl, newIdx, renderItem(newIdx, payload), customSeries, group, data);
@@ -61599,12 +61762,27 @@ function mergeChildren(api, el, dataIndex, elOption, seriesModel) {
   notMerge && el.removeAll();
   var index = 0;
   for (; index < newLen; index++) {
-    newChildren[index] && doCreateOrUpdateEl(api, el.childAt(index), dataIndex, newChildren[index], seriesModel, el);
+    var newChild = newChildren[index];
+    var oldChild = el.childAt(index);
+    if (newChild) {
+      if (newChild.ignore == null) {
+        newChild.ignore = false;
+      }
+      doCreateOrUpdateEl(api, oldChild, dataIndex, newChild, seriesModel, el);
+    } else {
+      if (true) {
+        assert(oldChild, "renderItem should not return a group containing elements as null/undefined/{} if they do not exist before.");
+      }
+      oldChild.ignore = true;
+    }
   }
   for (var i = el.childCount() - 1; i >= index; i--) {
     var child = el.childAt(i);
-    applyLeaveTransition(child, customInnerStore(el).option, seriesModel);
+    removeChildFromGroup(el, child, seriesModel);
   }
+}
+function removeChildFromGroup(group, child, seriesModel) {
+  child && applyLeaveTransition(child, customInnerStore(group).option, seriesModel);
 }
 function diffGroupChildren(context) {
   new DataDiffer_default(context.oldChildren, context.newChildren, getKey, getKey, context).add(processAddUpdate).update(processAddUpdate).remove(processRemove).execute();
@@ -61622,7 +61800,7 @@ function processAddUpdate(newIndex, oldIndex) {
 function processRemove(oldIndex) {
   var context = this.context;
   var child = context.oldChildren[oldIndex];
-  applyLeaveTransition(child, customInnerStore(child).option, context.seriesModel);
+  child && applyLeaveTransition(child, customInnerStore(child).option, context.seriesModel);
 }
 function getPathData(shape) {
   return shape && (shape.pathData || shape.d);
@@ -64138,6 +64316,7 @@ var axisElementBuilders3 = {
     var lineStyleModel = splitLineModel.getModel("lineStyle");
     var lineColors = lineStyleModel.get("color");
     lineColors = lineColors instanceof Array ? lineColors : [lineColors];
+    var lineWidth = lineStyleModel.get("width");
     var gridRect = axisModel.coordinateSystem.getRect();
     var isHorizontal = axis.isHorizontal();
     var splitLines = [];
@@ -64160,10 +64339,7 @@ var axisElementBuilders3 = {
         p2[0] = gridRect.x + gridRect.width;
         p2[1] = tickCoord;
       }
-      var colorIndex = lineCount++ % lineColors.length;
-      splitLines[colorIndex] = splitLines[colorIndex] || [];
-      splitLines[colorIndex].push(new Line_default({
-        subPixelOptimize: true,
+      var line = new Line_default({
         shape: {
           x1: p1[0],
           y1: p1[1],
@@ -64171,7 +64347,11 @@ var axisElementBuilders3 = {
           y2: p2[1]
         },
         silent: true
-      }));
+      });
+      subPixelOptimizeLine2(line.shape, lineWidth);
+      var colorIndex = lineCount++ % lineColors.length;
+      splitLines[colorIndex] = splitLines[colorIndex] || [];
+      splitLines[colorIndex].push(line);
     }
     var lineStyle = lineStyleModel.getLineStyle(["color"]);
     for (var i = 0; i < splitLines.length; ++i) {
@@ -64372,7 +64552,7 @@ var Single = function() {
     var axis = this._axis;
     var isHorizontal = axis.isHorizontal();
     var extent3 = isHorizontal ? [0, rect.width] : [0, rect.height];
-    var idx = axis.reverse ? 1 : 0;
+    var idx = axis.inverse ? 1 : 0;
     axis.setExtent(extent3[idx], extent3[1 - idx]);
     this._updateAxisTransform(axis, isHorizontal ? rect.x : rect.y);
   };
@@ -72140,13 +72320,13 @@ var markLineTransform = function(seriesModel, coordSys, mlModel, item) {
   merge(normalizedItem[2], normalizedItem[1]);
   return normalizedItem;
 };
-function isInifinity(val) {
+function isInfinity(val) {
   return !isNaN(val) && !isFinite(val);
 }
 function ifMarkLineHasOnlyDim(dimIndex, fromCoord, toCoord, coordSys) {
   var otherDimIndex = 1 - dimIndex;
   var dimName = coordSys.dimensions[dimIndex];
-  return isInifinity(fromCoord[otherDimIndex]) && isInifinity(toCoord[otherDimIndex]) && fromCoord[dimIndex] === toCoord[dimIndex] && coordSys.getAxis(dimName).containData(fromCoord[dimIndex]);
+  return isInfinity(fromCoord[otherDimIndex]) && isInfinity(toCoord[otherDimIndex]) && fromCoord[dimIndex] === toCoord[dimIndex] && coordSys.getAxis(dimName).containData(fromCoord[dimIndex]);
 }
 function markLineFilter(coordSys, item) {
   if (coordSys.type === "cartesian2d") {
@@ -72179,9 +72359,9 @@ function updateSingleMarkerEndLayout(data, idx, isFrom, seriesModel, api) {
       var xAxis = coordSys.getAxis("x");
       var yAxis = coordSys.getAxis("y");
       var dims = coordSys.dimensions;
-      if (isInifinity(data.get(dims[0], idx))) {
+      if (isInfinity(data.get(dims[0], idx))) {
         point[0] = xAxis.toGlobalCoord(xAxis.getExtent()[isFrom ? 0 : 1]);
-      } else if (isInifinity(data.get(dims[1], idx))) {
+      } else if (isInfinity(data.get(dims[1], idx))) {
         point[1] = yAxis.toGlobalCoord(yAxis.getExtent()[isFrom ? 0 : 1]);
       }
     }
@@ -72448,12 +72628,12 @@ var markAreaTransform = function(seriesModel, coordSys, maModel, item) {
   result.y1 = rb2.y;
   return result;
 };
-function isInifinity2(val) {
+function isInfinity2(val) {
   return !isNaN(val) && !isFinite(val);
 }
 function ifMarkAreaHasOnlyDim(dimIndex, fromCoord, toCoord, coordSys) {
   var otherDimIndex = 1 - dimIndex;
-  return isInifinity2(fromCoord[otherDimIndex]) && isInifinity2(toCoord[otherDimIndex]);
+  return isInfinity2(fromCoord[otherDimIndex]) && isInfinity2(toCoord[otherDimIndex]);
 }
 function markAreaFilter(coordSys, item) {
   var fromCoord = item.coord[0];
@@ -72499,9 +72679,9 @@ function getSingleMarkerEndPoint(data, idx, dims, seriesModel, api) {
       var yAxis = coordSys.getAxis("y");
       var x = data.get(dims[0], idx);
       var y = data.get(dims[1], idx);
-      if (isInifinity2(x)) {
+      if (isInfinity2(x)) {
         point[0] = xAxis.toGlobalCoord(xAxis.getExtent()[dims[0] === "x0" ? 0 : 1]);
-      } else if (isInifinity2(y)) {
+      } else if (isInfinity2(y)) {
         point[1] = yAxis.toGlobalCoord(yAxis.getExtent()[dims[1] === "y0" ? 0 : 1]);
       }
     }
@@ -74565,7 +74745,8 @@ var SliderZoomView = function(_super) {
     var oldSize = this._shadowSize || [];
     var seriesModel = info.series;
     var data = seriesModel.getRawData();
-    var otherDim = seriesModel.getShadowDim ? seriesModel.getShadowDim() : info.otherDim;
+    var candlestickDim = seriesModel.getShadowDim && seriesModel.getShadowDim();
+    var otherDim = candlestickDim && data.getDimensionInfo(candlestickDim) ? seriesModel.getShadowDim() : info.otherDim;
     if (otherDim == null) {
       return;
     }
@@ -76230,13 +76411,19 @@ var ContinuousView = function(_super) {
     this._dispatchHighDown("highlight", makeHighDownBatch(resultBatches[1], visualMapModel));
   };
   ContinuousView2.prototype._hoverLinkFromSeriesMouseOver = function(e2) {
-    var el = e2.target;
-    var visualMapModel = this.visualMapModel;
-    if (!el || getECData(el).dataIndex == null) {
+    var ecData;
+    findEventDispatcher(e2.target, function(target) {
+      var currECData = getECData(target);
+      if (currECData.dataIndex != null) {
+        ecData = currECData;
+        return true;
+      }
+    }, true);
+    if (!ecData) {
       return;
     }
-    var ecData = getECData(el);
     var dataModel = this.ecModel.getSeriesByIndex(ecData.seriesIndex);
+    var visualMapModel = this.visualMapModel;
     if (!visualMapModel.isTargetSeries(dataModel)) {
       return;
     }

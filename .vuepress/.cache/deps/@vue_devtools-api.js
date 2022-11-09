@@ -2,7 +2,7 @@ import {
   isPerformanceSupported,
   now,
   setupDevtoolsPlugin
-} from "./chunk-3IO6YQQR.js";
+} from "./chunk-UVPVYHTY.js";
 import {
   init_define_BACK_TO_TOP_LOCALES,
   init_define_CODE_COPY_LOCALES,
@@ -16,7 +16,7 @@ import {
   init_define_REVEAL_CONFIG,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-PXE4CLEU.js";
+} from "./chunk-VRI7DPPA.js";
 
 // dep:@vue_devtools-api
 init_define_BACK_TO_TOP_LOCALES();

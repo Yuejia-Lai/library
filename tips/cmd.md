@@ -1,7 +1,7 @@
 ---
 title: cmd使用
 icon: iconfont icon-zhongduan
-date: 2022-5-29
+date: 2022-05-29
 ---
 
 ::: tip
