@@ -6,6 +6,27 @@
   "description": "知识库tu'biao'su'cai'ku",
   "glyphs": [
     {
+      "icon_id": "15378732",
+      "name": "rabbitmq",
+      "font_class": "rabbitmq",
+      "unicode": "ec75",
+      "unicode_decimal": 60533
+    },
+    {
+      "icon_id": "15378745",
+      "name": "redis",
+      "font_class": "redis",
+      "unicode": "ec7c",
+      "unicode_decimal": 60540
+    },
+    {
+      "icon_id": "11493372",
+      "name": "mysql",
+      "font_class": "mysql",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "1423",
       "name": "html5",
       "font_class": "html5",

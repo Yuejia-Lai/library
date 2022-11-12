@@ -154,7 +154,6 @@ module.exports = {
         {
           text: "计算机基础",
           icon: "iconfont icon-computer_fill",
-          link: "/computer/",
           collapsable: true,
           children: [
               {
@@ -225,6 +224,24 @@ module.exports = {
                     text: "Linux介绍",
                     icon: "iconfont icon-linux",
                     link: "chapter1"
+                  },
+                ]
+              },
+              {
+                text: "MySQL高级",
+                icon: "iconfont icon-mysql",
+                collapsable: true,
+                prefix: "/computer/MySQL/",
+                children: [
+                  {
+                    text: "Linux与MySQL",
+                    icon: "iconfont icon-mysql",
+                    link: "chapter1"
+                  },
+                  {
+                    text: "MySQL的数据目录",
+                    icon: "iconfont icon-mysql",
+                    link: "chapter2"
                   },
                 ]
               },
