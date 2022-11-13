@@ -86,3 +86,13 @@ test.frm 存储表结构 #MySQL8.0 改为了 b.xxx.sdi
 test.MYD 存储数据 (MYData) 
 test.MYI 存储索引 (MYIndex
 ```
+
+
+
+
+
+```mermaid
+graph TB
+	A{kkk}-->B(ooo)
+```
+
