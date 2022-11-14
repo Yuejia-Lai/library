@@ -243,6 +243,11 @@ module.exports = {
                     icon: "iconfont icon-mysql",
                     link: "chapter2"
                   },
+                  {
+                    text: "用户与权限管理",
+                    icon: "iconfont icon-mysql",
+                    link: "chapter3"
+                  },
                 ]
               },
           ]

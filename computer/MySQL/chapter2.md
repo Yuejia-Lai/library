@@ -89,10 +89,3 @@ test.MYI 存储索引 (MYIndex
 
 
 
-
-
-```mermaid
-graph TB
-	A{kkk}-->B(ooo)
-```
-
