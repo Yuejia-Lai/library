@@ -513,6 +513,36 @@ module.exports = {
           ]
         },
         {
+          text: "Go语言",
+          icon: "iconfont icon-a-DevelopProgramming",
+          collapsable: true,
+          children: [
+            {
+              text: "Go语言基础语法",
+              icon: "iconfont icon-a-DevelopProgramming",
+              prefix: "/go/language/",
+              collapsable: true,
+              children: [
+                {
+                  text: "Go语言快速入门",
+                  icon: "iconfont icon-a-DevelopProgramming",
+                  link: "chapter1"
+                },
+                {
+                  text: "Go语言基础",
+                  icon: "iconfont icon-a-DevelopProgramming",
+                  link: "chapter2"
+                },
+                {
+                  text: "Go语言数据类型",
+                  icon: "iconfont icon-a-DevelopProgramming",
+                  link: "chapter3"
+                },
+              ]
+            },
+          ]
+        },
+        {
           text: "开发工具",
           icon: "iconfont icon-gongju",
           

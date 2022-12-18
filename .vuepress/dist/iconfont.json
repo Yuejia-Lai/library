@@ -6,6 +6,13 @@
   "description": "知识库tu'biao'su'cai'ku",
   "glyphs": [
     {
+      "icon_id": "25847926",
+      "name": "Develop Programming",
+      "font_class": "a-DevelopProgramming",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "15378732",
       "name": "rabbitmq",
       "font_class": "rabbitmq",
