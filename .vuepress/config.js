@@ -534,9 +534,14 @@ module.exports = {
                   link: "chapter2"
                 },
                 {
-                  text: "Go语言数据类型",
+                  text: "Go语言变量",
                   icon: "iconfont icon-a-DevelopProgramming",
                   link: "chapter3"
+                },
+                {
+                  text: "Go语言常量与运算符",
+                  icon: "iconfont icon-a-DevelopProgramming",
+                  link: "chapter4"
                 },
               ]
             },
